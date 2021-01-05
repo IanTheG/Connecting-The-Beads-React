@@ -13,6 +13,7 @@ body {
     // flex: 0 1 auto;
     margin: 0;
     padding: 1rem;
+    font-size: 2rem;
     font-family: 'Satisfy', 'Dancing Script', 'cursive', 'Arial', 'sans-serif';
   }
 
@@ -24,6 +25,10 @@ body {
     margin: 0;
     padding: 0 1rem 1rem 1rem;
     font-size: 1.2rem;
+
+    &--day {
+      padding: 0 0 0.5rem 3rem;
+    }
   }
   
   .container {
@@ -33,9 +38,7 @@ body {
     width: 100vw;
     display: flex;
     flex-direction: column;
-    scroll-snap-align: center;
-    // justify-content: stretch;
-    
+    scroll-snap-align: center; 
   }
   
   .mysteries {
@@ -44,30 +47,22 @@ body {
     flex-direction: column;
   }
 
-  .mystery {
+  .link {
     flex: 1;
     display: flex;
     flex-direction: column;
     text-decoration: none;
     color: black;
     justify-content: center;
-    // border-bottom: 1px solid black;
-
-    & > p {
-      margin: 0;
-      padding-left: 3rem;
-      font-size: 1.2rem;
-    }
 
     &:hover {
       background-color: #9E94AA;
     }
   }
-    
-  
-  .link {
+
+  .mystery {
     margin: 0;
-    margin-bottom: 1rem;
+    margin-bottom: 2%;
     padding-left: 2rem;
     font-size: 2rem;
     font-family: 'Satisfy', 'Dancing Script', 'cursive', 'Arial', 'sans-serif';

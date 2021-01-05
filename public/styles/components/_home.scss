@@ -1,0 +1,75 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+// Base Styles
+
+// Cell Phone - Portrait
+@media screen and (min-width: 10px) {
+  .title {
+    // flex: 0 1 auto;
+    margin: 0;
+    padding: 1rem;
+    font-family: 'Satisfy', 'Dancing Script', 'cursive', 'Arial', 'sans-serif';
+  }
+
+  .hero-image {
+    flex: 1;
+  }
+
+  .description {
+    margin: 0;
+    padding: 0 1rem 1rem 1rem;
+    font-size: 1.2rem;
+  }
+  
+  .container {
+    // background-color: #8C54D0;
+    // background-color: #6A5188;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    scroll-snap-align: center;
+    // justify-content: stretch;
+    
+  }
+  
+  .mysteries {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .mystery {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: black;
+    justify-content: center;
+    // border-bottom: 1px solid black;
+
+    & > p {
+      margin: 0;
+      padding-left: 3rem;
+      font-size: 1.2rem;
+    }
+
+    &:hover {
+      background-color: #9E94AA;
+    }
+  }
+    
+  
+  .link {
+    margin: 0;
+    margin-bottom: 1rem;
+    padding-left: 2rem;
+    font-size: 2rem;
+    font-family: 'Satisfy', 'Dancing Script', 'cursive', 'Arial', 'sans-serif';
+  }
+}

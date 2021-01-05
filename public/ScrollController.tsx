@@ -1,5 +1,11 @@
 import React from 'react'
 
+// Implementing the JSX
+{/* <ScrollController components={[
+  <Home key="home" />,
+  <MysteriesHome key="mysteries" />
+]}/> */}
+
 // Define an interface for props
 interface ComponentPropsI {
   components: JSX.Element[]

@@ -1,21 +1,22 @@
 {
   "glorious": {
-    "name": "Glorious",
     "first": {
       "name": "The Resurrection",
-      "scene1": "",
-      "scene2": "",
-      "scene3": "",
-      "scene4": "",
-      "scene5": "",
-      "scene6": "",
-      "scene7": "",
-      "scene8": "",
-      "scene9": "",
-      "scene10": ""
+      "number": "First",
+      "scene1": "1",
+      "scene2": "2",
+      "scene3": "3",
+      "scene4": "4",
+      "scene5": "5",
+      "scene6": "6",
+      "scene7": "7",
+      "scene8": "8",
+      "scene9": "9",
+      "scene10": "10"
     },
     "second": {
       "name": "The Ascension",
+      "number": "Second",
       "scene1": "",
       "scene2": "",
       "scene3": "",
@@ -29,6 +30,7 @@
     },
     "third": {
       "name": "The Descent of The Holy Spirit",
+      "number": "Third",
       "scene1": "",
       "scene2": "",
       "scene3": "",
@@ -42,6 +44,7 @@
     },
     "fourth": {
       "name": "The Assumption",
+      "number": "Fourth",
       "scene1": "",
       "scene2": "",
       "scene3": "",
@@ -55,6 +58,7 @@
     },
     "fifth": {
       "name": "The Coronation",
+      "number": "Fifth",
       "scene1": "",
       "scene2": "",
       "scene3": "",
@@ -68,9 +72,9 @@
     }
   },
   "joyful": {
-    "name": "Joyful",
     "first": {
       "name": "The Annunciation",
+      "number": "First",
       "scene1": "",
       "scene2": "",
       "scene3": "",
@@ -84,6 +88,7 @@
     },
     "second": {
       "name": "The Visitation",
+      "number": "Second",
       "scene1": "",
       "scene2": "",
       "scene3": "",
@@ -97,6 +102,7 @@
     },
     "third": {
       "name": "The Nativity",
+      "number": "Third",
       "scene1": "",
       "scene2": "",
       "scene3": "",
@@ -110,6 +116,7 @@
     },
     "fourth": {
       "name": "The Presentation",
+      "number": "Fourth",
       "scene1": "",
       "scene2": "",
       "scene3": "",
@@ -123,6 +130,7 @@
     },
     "fifth": {
       "name": "The Finding of Jesus in the Temple",
+      "number": "Fifth",
       "scene1": "",
       "scene2": "",
       "scene3": "",
@@ -136,9 +144,9 @@
     }
   },
   "sorrowful": {
-    "name": "Sorrowful",
     "first": {
       "name": "The Agony in the Garden",
+      "number": "First",
       "scene1": "",
       "scene2": "",
       "scene3": "",
@@ -152,6 +160,7 @@
     },
     "second": {
       "name": "The Scourging at the Pillar",
+      "number": "Second",
       "scene1": "",
       "scene2": "",
       "scene3": "",
@@ -165,6 +174,7 @@
     },
     "third": {
       "name": "The Crowning with Thorns",
+      "number": "Third",
       "scene1": "",
       "scene2": "",
       "scene3": "",
@@ -178,6 +188,7 @@
     },
     "fourth": {
       "name": "The Carrying of The Cross",
+      "number": "Fourth",
       "scene1": "",
       "scene2": "",
       "scene3": "",
@@ -191,6 +202,7 @@
     },
     "fifth": {
       "name": "The Crucifixion",
+      "number": "Fifth",
       "scene1": "",
       "scene2": "",
       "scene3": "",
@@ -204,9 +216,9 @@
     }
   },
   "luminous": {
-    "name": "Luminous",
     "first": {
       "name": "The Baptism of The Lord",
+      "number": "First",
       "scene1": "",
       "scene2": "",
       "scene3": "",
@@ -220,6 +232,7 @@
     },
     "second": {
       "name": "The Wedding at Cana",
+      "number": "Second",
       "scene1": "",
       "scene2": "",
       "scene3": "",
@@ -233,6 +246,7 @@
     },
     "third": {
       "name": "Proclamation of The Kingdom",
+      "number": "Third",
       "scene1": "",
       "scene2": "",
       "scene3": "",
@@ -246,6 +260,7 @@
     },
     "fourth": {
       "name": "The Transfiguration",
+      "number": "Fourth",
       "scene1": "",
       "scene2": "",
       "scene3": "",
@@ -259,6 +274,7 @@
     },
     "fifth": {
       "name": "The Institution of The Eucharist",
+      "number": "Fifth",
       "scene1": "",
       "scene2": "",
       "scene3": "",

@@ -1,7 +1,23 @@
-export interface MysteryI {
+export interface SceneI {
   name: string;
+  number: string;
+  scene1: string;
+  scene2: string;
+  scene3: string;
+  scene4: string;
+  scene5: string;
+  scene6: string;
+  scene7: string;
+  scene8: string;
+  scene9: string;
+  scene10: string;
+}
+
+export interface MysteryI {
+  // name: string;
   first: {
     name: string;
+    number: string;
     scene1: string;
     scene2: string;
     scene3: string;
@@ -15,6 +31,7 @@ export interface MysteryI {
   },
   second: {
     name: string;
+    number: string;
     scene1: string;
     scene2: string;
     scene3: string;
@@ -28,6 +45,7 @@ export interface MysteryI {
   },
   third: {
     name: string;
+    number: string;
     scene1: string;
     scene2: string;
     scene3: string;
@@ -41,6 +59,7 @@ export interface MysteryI {
   },
   fourth: {
     name: string;
+    number: string;
     scene1: string;
     scene2: string;
     scene3: string;
@@ -54,6 +73,7 @@ export interface MysteryI {
   },
   fifth: {
     name: string;
+    number: string;
     scene1: string;
     scene2: string;
     scene3: string;

@@ -1,16 +1,18 @@
 import React from 'react'
-import { SceneI } from '../utils/interfaces'
+import { HAIL_MARY } from '../utils/prayers'
 
 // Render 10 scenes at a time
-const Scenes: React.FC<{selectedMystery: string, currentMysteryNumber: string, scene: string}> = 
-  ({ selectedMystery, currentMysteryNumber, scene }) => {
+const Scene: React.FC<{decadeNumber: string, mystery: string, name: string}> = 
+  ({ decadeNumber, mystery, name}) => {
 
   return (
-    <>
-      <h1 className="title title--small">The {currentMysteryNumber} {selectedMystery} Mystery</h1>
-      <h2 className="title">{scene}</h2>
-    </>
+    <div className="container">
+      <h1 className="">The {decadeNumber} {name} Mystery</h1>
+      <h2 className="">{mystery}</h2>
+      <p className="prayer">{HAIL_MARY[0]}</p>
+      <p className="prayer">{HAIL_MARY[1]}</p>
+    </div>
   )
 }
 
-export default Scenes
+export default Scene

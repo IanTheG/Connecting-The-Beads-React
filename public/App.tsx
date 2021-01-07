@@ -4,6 +4,7 @@ import Home from './components/Home'
 import MysteriesHome from './components/MysteriesHome'
 import Guide from './components/Guide'
 import Mystery from './components/Mystery'
+import OpeningPrayers from './components/OpeningPrayers'
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
           <div className="scroll-container">
             <Home />
             <Guide />
+            <OpeningPrayers />
             <MysteriesHome />
           </div>
         </Route>

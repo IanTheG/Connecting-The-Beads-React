@@ -20,22 +20,22 @@ const App = () => {
         </Route>
         <Route path="/glorious">
           <div className="scroll-container">
-            <Mystery name="glorious"/>
+            <Mystery mysteryName="glorious"/>
           </div>
         </Route>
         <Route path="/joyful">
           <div className="scroll-container">
-            <Mystery name="joyful"/>
+            <Mystery mysteryName="joyful"/>
           </div>
         </Route>
         <Route path="/sorrowful">
           <div className="scroll-container">
-            <Mystery name="sorrowful"/>
+            <Mystery mysteryName="sorrowful"/>
           </div>
         </Route>
         <Route path="/luminous">
           <div className="scroll-container">
-            <Mystery name="luminous"/>
+            <Mystery mysteryName="luminous"/>
           </div>
         </Route>
       </Switch>

@@ -4,7 +4,7 @@ import { MysteryI } from './interfaces'
 
 // Get requests for retrieving mystery from server
 const getMystery = async (mystery: string) => {
-  return await axios.get<MysteryI>(`http://localhost:3000/${mystery}`)
+  return await axios.get<MysteryI>(`http://localhost:3000/mysteries/${mystery}`)
 
   // try {
   //   return await axios.get<MysteryI>(`http://localhost:3000/${mystery}`)

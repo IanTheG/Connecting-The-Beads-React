@@ -1,39 +1,60 @@
 import React, { useEffect, useState } from 'react'
 import getMystery from '../utils/api'
-import { MysteryI, SceneI } from '../utils/interfaces'
-import Decade from './Decade'
+import { MysteryI } from '../utils/interfaces'
+import { OUR_FATHER, GLORY_BE, FATIMA_PRAYER} from '../utils/prayers'
+import Scene from './Scene'
 import ClosingPrayers from './ClosingPrayers'
 
-const Mystery: React.FC<{name: string}> = ({ name }): JSX.Element | null => {
+const Mystery: React.FC<{mysteryName: string}> = ({ mysteryName }): JSX.Element | null => {
 
   const [selectedMysteries, setSelectedMysteries] = useState<MysteryI>()
+  const [currentDecade, setCurrentDecade] = useState<number>(0);
 
   useEffect(() => {
-    getMystery(name)
-      .then((res) => setSelectedMysteries(res.data))
+    getMystery(mysteryName)
+      .then((res) => {
+        setSelectedMysteries(res.data)
+        setCurrentDecade(0)
+      })
       .catch(err => console.error(err))
-  }, [name])
+  }, [mysteryName])
 
-  return (
+  // console.log(selectedMysteries)
+
+  // Render a decade at a time, user clicks/taps a button to navigate to the next decade
+  const handleNextDecade = () => {
+    if (currentDecade < 4) {
+      setCurrentDecade(currentDecade + 1)
+      document.getElementById('top-container')?.scrollIntoView(true)
+    }
+  }
+
+  return selectedMysteries ? (
     <>
-      {selectedMysteries ? (
-        Object.keys(selectedMysteries).map((decadeNumber, idx) => {
-          let currentMysteryNumber: keyof MysteryI = decadeNumber as keyof MysteryI
-          let currentScenes: SceneI = selectedMysteries[currentMysteryNumber];
-          let mysteryName: string = selectedMysteries[currentMysteryNumber].name;
+      <div id="top-container" className="container">
+        <h2 className="">The {selectedMysteries.decades[currentDecade].number} {mysteryName} Mystery is {selectedMysteries.decades[currentDecade].name}.</h2>
 
+        <img />
+        <p className="prayer">{OUR_FATHER[0]}</p>
+        <p className="prayer">{OUR_FATHER[1]}</p>
+      </div>
+
+      {Object.keys(selectedMysteries.decades[currentDecade]).map((scene, idx2) => {
+        if (scene !== 'name' && scene !== 'number') {
           return (
-            <Decade
-              key={idx.toString()}
-              decadeNumber={decadeNumber}
-              mystery={mysteryName}
-              currentScenes={currentScenes}
-              name={name}/>
+            <Scene key={idx2.toString()} decadeNumber={selectedMysteries.decades[currentDecade].number} mystery={selectedMysteries.decades[currentDecade].name} selectedMystery={mysteryName}/>
           )
-        }))
-        : null}
+        }
+      })}
+
+      <div className="container">
+        <p className="prayer">{GLORY_BE[0]}</p>
+        <p className="prayer">{GLORY_BE[1]}</p>
+        <p className="prayer">{FATIMA_PRAYER}</p>
+        <button className="" onClick={handleNextDecade}>Continue</button>
+      </div>
     </>
-  )
+    ) : null
 }
 
 export default Mystery

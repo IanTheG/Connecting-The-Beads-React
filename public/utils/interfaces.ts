@@ -19,3 +19,11 @@ export interface MysteryI {
   name: string;
   decades: SceneI[];
 }
+
+// interface LocationI {
+//   hash: string;
+//   key: string;
+//   pathname: string;
+//   search: string;
+//   state: { decade: number }
+// }

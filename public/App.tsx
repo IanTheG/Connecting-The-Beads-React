@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import { Switch, Route } from 'react-router-dom'
 
 import Home from './components/Home'
 import MysteriesNav from './components/MysteriesNav'
@@ -10,31 +10,29 @@ import ClosingPrayers from './components/ClosingPrayers'
 
 const App = () => {
   return (
-    <Router>
-      <Switch>
-        <Route exact path="/">
-          <Home />
-          <Guide />
-          <OpeningPrayers />
-          <MysteriesNav />
-        </Route>
-        <Route path="/glorious">
-          <Mystery mysteryName="glorious"/>
-        </Route>
-        <Route path="/joyful">
-          <Mystery mysteryName="joyful"/>
-        </Route>
-        <Route path="/sorrowful">
-          <Mystery mysteryName="sorrowful"/>
-        </Route>
-        <Route path="/luminous">
-          <Mystery mysteryName="luminous"/>
-        </Route>
-        <Route path="/closing">
-          <ClosingPrayers />
-        </Route>
-      </Switch>
-    </Router>
+    <Switch>
+      <Route exact path="/">
+        <Home />
+        <Guide />
+        <OpeningPrayers />
+        <MysteriesNav />
+      </Route>
+      <Route path="/glorious/:mystery">
+        <Mystery mysteryName="glorious"/>
+      </Route>
+      <Route path="/joyful/:mystery">
+        <Mystery mysteryName="joyful"/>
+      </Route>
+      <Route path="/sorrowful/:mystery">
+        <Mystery mysteryName="sorrowful"/>
+      </Route>
+      <Route path="/luminous/:mystery">
+        <Mystery mysteryName="luminous"/>
+      </Route>
+      <Route path="/closing-prayers">
+        <ClosingPrayers />
+      </Route>
+    </Switch>
   )
 }
 

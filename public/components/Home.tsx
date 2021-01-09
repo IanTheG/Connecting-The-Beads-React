@@ -1,9 +1,13 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 const Home = () => {
 
+  useEffect(() => {
+    document.getElementById('top-container')?.scrollIntoView(true)
+  })
+
   return (
-    <div className="container">
+    <div id="top-container" className="container">
       <h1 className="title">Connecting The Beads</h1>
       {/* Image of rosary beads */}
       <img className="hero-image" src="" />

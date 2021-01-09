@@ -1,0 +1,46 @@
+
+@media screen and (min-width: 10px) {
+  .mysteries {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  .mystery {
+    margin: 0;
+    margin-bottom: 2%;
+    padding-left: 2rem;
+    font-size: 2rem;
+    font-family: 'Satisfy', 'Dancing Script', 'cursive', 'Arial', 'sans-serif';
+  }
+  .link {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: black;
+    padding-top: 0.5em;
+
+    &:hover {
+      background-color: #9E94AA;
+    }
+  }
+  .description--day {
+    padding: 0 0 0.5rem 3rem;
+  }
+}
+
+@media screen and (min-width: 568px) {
+  .mystery {
+    padding: 0;
+  }
+  .mysteries {
+    margin: 0;
+    flex-direction: row;
+  }
+  .description--day {
+    padding: 0 0 0.5rem 0;
+  }
+  .link {
+    align-items: center;
+  }
+}

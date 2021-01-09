@@ -1,7 +1,57 @@
 @import './components';
 
+// Main styles used throughout out app
+
 .scroll-container {
   height: 100vh;
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
+}
+
+.container {
+  // background-color: #8C54D0;
+  // background-color: #6A5188;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  scroll-snap-align: center;
+}
+
+@media screen and (min-width: 10px) {
+  body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  html {
+    font-size: 16px;
+  }
+}
+
+@media screen and (orientation: landscape) {
+  .container--landscape {
+    display: flex;
+    flex-direction: row;
+    
+    & > section, aside {
+      flex: 1;
+    }
+  }
+}
+
+@media screen and (min-width: 350px) {
+  @media screen and (orientation: portrait) {
+    html {
+      font-size: 18px;
+    }   
+  }
+}
+
+@media screen and (min-width: 600px) {
+  @media screen and (orientation: landscape) {
+    html {
+      font-size: 18px;
+    }
+  }
 }

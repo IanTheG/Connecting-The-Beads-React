@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-const MysteriesHome = () => {
+const MysteriesNav = () => {
 
   return (
     <div className="container">
@@ -38,4 +38,4 @@ const MysteriesHome = () => {
   )
 }
 
-export default MysteriesHome
+export default MysteriesNav

@@ -1,42 +1,37 @@
 import React from 'react'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+
 import Home from './components/Home'
-import MysteriesHome from './components/MysteriesHome'
+import MysteriesNav from './components/MysteriesNav'
 import Guide from './components/Guide'
 import Mystery from './components/Mystery'
 import OpeningPrayers from './components/OpeningPrayers'
+import ClosingPrayers from './components/ClosingPrayers'
 
 const App = () => {
   return (
     <Router>
       <Switch>
         <Route exact path="/">
-          <div className="scroll-container">
-            <Home />
-            <Guide />
-            <OpeningPrayers />
-            <MysteriesHome />
-          </div>
+          <Home />
+          <Guide />
+          <OpeningPrayers />
+          <MysteriesNav />
         </Route>
         <Route path="/glorious">
-          <div className="scroll-container">
-            <Mystery mysteryName="glorious"/>
-          </div>
+          <Mystery mysteryName="glorious"/>
         </Route>
         <Route path="/joyful">
-          <div className="scroll-container">
-            <Mystery mysteryName="joyful"/>
-          </div>
+          <Mystery mysteryName="joyful"/>
         </Route>
         <Route path="/sorrowful">
-          <div className="scroll-container">
-            <Mystery mysteryName="sorrowful"/>
-          </div>
+          <Mystery mysteryName="sorrowful"/>
         </Route>
         <Route path="/luminous">
-          <div className="scroll-container">
-            <Mystery mysteryName="luminous"/>
-          </div>
+          <Mystery mysteryName="luminous"/>
+        </Route>
+        <Route path="/closing">
+          <ClosingPrayers />
         </Route>
       </Switch>
     </Router>

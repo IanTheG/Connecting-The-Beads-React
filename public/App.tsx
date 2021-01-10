@@ -9,6 +9,19 @@ import OpeningPrayers from './components/OpeningPrayers'
 import ClosingPrayers from './components/ClosingPrayers'
 
 const App = () => {
+
+  let orientation: number = 0
+
+  window.addEventListener('orientationchange', (e) => {
+    orientation = (e.target as Window).screen.orientation.angle
+
+    if (orientation === 90) {
+      // show / hide the app and a page that asks the user to rotate the device to portrait mode
+    }
+
+  })
+
+
   return (
     <Switch>
       <Route exact path="/">
@@ -17,16 +30,16 @@ const App = () => {
         <OpeningPrayers />
         <MysteriesNav />
       </Route>
-      <Route path="/glorious/:mystery">
+      <Route path="/glorious">
         <Mystery mysteryName="glorious"/>
       </Route>
-      <Route path="/joyful/:mystery">
+      <Route path="/joyful">
         <Mystery mysteryName="joyful"/>
       </Route>
-      <Route path="/sorrowful/:mystery">
+      <Route path="/sorrowful">
         <Mystery mysteryName="sorrowful"/>
       </Route>
-      <Route path="/luminous/:mystery">
+      <Route path="/luminous">
         <Mystery mysteryName="luminous"/>
       </Route>
       <Route path="/closing-prayers">

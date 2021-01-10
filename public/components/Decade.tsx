@@ -1,16 +1,13 @@
 import React, { useEffect } from 'react'
 import { useHistory, useLocation } from 'react-router'
 
-import { MysteryI, SceneI } from '../utils/interfaces'
 import { OUR_FATHER, GLORY_BE, FATIMA_PRAYER} from '../utils/prayers'
 import Scene from './Scene'
 
-import { useRosary } from '../utils/RosaryContext'
+import { SceneI } from '../utils/interfaces'
 
-const Decade: React.FC<{ mysteryName: string }> = ({ mysteryName }) => {
-
-  // Access state from RosaryContext.Provider in Mystery component
-  const { selectedMysteries, currentMystery } = useRosary()!;
+const Decade: React.FC<{ mysteryName: string, currentMystery: SceneI }> =
+  ({ mysteryName, currentMystery }) => {
 
   const history = useHistory()
   const location = useLocation<{ decade: number }>()
@@ -22,12 +19,7 @@ const Decade: React.FC<{ mysteryName: string }> = ({ mysteryName }) => {
   const handleNextDecade = () => {
     if (location.state.decade < 4) {
       const nextDecade = location.state.decade + 1
-      const nextMysteryUrl = selectedMysteries.decades[nextDecade].name.toLowerCase().replace(/\s/g, '-')
-      const nextUrl = `/${mysteryName}/${nextMysteryUrl}`
-
-      // Format link to push to with state, enables forward and back navigation
-      // setCurrentDecade(nextDecade)
-      history.push(nextUrl, {decade: nextDecade} )
+      history.push(mysteryName, {decade: nextDecade} )
     } else {
       // Navigate to closing prayers on final click
       history.push('/closing-prayers')
@@ -37,7 +29,7 @@ const Decade: React.FC<{ mysteryName: string }> = ({ mysteryName }) => {
   return (
     <>
       <div id="top-container" className="container">
-        <h2 className="">The {currentMystery.number} {mysteryName} Mystery is {currentMystery.name}.</h2>
+        <h2 className="stated-mystery">The {currentMystery.number} {mysteryName} Mystery is {currentMystery.name}.</h2>
         <div className="container--landscape">
           <section>
             <p className="prayer">{OUR_FATHER[0]}</p>
@@ -49,12 +41,9 @@ const Decade: React.FC<{ mysteryName: string }> = ({ mysteryName }) => {
         </div>
       </div>
       {Object.entries(currentMystery).map(([key, scene], idx2) => {
-          if (key !== 'id' && key !== 'number' && key !== 'name') {
-            return (
-              <Scene key={idx2.toString()} mystery={currentMystery.name} scene={scene}/>
-            )
-          }
-        })
+        if (key !== 'id' && key !== 'number' && key !== 'name') {
+          return <Scene key={idx2.toString()} mystery={currentMystery.name} scene={scene}/>
+        }})
       }
       <div className="container">
         <div className="container--landscape">

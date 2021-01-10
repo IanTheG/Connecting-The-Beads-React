@@ -8,15 +8,17 @@ const Scene: React.FC<{ mystery: string, scene: string}> =
   return (
     <div className="container container--landscape">
       <section>
-        <h3 className="">{mystery}</h3>
+        <h3 className="stated-mystery">{mystery}</h3>
         {/* Render scene */}
-        <p>{scene}</p>
-        <p className="prayer">{HAIL_MARY[0]}</p>
-        <p className="prayer">{HAIL_MARY[1]}</p>
+        <p className="prayer">{scene}</p>
       </section>
       <aside>
         <img />
       </aside>
+      <section>
+        <p className="prayer">{HAIL_MARY[0]}</p>
+        <p className="prayer">{HAIL_MARY[1]}</p>
+      </section>
     </div>
   )
 }

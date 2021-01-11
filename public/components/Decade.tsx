@@ -30,7 +30,7 @@ const Decade: React.FC<{ mysteryName: string, currentMystery: SceneI }> =
     <>
       <div id="top-container" className="container">
         <h2 className="stated-mystery">The {currentMystery.number} {mysteryName} Mystery is {currentMystery.name}.</h2>
-        <div className="container--landscape">
+        <div>
           <section>
             <p className="prayer">{OUR_FATHER[0]}</p>
             <p className="prayer">{OUR_FATHER[1]}</p>
@@ -46,7 +46,7 @@ const Decade: React.FC<{ mysteryName: string, currentMystery: SceneI }> =
         }})
       }
       <div className="container">
-        <div className="container--landscape">
+        <div>
           <section>
             <p className="prayer">{GLORY_BE[0]}</p>
             <p className="prayer">{GLORY_BE[1]}</p>

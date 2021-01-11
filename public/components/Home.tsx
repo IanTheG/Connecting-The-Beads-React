@@ -1,9 +1,12 @@
 import React, { useEffect } from 'react'
+import { fadeAnimation } from '../utils/functions'
 
 const Home = () => {
 
   useEffect(() => {
     document.getElementById('top-container')?.scrollIntoView(true)
+
+    fadeAnimation()
   })
 
   return (

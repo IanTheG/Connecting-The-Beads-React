@@ -3,6 +3,7 @@ import { useHistory, useLocation } from 'react-router'
 
 import getMystery from '../utils/api'
 import { SceneI } from '../utils/interfaces'
+import { fadeAnimation } from '../utils/functions'
 
 import Decade from './Decade'
 
@@ -32,6 +33,10 @@ const Mystery: React.FC<{mysteryName: string}> = ({ mysteryName }): JSX.Element 
   }
 
   const [currentMystery, setCurrentMystery] = useState<SceneI>(initialState)
+
+  useEffect(() => {
+    fadeAnimation()
+  })
 
   // Re-renders when state in location object changes, enables forward-backward navigation
   useEffect(() => {

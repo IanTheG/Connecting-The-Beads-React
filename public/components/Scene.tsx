@@ -6,7 +6,7 @@ const Scene: React.FC<{ mystery: string, scene: string}> =
   ({ mystery, scene }) => {
 
   return (
-    <div className="container container--landscape">
+    <div className="container">
       <section>
         <h3 className="stated-mystery">{mystery}</h3>
         {/* Render scene */}

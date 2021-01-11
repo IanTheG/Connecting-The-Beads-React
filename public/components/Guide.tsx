@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 const Guide = () => {
+
   return (
     <div className="container">
       <h2 className="title">Praying The Rosary</h2>

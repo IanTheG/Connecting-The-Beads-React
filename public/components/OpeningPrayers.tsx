@@ -5,9 +5,9 @@ const OpeningPrayers = () => {
 
   return (
     <>
-    <div className="container container--long">
+    <div className="container">
       <h2 className="title">Opening Prayers</h2>
-      <div className="container--landscape">
+      <div>
         <section>
           {/* <h3 className="instructions">Make The Sign of The Cross</h3> */}
           <p className="prayer">{SIGN_OF_CROSS}</p>
@@ -19,7 +19,7 @@ const OpeningPrayers = () => {
       </div>
     </div>
 
-    <div className="container container--landscape">
+    <div className="container">
       <section>
         <p className="desc desc--italic">For our Holy Father, Pope Francis.</p>
         <h3 className="instructions">Say the Our Father</h3>
@@ -31,7 +31,7 @@ const OpeningPrayers = () => {
       </aside>
     </div>
 
-    <div className="container container--landscape">
+    <div className="container">
       <section>
         <p className="desc desc--italic">For the increase of the virtues of Faith, Hope, and Charity.</p>
         <h3 className="instructions">Say three Hail Marys</h3>
@@ -43,7 +43,7 @@ const OpeningPrayers = () => {
       </aside>
     </div>
 
-    <div className="container container--landscape">
+    <div className="container">
       <section>
         <h3 className="instructions">Say the Glory Be</h3>
         <p className="prayer">{GLORY_BE[0]}</p>

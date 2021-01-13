@@ -26,7 +26,7 @@ class ErrorBoundary extends Component<Props, State> {
 
   public render() {
     if (this.state.hasError) {
-      location.href = '/'
+      // location.href = '/'
       return (
         <>
           <h2>Sorry.. there was an error</h2>

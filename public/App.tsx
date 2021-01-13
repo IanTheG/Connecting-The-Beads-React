@@ -8,13 +8,7 @@ import Mystery from './components/Mystery'
 import OpeningPrayers from './components/OpeningPrayers'
 import ClosingPrayers from './components/ClosingPrayers'
 
-import { rotateToPortrait } from './utils/functions'
-
 const App = () => {
-
-  useEffect(() => {
-    rotateToPortrait()
-  })
 
   return (
     <main id="root" className="scroll-container">

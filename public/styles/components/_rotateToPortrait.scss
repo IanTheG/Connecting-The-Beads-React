@@ -7,8 +7,19 @@
   justify-content: center;
   height: 100vh;
 
+  // background-image: url();
+
   & > div > i {
     padding: 0.5rem;
     font-size: 2rem;
   }
+}
+
+@media (orientation: portrait) {
+  .scroll-container { display: block; }
+  #portrait { display: none; }
+}
+@media (orientation: landscape) {
+  .scroll-container { display: none; }
+  #portrait { display: flex; }
 }

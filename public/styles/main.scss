@@ -16,10 +16,6 @@
   flex-direction: column;
   justify-content: space-between;
 
-  &--landscape {
-    display: flex;
-  }
-
   > * {
     opacity: 0;
     transform: translate3d(0, 1rem, 0);

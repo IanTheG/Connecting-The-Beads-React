@@ -12,7 +12,7 @@ const Mystery: React.FC<{mysteryName: string}> = ({ mysteryName }): JSX.Element 
   const history = useHistory()
   const location = useLocation<{ decade: number }>()
 
-  // if (!location.state.decade) {
+  // if (location.state.decade) {
   //   history.push(mysteryName, {decade: 0})
   // }
 
@@ -32,6 +32,7 @@ const Mystery: React.FC<{mysteryName: string}> = ({ mysteryName }): JSX.Element 
     scene10: '',
   }
 
+  // const [decade, setDecade] = useState(0)
   const [currentMystery, setCurrentMystery] = useState<SceneI>(initialState)
 
   useEffect(() => {
@@ -50,6 +51,6 @@ const Mystery: React.FC<{mysteryName: string}> = ({ mysteryName }): JSX.Element 
     }
   }, [location.state.decade])
 
-  return <Decade mysteryName={mysteryName} currentMystery={currentMystery}/>
+  return <Decade mysteryName={mysteryName} currentMystery={currentMystery} />
 }
 export default Mystery

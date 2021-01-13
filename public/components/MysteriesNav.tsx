@@ -8,6 +8,7 @@ const MysteriesNav = () => {
       <h2 className="title">Mysteries</h2>
       <div className="mysteries">
         <Link className="link" to={{pathname: "/glorious", state: {decade: 0}} }>
+        {/* <Link className="link" to="/glorious"> */}
           <h3 className="mystery">Glorious</h3>
           <p className="desc desc--day">Sunday</p>
           <p className="desc desc--day">Wednesday</p>
@@ -15,6 +16,7 @@ const MysteriesNav = () => {
         </Link>
 
         <Link className="link" to={{pathname: "/joyful", state: {decade: 0}} }>
+        {/* <Link className="link" to="/joyful"> */}
           <h3 className="mystery">Joyful</h3>
           <p className="desc desc--day">Monday</p>
           <p className="desc desc--day">Saturday</p>
@@ -22,6 +24,7 @@ const MysteriesNav = () => {
         </Link>
 
         <Link className="link" to={{pathname: "/sorrowful", state: {decade: 0}} }>
+        {/* <Link className="link" to="/sorrowful"> */}
           <h3 className="mystery">Sorrowful</h3>
           <p className="desc desc--day">Tuesday</p>
           <p className="desc desc--day">Friday</p>
@@ -29,6 +32,7 @@ const MysteriesNav = () => {
         </Link>
 
         <Link className="link" to={{pathname: "/luminous", state: {decade: 0}} }>
+        {/* <Link className="link" to="/luminous"> */}
           <h3 className="mystery">Luminous</h3>
           <p className="desc desc--day">Thursday</p>
           <img />

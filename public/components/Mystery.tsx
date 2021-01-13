@@ -3,7 +3,7 @@ import { useLocation, useParams } from 'react-router'
 import { Location as Locale } from '../../node_modules/@types/history/index'
 
 import getMystery from '../utils/api'
-import { SceneI } from '../utils/interfaces'
+import { SceneI, initialState } from '../utils/interfaces'
 import { fadeAnimation } from '../utils/functions'
 
 import Decade from './Decade'
@@ -16,36 +16,10 @@ const Mystery = () => {
     ...location,
     state: location.state ? location.state : {decade: 0}
   }
-  // console.log(location2.state)
 
   const { mystery } = useParams<{ mystery: string }>()
 
-  const initialState: SceneI = {
-    id: '',
-    name: '',
-    number: '',
-    scene1: '',
-    scene2: '',
-    scene3: '',
-    scene4: '',
-    scene5: '',
-    scene6: '',
-    scene7: '',
-    scene8: '',
-    scene9: '',
-    scene10: '',
-  }
-
   const [currentMystery, setCurrentMystery] = useState<SceneI>(initialState)
-
-  // This is necessary because useLocation does not allow a default value if state is undefined
-  // const isStateDefined = () => {
-  //   if (location.state) {
-  //     return location.state.decade
-  //   } else {
-  //     return 0
-  //   }
-  // }
 
   useEffect(() => {
     fadeAnimation()
@@ -67,3 +41,12 @@ const Mystery = () => {
   return <Decade mysteryName={mystery} currentMystery={currentMystery} />
 }
 export default Mystery
+
+// This is necessary because useLocation does not allow a default value if state is undefined
+// const isStateDefined = () => {
+//   if (location.state) {
+//     return location.state.decade
+//   } else {
+//     return 0
+//   }
+// }

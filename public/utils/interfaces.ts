@@ -20,6 +20,21 @@ export interface MysteryI {
   decades: SceneI[];
 }
 
+export const initialState: SceneI = {
+  id: '',
+  name: '',
+  number: '',
+  scene1: '',
+  scene2: '',
+  scene3: '',
+  scene4: '',
+  scene5: '',
+  scene6: '',
+  scene7: '',
+  scene8: '',
+  scene9: '',
+  scene10: '',
+}
 // interface LocationI {
 //   hash: string;
 //   key: string;

@@ -10,19 +10,23 @@ const Decade: React.FC<{ mysteryName: string, currentMystery: SceneI }> =
   ({ mysteryName, currentMystery }) => {
 
   const history = useHistory()
-  const location = useLocation<{ decade: number }>()
+  const { state } = useLocation<{ decade: number }>()
 
   useEffect(() => {
     document.getElementById('top-container')?.scrollIntoView(true)
   })
 
   const handleNextDecade = () => {
-    if (location.state.decade < 4) {
-      const nextDecade = location.state.decade + 1
-      history.push(mysteryName, {decade: nextDecade} )
+    if (state) {
+      if (state.decade < 4) {
+        const nextDecade = state.decade + 1
+        history.push(mysteryName, {decade: nextDecade} )
+      } else {
+        history.push('/closing-prayers')
+      }
     } else {
-      // Navigate to closing prayers on final click
-      history.push('/closing-prayers')
+      // Push to the second mystery if just entering ie: /glorious into the address bar
+      history.push(mysteryName, {decade: 1} )
     }
   }
 

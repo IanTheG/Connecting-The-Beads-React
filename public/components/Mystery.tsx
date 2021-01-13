@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import { useHistory, useLocation } from 'react-router'
+import { useLocation, useParams } from 'react-router'
+import { Location as Locale } from '../../node_modules/@types/history/index'
 
 import getMystery from '../utils/api'
 import { SceneI } from '../utils/interfaces'
@@ -7,14 +8,17 @@ import { fadeAnimation } from '../utils/functions'
 
 import Decade from './Decade'
 
-const Mystery: React.FC<{mysteryName: string}> = ({ mysteryName }): JSX.Element | null => {
+const Mystery = () => {
 
-  const history = useHistory()
   const location = useLocation<{ decade: number }>()
 
-  // if (location.state.decade) {
-  //   history.push(mysteryName, {decade: 0})
-  // }
+  const location2: Locale<{ decade: number }> = {
+    ...location,
+    state: location.state ? location.state : {decade: 0}
+  }
+  // console.log(location2.state)
+
+  const { mystery } = useParams<{ mystery: string }>()
 
   const initialState: SceneI = {
     id: '',
@@ -32,25 +36,34 @@ const Mystery: React.FC<{mysteryName: string}> = ({ mysteryName }): JSX.Element 
     scene10: '',
   }
 
-  // const [decade, setDecade] = useState(0)
   const [currentMystery, setCurrentMystery] = useState<SceneI>(initialState)
+
+  // This is necessary because useLocation does not allow a default value if state is undefined
+  // const isStateDefined = () => {
+  //   if (location.state) {
+  //     return location.state.decade
+  //   } else {
+  //     return 0
+  //   }
+  // }
 
   useEffect(() => {
     fadeAnimation()
   })
 
-  // Re-renders when state in location object changes, enables forward-backward navigation
+  // Re-renders when state in location object changes or mystery changes, enables forward-backward navigation
   useEffect(() => {
     let mounted = true
-    getMystery(mysteryName)
-      .then((res) => mounted && setCurrentMystery(res.data.decades[location.state.decade]))
+        
+    getMystery(mystery)
+      .then((res) => mounted && setCurrentMystery(res.data.decades[location2.state.decade]))
       .catch(err => console.error(err))
     
     return () => {
       mounted = false
     }
-  }, [location.state.decade])
+  }, [location2.state.decade])
 
-  return <Decade mysteryName={mysteryName} currentMystery={currentMystery} />
+  return <Decade mysteryName={mystery} currentMystery={currentMystery} />
 }
 export default Mystery

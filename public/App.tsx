@@ -1,5 +1,5 @@
-import React, { useEffect } from 'react'
-import { Switch, Route } from 'react-router-dom'
+import React from 'react'
+import { Switch, Route, useLocation } from 'react-router-dom'
 
 import Home from './components/Home'
 import MysteriesNav from './components/MysteriesNav'
@@ -19,20 +19,11 @@ const App = () => {
           <OpeningPrayers />
           <MysteriesNav />
         </Route>
-        <Route path="/glorious">
-          <Mystery mysteryName="glorious"/>
-        </Route>
-        <Route path="/joyful">
-          <Mystery mysteryName="joyful"/>
-        </Route>
-        <Route path="/sorrowful">
-          <Mystery mysteryName="sorrowful"/>
-        </Route>
-        <Route path="/luminous">
-          <Mystery mysteryName="luminous"/>
-        </Route>
-        <Route path="/closing-prayers">
+        <Route exact path="/closing-prayers">
           <ClosingPrayers />
+        </Route>
+        <Route path="/:mystery">
+          <Mystery />
         </Route>
       </Switch>
     </main>

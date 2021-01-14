@@ -2,13 +2,12 @@ import React, { useEffect, useState } from 'react'
 import { useLocation, useParams } from 'react-router'
 import { Location as Locale } from '../../node_modules/@types/history/index'
 
-import getMystery from '../utils/api'
-import { SceneI, initialState } from '../utils/interfaces'
-import { fadeAnimation } from '../utils/functions'
+import { SceneI, initialState, MysteryI } from '../utils/interfaces'
+import { fadeAnimation, getIndex } from '../utils/functions'
 
 import Decade from './Decade'
 
-const Mystery = () => {
+const Mystery: React.FC<{ rosary: MysteryI[] }> = ({ rosary }) => {
 
   const location = useLocation<{ decade: number }>()
 
@@ -23,15 +22,13 @@ const Mystery = () => {
 
   useEffect(() => {
     fadeAnimation()
-  })
+  }, [])
 
   // Re-renders when state in location object changes or mystery changes, enables forward-backward navigation
   useEffect(() => {
     let mounted = true
-        
-    getMystery(mystery)
-      .then((res) => mounted && setCurrentMystery(res.data.decades[location2.state.decade]))
-      .catch(err => console.error(err))
+    
+    setCurrentMystery(rosary[getIndex(mystery)].decades[location2.state.decade])
     
     return () => {
       mounted = false
@@ -40,6 +37,7 @@ const Mystery = () => {
 
   return <Decade mysteryName={mystery} currentMystery={currentMystery} />
 }
+
 export default Mystery
 
 // This is necessary because useLocation does not allow a default value if state is undefined

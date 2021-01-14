@@ -29,7 +29,6 @@ const Mystery: React.FC<{ rosary: MysteryI[] }> = ({ rosary }) => {
     let mounted = true
     
     setCurrentMystery(rosary[getIndex(mystery)].decades[location2.state.decade])
-    // rosary && console.log(rosary[getIndex(mystery)].decades[location2.state.decade])
     
     return () => {
       mounted = false

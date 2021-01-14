@@ -9,6 +9,7 @@ import OpeningPrayers from './components/OpeningPrayers'
 import ClosingPrayers from './components/ClosingPrayers'
 
 import { MysteryI } from './utils/interfaces'
+import { generateRosary } from './utils/functions'
 import getRosary from './utils/api'
 
 const App = () => {
@@ -17,10 +18,10 @@ const App = () => {
 
   useEffect(() => {
     let mounted = true
-
-    getRosary()
-      .then((res) => setRosary(res.data))
-      .catch(err => console.error(err))
+    generateRosary(setRosary)
+    // getRosary()
+    //   .then((res) => setRosary(res.data))
+    //   .catch(err => console.error(err))
 
     return () => {
       mounted = false
@@ -29,7 +30,7 @@ const App = () => {
 
   useEffect(() => {
     console.log(rosary)
-  }, [])
+  }, [rosary])
 
   return (
     <main id="root" className="scroll-container">

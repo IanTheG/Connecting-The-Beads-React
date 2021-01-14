@@ -50,11 +50,17 @@ export const getIndex = (mystery: string): number => {
   }
 }
 
-export const generateRosary = (rosary: MysteryI[], setRosary: React.Dispatch<React.SetStateAction<MysteryI[]>>) => {
-  getRosary()
-    .then((res) => setRosary(res.data))
-    .then(() => {
-      return rosary
-    })
-    .catch(err => console.error(err))
+export const generateRosary = async (setRosary: React.Dispatch<React.SetStateAction<MysteryI[]>>) => {
+  try { 
+    const rosaryData = await getRosary()
+    setRosary(rosaryData.data)
+  } catch (error) {
+    console.log(error)
+  }
+  // getRosary()
+    // .then((res) => setRosary(res.data))
+    // .then(() => {
+    //   return rosary
+    // })
+    // .catch(err => console.error(err))
 }

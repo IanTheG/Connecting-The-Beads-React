@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react'
-import getRosary from './api'
-import { MysteryI } from './interfaces'
+// import React, { useEffect, useState } from 'react'
+// import getRosary from './api'
+// import { MysteryI } from './interfaces'
 
 // Fade animation found on
 // https://codepen.io/michellebarker/pen/PowYKXJ?editors=1010
@@ -40,27 +40,27 @@ export const fadeAnimation = (): void => {
   })
 }
 
-export const getIndex = (mystery: string): number => {
-  switch (mystery) {
-    case 'glorious': return 0
-    case 'joyful': return 1
-    case 'sorrowful': return 2
-    case 'luminous': return 3
-    default: return 0
-  }
-}
+// export const getIndex = (mystery: string): number => {
+//   switch (mystery) {
+//     case 'glorious': return 0
+//     case 'joyful': return 1
+//     case 'sorrowful': return 2
+//     case 'luminous': return 3
+//     default: return 0
+//   }
+// }
 
-export const generateRosary = async (setRosary: React.Dispatch<React.SetStateAction<MysteryI[]>>) => {
-  try { 
-    const rosaryData = await getRosary()
-    setRosary(rosaryData.data)
-  } catch (error) {
-    console.log(error)
-  }
+// export const generateRosary = async (setRosary: React.Dispatch<React.SetStateAction<MysteryI[]>>) => {
+//   try { 
+//     const rosaryData = await getRosary()
+//     setRosary(rosaryData.data)
+//   } catch (error) {
+//     console.log(error)
+//   }
   // getRosary()
     // .then((res) => setRosary(res.data))
     // .then(() => {
     //   return rosary
     // })
     // .catch(err => console.error(err))
-}
+// }

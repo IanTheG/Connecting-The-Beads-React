@@ -8,8 +8,8 @@ const ClosingPrayers = () => {
   const history = useHistory()
 
   useEffect(() => {
-    fadeAnimation()
     document.getElementById('top-container')?.scrollIntoView(true)
+    fadeAnimation()
   })
   
   return (

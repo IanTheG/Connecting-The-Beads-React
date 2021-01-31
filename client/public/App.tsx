@@ -1,36 +1,14 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { Switch, Route } from 'react-router-dom'
 
 import Home from './components/Home'
-import MysteriesNav from './components/MysteriesNav'
 import Guide from './components/Guide'
-import Mystery from './components/Mystery'
 import OpeningPrayers from './components/OpeningPrayers'
+import MysteriesNav from './components/MysteriesNav'
 import ClosingPrayers from './components/ClosingPrayers'
-
-import { MysteryI } from './utils/interfaces'
-import { generateRosary } from './utils/functions'
-import getRosary from './utils/api'
+import Mystery from './components/Mystery'
 
 const App = () => {
-
-  const [rosary, setRosary] = useState<MysteryI[]>([])
-
-  useEffect(() => {
-    let mounted = true
-    generateRosary(setRosary)
-    // getRosary()
-    //   .then((res) => setRosary(res.data))
-    //   .catch(err => console.error(err))
-
-    return () => {
-      mounted = false
-    }
-  }, [])
-
-  useEffect(() => {
-    console.log(rosary)
-  }, [rosary])
 
   return (
     <main id="root" className="scroll-container">
@@ -45,7 +23,7 @@ const App = () => {
           <ClosingPrayers />
         </Route>
         <Route path="/:mystery">
-          <Mystery rosary={rosary}/>
+          <Mystery />
         </Route>
       </Switch>
     </main>

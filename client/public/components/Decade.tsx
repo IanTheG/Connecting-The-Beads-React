@@ -6,8 +6,8 @@ import Scene from './Scene'
 
 import { SceneI } from '../utils/interfaces'
 
-const Decade: React.FC<{ mysteryName: string, currentMystery: SceneI }> =
-  ({ mysteryName, currentMystery }) => {
+const Decade: React.FC<{ mysteryName: string, currentDecade: SceneI }> =
+  ({ mysteryName, currentDecade }) => {
 
   const history = useHistory()
   const { state } = useLocation<{ decade: number }>()
@@ -25,7 +25,7 @@ const Decade: React.FC<{ mysteryName: string, currentMystery: SceneI }> =
         history.push('/closing-prayers')
       }
     } else {
-      // Push to the second mystery if just entering ie: /glorious into the address bar
+      // Push to the first mystery if just entering ie: /glorious into the address bar
       history.push(mysteryName, {decade: 1} )
     }
   }
@@ -33,7 +33,7 @@ const Decade: React.FC<{ mysteryName: string, currentMystery: SceneI }> =
   return (
     <>
       <div id="top-container" className="container">
-        <h2 className="stated-mystery">The {currentMystery.number} {mysteryName} Mystery is {currentMystery.name}.</h2>
+        <h2 className="stated-mystery">The {currentDecade.number} {mysteryName} Mystery is {currentDecade.name}.</h2>
         <div>
           <section>
             <p className="prayer">{OUR_FATHER[0]}</p>
@@ -44,9 +44,9 @@ const Decade: React.FC<{ mysteryName: string, currentMystery: SceneI }> =
           </aside>
         </div>
       </div>
-      {Object.entries(currentMystery).map(([key, scene], idx2) => {
+      {Object.entries(currentDecade).map(([key, scene], idx2) => {
         if (key !== 'id' && key !== 'number' && key !== 'name') {
-          return <Scene key={idx2.toString()} mystery={currentMystery.name} scene={scene}/>
+          return <Scene key={idx2.toString()} mystery={currentDecade.name} scene={scene}/>
         }})
       }
       <div className="container">

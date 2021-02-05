@@ -1,0 +1,202 @@
+var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+try {
+  var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+  _parcelHelpers.defineInteropFlag(exports);
+  var _react = require('react');
+  var _reactDefault = _parcelHelpers.interopDefault(_react);
+  var _reactRouter = require('react-router');
+  var _utilsPrayers = require('../utils/prayers');
+  var _utilsFunctions = require('../utils/functions');
+  var _Scene = require('./Scene');
+  var _SceneDefault = _parcelHelpers.interopDefault(_Scene);
+  var _jsxFileName = "/Users/iantheg/Documents/Git/Connecting-The-Beads/client/public/components/Decade.tsx", _s = $RefreshSig$();
+  const Decade = ({mysteryName, currentDecade}) => {
+    _s();
+    const history = _reactRouter.useHistory();
+    const {state} = _reactRouter.useLocation();
+    _react.useEffect(() => {
+      document.getElementById('top-container')?.scrollIntoView?.(true);
+      _utilsFunctions.fadeAnimation();
+    });
+    const handleNextDecade = () => {
+      if (state) {
+        if (state.decade < 4) {
+          const nextDecade = state.decade + 1;
+          history.push(mysteryName, {
+            decade: nextDecade
+          });
+        } else {
+          history.push('/closing-prayers');
+        }
+      } else {
+        // Push to the first mystery if just entering ie: /glorious into the address bar
+        history.push(mysteryName, {
+          decade: 1
+        });
+      }
+    };
+    return (
+      /*#__PURE__*/_reactDefault.default.createElement(_reactDefault.default.Fragment, null, /*#__PURE__*/_reactDefault.default.createElement("div", {
+        id: "top-container",
+        className: "container",
+        __self: undefined,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 38,
+          columnNumber: 7
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement("h2", {
+        className: "stated-mystery",
+        __self: undefined,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 39,
+          columnNumber: 9
+        }
+      }, "The ", currentDecade.number, " ", mysteryName.charAt(0).toUpperCase() + mysteryName.slice(1), " Mystery is ", currentDecade.name, "."), /*#__PURE__*/_reactDefault.default.createElement("div", {
+        __self: undefined,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 40,
+          columnNumber: 9
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement("section", {
+        __self: undefined,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 41,
+          columnNumber: 11
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement("p", {
+        className: "prayer",
+        __self: undefined,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 42,
+          columnNumber: 13
+        }
+      }, _utilsPrayers.OUR_FATHER[0]), /*#__PURE__*/_reactDefault.default.createElement("p", {
+        className: "prayer",
+        __self: undefined,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 43,
+          columnNumber: 13
+        }
+      }, _utilsPrayers.OUR_FATHER[1])), /*#__PURE__*/_reactDefault.default.createElement("aside", {
+        __self: undefined,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 45,
+          columnNumber: 11
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement("img", {
+        __self: undefined,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 46,
+          columnNumber: 13
+        }
+      })))), Object.entries(currentDecade).map(([key, scene], idx2) => {
+        if (key !== '_id' && key !== 'number' && key !== 'name') {
+          return (
+            /*#__PURE__*/_reactDefault.default.createElement(_SceneDefault.default, {
+              key: idx2.toString(),
+              mystery: currentDecade.name,
+              scene: scene,
+              __self: undefined,
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 52,
+                columnNumber: 18
+              }
+            })
+          );
+        }
+      }), /*#__PURE__*/_reactDefault.default.createElement("div", {
+        className: "container",
+        __self: undefined,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 55,
+          columnNumber: 7
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement("div", {
+        __self: undefined,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 56,
+          columnNumber: 9
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement("section", {
+        __self: undefined,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 57,
+          columnNumber: 11
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement("p", {
+        className: "prayer",
+        __self: undefined,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 58,
+          columnNumber: 13
+        }
+      }, _utilsPrayers.GLORY_BE[0]), /*#__PURE__*/_reactDefault.default.createElement("p", {
+        className: "prayer",
+        __self: undefined,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 59,
+          columnNumber: 13
+        }
+      }, _utilsPrayers.GLORY_BE[1]), /*#__PURE__*/_reactDefault.default.createElement("p", {
+        className: "prayer",
+        __self: undefined,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 60,
+          columnNumber: 13
+        }
+      }, _utilsPrayers.FATIMA_PRAYER)), /*#__PURE__*/_reactDefault.default.createElement("aside", {
+        __self: undefined,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 62,
+          columnNumber: 11
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement("img", {
+        __self: undefined,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 63,
+          columnNumber: 13
+        }
+      }))), /*#__PURE__*/_reactDefault.default.createElement("button", {
+        className: "btn",
+        onClick: handleNextDecade,
+        __self: undefined,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 66,
+          columnNumber: 9
+        }
+      }, "Continue")))
+    );
+  };
+  _s(Decade, "tHQc1jx6E3g8mVWJSMbB979gx+Q=", false, function () {
+    return [_reactRouter.useHistory, _reactRouter.useLocation];
+  });
+  _c = Decade;
+  exports.default = Decade;
+  var _c;
+  $RefreshReg$(_c, "Decade");
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}

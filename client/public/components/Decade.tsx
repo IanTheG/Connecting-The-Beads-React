@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import { useHistory, useLocation } from 'react-router'
 
 import { OUR_FATHER, GLORY_BE, FATIMA_PRAYER} from '../utils/prayers'
+import { fadeAnimation } from '../utils/functions'
 import Scene from './Scene'
 
 import { SceneI } from '../utils/interfaces'
@@ -14,6 +15,8 @@ const Decade: React.FC<{ mysteryName: string, currentDecade: SceneI }> =
 
   useEffect(() => {
     document.getElementById('top-container')?.scrollIntoView(true)
+
+    fadeAnimation()
   })
 
   const handleNextDecade = () => {
@@ -33,7 +36,7 @@ const Decade: React.FC<{ mysteryName: string, currentDecade: SceneI }> =
   return (
     <>
       <div id="top-container" className="container">
-        <h2 className="stated-mystery">The {currentDecade.number} {mysteryName} Mystery is {currentDecade.name}.</h2>
+        <h2 className="stated-mystery">The {currentDecade.number} {mysteryName.charAt(0).toUpperCase() + mysteryName.slice(1)} Mystery is {currentDecade.name}.</h2>
         <div>
           <section>
             <p className="prayer">{OUR_FATHER[0]}</p>
@@ -45,7 +48,7 @@ const Decade: React.FC<{ mysteryName: string, currentDecade: SceneI }> =
         </div>
       </div>
       {Object.entries(currentDecade).map(([key, scene], idx2) => {
-        if (key !== 'id' && key !== 'number' && key !== 'name') {
+        if (key !== '_id' && key !== 'number' && key !== 'name') {
           return <Scene key={idx2.toString()} mystery={currentDecade.name} scene={scene}/>
         }})
       }

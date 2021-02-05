@@ -1,0 +1,46 @@
+var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+try {
+  var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+  _parcelHelpers.defineInteropFlag(exports);
+  var _react = require('react');
+  var _reactDefault = _parcelHelpers.interopDefault(_react);
+  var _jsxFileName = "/Users/iantheg/Documents/Git/Connecting-The-Beads/client/public/utils/ErrorBoundary.tsx";
+  class ErrorBoundary extends _react.Component {
+    state = {
+      hasError: false
+    };
+    static getDerivedStateFromError(_) {
+      // Update state so the next render will show the fallback UI.
+      return {
+        hasError: true
+      };
+    }
+    componentDidCatch(error, errorInfo) {
+      console.error('Uncaught error: ', error, errorInfo);
+    }
+    render() {
+      if (this.state.hasError) {
+        // location.href = '/'
+        return (
+          /*#__PURE__*/_reactDefault.default.createElement(_reactDefault.default.Fragment, null, /*#__PURE__*/_reactDefault.default.createElement("h2", {
+            __self: this,
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 32,
+              columnNumber: 11
+            }
+          }, "Sorry.. there was an error"))
+        );
+      }
+      return this.props.children;
+    }
+  }
+  exports.default = ErrorBoundary;
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}

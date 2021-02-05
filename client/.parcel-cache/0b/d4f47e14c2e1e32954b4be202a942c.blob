@@ -1,0 +1,189 @@
+var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+try {
+  var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+  _parcelHelpers.defineInteropFlag(exports);
+  var _react = require('react');
+  var _reactDefault = _parcelHelpers.interopDefault(_react);
+  var _reactRouter = require('react-router');
+  var _utilsFunctions = require('../utils/functions');
+  var _utilsPrayers = require('../utils/prayers');
+  var _jsxFileName = "/Users/iantheg/Documents/Git/Connecting-The-Beads/client/public/components/ClosingPrayers.tsx", _s = $RefreshSig$();
+  const ClosingPrayers = () => {
+    _s();
+    const history = _reactRouter.useHistory();
+    _react.useEffect(() => {
+      document.getElementById('top-container')?.scrollIntoView?.(true);
+      _utilsFunctions.fadeAnimation();
+    });
+    return (
+      /*#__PURE__*/_reactDefault.default.createElement(_reactDefault.default.Fragment, null, /*#__PURE__*/_reactDefault.default.createElement("div", {
+        id: "top-container",
+        className: "container",
+        __self: undefined,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 17,
+          columnNumber: 7
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement("section", {
+        __self: undefined,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 18,
+          columnNumber: 9
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement("h2", {
+        className: "prayer prayer--title",
+        __self: undefined,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 19,
+          columnNumber: 11
+        }
+      }, "Hail, Holy Queen"), /*#__PURE__*/_reactDefault.default.createElement("p", {
+        className: "prayer",
+        __self: undefined,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 20,
+          columnNumber: 11
+        }
+      }, _utilsPrayers.HAIL_HOLY_QUEEN)), /*#__PURE__*/_reactDefault.default.createElement("aside", {
+        __self: undefined,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 22,
+          columnNumber: 9
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement("img", {
+        __self: undefined,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 23,
+          columnNumber: 11
+        }
+      }))), /*#__PURE__*/_reactDefault.default.createElement("div", {
+        className: "container",
+        __self: undefined,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 26,
+          columnNumber: 7
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement("section", {
+        __self: undefined,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 27,
+          columnNumber: 9
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement("h2", {
+        className: "prayer prayer--title",
+        __self: undefined,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 28,
+          columnNumber: 11
+        }
+      }, "Final Prayer"), /*#__PURE__*/_reactDefault.default.createElement("p", {
+        className: "prayer",
+        __self: undefined,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 29,
+          columnNumber: 11
+        }
+      }, _utilsPrayers.FINAL_PRAYER[0]), /*#__PURE__*/_reactDefault.default.createElement("p", {
+        className: "prayer",
+        __self: undefined,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 30,
+          columnNumber: 11
+        }
+      }, _utilsPrayers.FINAL_PRAYER[1])), /*#__PURE__*/_reactDefault.default.createElement("aside", {
+        __self: undefined,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 32,
+          columnNumber: 9
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement("img", {
+        __self: undefined,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 33,
+          columnNumber: 11
+        }
+      }))), /*#__PURE__*/_reactDefault.default.createElement("div", {
+        className: "container",
+        __self: undefined,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 36,
+          columnNumber: 7
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement("section", {
+        __self: undefined,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 37,
+          columnNumber: 9
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement("h2", {
+        className: "prayer prayer--title",
+        __self: undefined,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 38,
+          columnNumber: 11
+        }
+      }, "St. Michael Prayer"), /*#__PURE__*/_reactDefault.default.createElement("p", {
+        className: "prayer",
+        __self: undefined,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 39,
+          columnNumber: 11
+        }
+      }, _utilsPrayers.ST_MICHAEL)), /*#__PURE__*/_reactDefault.default.createElement("aside", {
+        __self: undefined,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 41,
+          columnNumber: 9
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement("img", {
+        __self: undefined,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 42,
+          columnNumber: 11
+        }
+      })), /*#__PURE__*/_reactDefault.default.createElement("button", {
+        className: "btn",
+        onClick: () => history.push('/'),
+        __self: undefined,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 44,
+          columnNumber: 9
+        }
+      }, "Home")))
+    );
+  };
+  _s(ClosingPrayers, "bz2N+u0mX89LO9zOCfVCA9Sa20M=", false, function () {
+    return [_reactRouter.useHistory];
+  });
+  _c = ClosingPrayers;
+  exports.default = ClosingPrayers;
+  var _c;
+  $RefreshReg$(_c, "ClosingPrayers");
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}

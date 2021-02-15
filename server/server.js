@@ -1,21 +1,25 @@
-"use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-var express_1 = __importDefault(require("express"));
-var path_1 = __importDefault(require("path"));
-var PORT = process.env.PORT || 8080;
-var corsOptions = {
-    origin: 'https://localhost:1234'
-};
-var app = express_1.default();
-app.use(express_1.default.json());
-app.use(express_1.default.urlencoded({ extended: true }));
-app.use(express_1.default.static('../client/dist'));
-app.get('/*', function (req, res) {
-    res.sendFile(path_1.default.join(__dirname, '../client/dist/index.html'));
-});
-app.listen(PORT, function () {
-    console.log("Server is listening on port " + PORT);
-});
+const express = require('express')
+const cors = require('cors')
+const logger = require('morgan')
+
+const routes = require('./routes')
+
+const app = express()
+const PORT = process.env.PORT || 8080
+const corsOptions = { origin: 'https://localhost:1234' }
+
+app.use(logger('dev'))
+app.use(cors(corsOptions))
+app.use(express.json())
+app.use(express.urlencoded({ extended: true }))
+app.use(express.static('../client/dist'))
+
+// if (process.env.NODE_ENV === 'production') {
+//   app.use(express.static('client/dist'))
+// }
+
+app.use(routes)
+
+app.listen(PORT, () => {
+  console.log(`Server is listening on port ${PORT}`)
+})

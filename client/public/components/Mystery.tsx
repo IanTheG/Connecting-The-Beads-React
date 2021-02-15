@@ -33,7 +33,7 @@ const Mystery = () => {
     const initializeMystery = async () => {
       const chosenMystery = await getMystery(mystery)
       if (chosenMystery) setCurrentMystery(chosenMystery.data)
-      else history.push('/')
+      // else history.push('/')
     }
     mounted && initializeMystery();
 
@@ -47,7 +47,24 @@ const Mystery = () => {
       currentMystery && setCurrentDecade(currentMystery.decades[location2.state.decade])
   }, [currentMystery, location2.state.decade])
 
-  return <Decade mysteryName={mystery} currentDecade={currentDecade} />
+  return (
+    currentMystery
+      ? <Decade mysteryName={mystery} currentDecade={currentDecade} />
+      : <Loading mysteryName={mystery} />
+  )
 }
 
 export default Mystery
+
+const Loading: React.FC<{ mysteryName: string }> = ({ mysteryName }) => {
+
+  useEffect(() => {
+    fadeAnimation()
+  })
+
+  return (
+    <div className="container" style={{ alignItems: 'center', justifyContent: 'center' }}>
+      <h2 style={{ textAlign: 'center' }}>Loading the {mysteryName.charAt(0).toUpperCase() + mysteryName.slice(1)} Mysteries</h2>
+    </div>
+  )
+}

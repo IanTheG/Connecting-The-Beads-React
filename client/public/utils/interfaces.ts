@@ -1,5 +1,5 @@
 export interface SceneI {
-  id: string;
+  _id: string;
   name: string;
   number: string;
   scene1: string;
@@ -21,7 +21,7 @@ export interface MysteryI {
 }
 
 export const initialState: SceneI = {
-  id: '',
+  _id: '',
   name: '',
   number: '',
   scene1: '',

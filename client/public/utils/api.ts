@@ -14,11 +14,9 @@ const matchCondition = (mystery: string) => {
 }
 
 // Get requests for retrieving mystery from server
-// const getRosary = async () => {
 const getMystery = async (mystery: string) => {
-  // return await axios.get<MysteryI[]>('http://localhost:3000/mysteries/')
   if (matchCondition(mystery)) {
-    return await axios.get<MysteryI>(`http://localhost:3000/mysteries/${mystery}`)
+    return await axios.get<MysteryI>(`/api/${mystery}`)
   }
 }
 

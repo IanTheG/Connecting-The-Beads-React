@@ -23,12 +23,12 @@
       transform 800ms cubic-bezier(0.13, 0.07, 0.26, 0.99) var(--delay);
   }
 
-  > *:first-child {
-    margin-top: 64px;
-  }
-  > *:last-child {
-    margin-bottom: 64px;
-  }
+  // > *:first-child {
+  //   margin-top: 64px;
+  // }
+  // > *:last-child {
+  //   margin-bottom: 64px;
+  // }
 }
 
 .is-visible > * {

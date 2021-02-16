@@ -18,7 +18,7 @@ app.use(express.static('../client/dist'))
 //   app.use(express.static('client/dist'))
 // }
 
-app.use(routes)
+// app.use(routes)
 
 app.listen(PORT, () => {
   console.log(`Server is listening on port ${PORT}`)

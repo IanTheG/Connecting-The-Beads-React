@@ -8,7 +8,9 @@
     "start": "nodemon server.js",
     "start:dev": "tsc-watch --onSuccess \"node ./dist/server.js\"",
     "build:dev": "tsc --watch --preserveWatchOutput",
-    "dev": "concurrently \"npm:build:dev\" \"npm:start:dev\""
+    "dev": "concurrently \"npm:build:dev\" \"npm:start:dev\"",
+    "setprofile": "export AWS_PROFILE='IanG_MBPro'",
+    "deploy": "serverless deploy --aws-profile IanG_MBPro"
   },
   "keywords": [],
   "author": "",

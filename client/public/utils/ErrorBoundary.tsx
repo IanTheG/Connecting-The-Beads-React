@@ -8,11 +8,13 @@ interface Props {
 
 interface State {
   hasError: boolean;
+  error?: Error | undefined;
 }
 
 class ErrorBoundary extends Component<Props, State> {
   public state: State = {
     hasError: false,
+    error: undefined,
   };
 
   public static getDerivedStateFromError(_: Error): State {
@@ -22,6 +24,7 @@ class ErrorBoundary extends Component<Props, State> {
 
   public componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     console.error('Uncaught error: ', error, errorInfo);
+    this.setState({ hasError: true, error });
   }
 
   public render() {
@@ -30,6 +33,9 @@ class ErrorBoundary extends Component<Props, State> {
       return (
         <>
           <h2>Sorry.. there was an error</h2>
+          <p>{this.state.error?.name}</p>
+          <p>{this.state.error?.message}</p>
+          <p>{this.state.error?.stack}</p>
         </>
       );
     }

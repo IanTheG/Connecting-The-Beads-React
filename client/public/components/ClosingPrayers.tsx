@@ -16,8 +16,8 @@ const ClosingPrayers = () => {
     <>
       <div id="top-container" className="container">
         <section>
-          <h2 className="prayer prayer--title">Hail, Holy Queen</h2>
-          <p className="prayer">{HAIL_HOLY_QUEEN}</p>
+          <h2 className="title">Hail, Holy Queen</h2>
+          {HAIL_HOLY_QUEEN.map((line, idx) => <p className="prayer" key={idx}>{line}</p> )}
         </section>
         <aside>
           <img />
@@ -25,9 +25,8 @@ const ClosingPrayers = () => {
     </div>
       <div className="container">
         <section>
-          <h2 className="prayer prayer--title">Final Prayer</h2>
-          <p className="prayer">{FINAL_PRAYER[0]}</p>
-          <p className="prayer">{FINAL_PRAYER[1]}</p>
+          <h2 className="title">Final Prayer</h2>
+          {FINAL_PRAYER.map((line, idx) => <p className="prayer" key={idx}>{line}</p> )}
         </section>
         <aside>
           <img />
@@ -35,8 +34,8 @@ const ClosingPrayers = () => {
       </div>
       <div className="container">
         <section>
-          <h2 className="prayer prayer--title">St. Michael Prayer</h2>
-          <p className="prayer">{ST_MICHAEL}</p>
+          <h2 className="title">St. Michael Prayer</h2>
+          {ST_MICHAEL.map((line, idx) => <p className="prayer" key={idx}>{line}</p> )}
         </section>
         <aside>
           <img />

@@ -5,9 +5,9 @@ import { OUR_FATHER, GLORY_BE, FATIMA_PRAYER} from '../utils/prayers'
 import { fadeAnimation } from '../utils/functions'
 import Scene from './Scene'
 
-import { SceneI } from '../utils/interfaces'
+import { DecadeI } from '../utils/interfaces'
 
-const Decade: React.FC<{ mysteryName: string, currentDecade: SceneI }> =
+const Decade: React.FC<{ mysteryName: string, currentDecade: DecadeI }> =
   ({ mysteryName, currentDecade }) => {
 
   const history = useHistory()
@@ -39,24 +39,22 @@ const Decade: React.FC<{ mysteryName: string, currentDecade: SceneI }> =
         <h2 className="stated-mystery">The {currentDecade.number} {mysteryName.charAt(0).toUpperCase() + mysteryName.slice(1)} Mystery is {currentDecade.name}.</h2>
         <div>
           <section>
-            <p className="prayer">{OUR_FATHER[0]}</p>
+            <p className="prayer prayer--top">{OUR_FATHER[0]}</p>
             <p className="prayer">{OUR_FATHER[1]}</p>
+            <p className="prayer">{OUR_FATHER[2]}</p>
           </section>
           <aside>
             <img />
           </aside>
         </div>
       </div>
-      {Object.entries(currentDecade).map(([key, scene], idx2) => {
-        if (key !== '_id' && key !== 'number' && key !== 'name') {
-          return <Scene key={idx2.toString()} mystery={currentDecade.name} scene={scene}/>
-        }})
-      }
+      {currentDecade.scenes.map((scene, idx) => <Scene key={idx} mystery={currentDecade.name} scene={scene} idx={idx} /> )}
       <div className="container">
         <div>
           <section>
-            <p className="prayer">{GLORY_BE[0]}</p>
+            <p className="prayer prayer--top">{GLORY_BE[0]}</p>
             <p className="prayer">{GLORY_BE[1]}</p>
+            <p className="prayer">{GLORY_BE[2]}</p>
             <p className="prayer">{FATIMA_PRAYER}</p>
           </section>
           <aside>

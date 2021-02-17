@@ -26,7 +26,7 @@
   .desc {
     margin: 0;
     padding: 1rem;
-    font-size: 1.2rem;
+    font-family: map-get($map: $fonts, $key: 'desc');
 
     &--italic {
       font-style: italic;

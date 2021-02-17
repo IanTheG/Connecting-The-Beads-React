@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useHistory, useLocation, useParams } from 'react-router'
 import { Location as Locale } from '../../node_modules/@types/history/index'
 
-import { SceneI, initialState, MysteryI } from '../utils/interfaces'
+import { DecadeI, initialState, MysteryI } from '../utils/interfaces'
 import { fadeAnimation } from '../utils/functions'
 import getMystery from '../utils/api'
 
@@ -23,7 +23,7 @@ const Mystery = () => {
   const { mystery } = useParams<{ mystery: string }>()
 
   const [currentMystery, setCurrentMystery] = useState<MysteryI>()
-  const [currentDecade, setCurrentDecade] = useState<SceneI>(initialState)
+  const [currentDecade, setCurrentDecade] = useState<DecadeI>(initialState)
 
   // Initializes the chosen mystery in state (prevents repeated server GET requests)
   useEffect(() => {
@@ -33,7 +33,7 @@ const Mystery = () => {
     const initializeMystery = async () => {
       const chosenMystery = await getMystery(mystery)
       if (chosenMystery) setCurrentMystery(chosenMystery.data)
-      // else history.push('/')
+      else history.push('/')
     }
     mounted && initializeMystery();
 
@@ -64,7 +64,7 @@ const Loading: React.FC<{ mysteryName: string }> = ({ mysteryName }) => {
 
   return (
     <div className="container" style={{ alignItems: 'center', justifyContent: 'center' }}>
-      <h2 style={{ textAlign: 'center' }}>Loading the {mysteryName.charAt(0).toUpperCase() + mysteryName.slice(1)} Mysteries</h2>
+      <h2 style={{ fontFamily: 'Geneva', textAlign: 'center' }}>Loading the {mysteryName.charAt(0).toUpperCase() + mysteryName.slice(1)} Mysteries</h2>
     </div>
   )
 }

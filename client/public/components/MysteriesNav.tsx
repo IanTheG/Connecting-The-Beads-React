@@ -3,38 +3,44 @@ import { Link } from 'react-router-dom'
 
 const MysteriesNav = () => {
 
+  const currentDay = (new Date()).getDay()
+
   return (
     <div className="container">
       <h2 className="title">Mysteries</h2>
       <div className="mysteries">
         <Link className="link" to={{pathname: "/glorious", state: {decade: 0}} }>
-        {/* <Link className="link" to="/glorious/the-resurrection"> */}
-          <h3 className="mystery">Glorious</h3>
-          <p className="desc desc--day">Sunday</p>
-          <p className="desc desc--day">Wednesday</p>
+          <div>
+            <h3 className="mystery">Glorious</h3>
+            <p className={`desc desc--day ${currentDay === 0 ? 'current-day' : ''}`}>Sunday</p>
+            <p className={`desc desc--day ${currentDay === 3 ? 'current-day' : ''}`}>Wednesday</p>
+          </div>
           <img />
         </Link>
 
         <Link className="link" to={{pathname: "/joyful", state: {decade: 0}} }>
-        {/* <Link className="link" to="/joyful/the-annunciation"> */}
-          <h3 className="mystery">Joyful</h3>
-          <p className="desc desc--day">Monday</p>
-          <p className="desc desc--day">Saturday</p>
+          <div>
+            <h3 className="mystery">Joyful</h3>
+            <p className={`desc desc--day ${currentDay === 1 ? 'current-day' : ''}`}>Monday</p>
+            <p className={`desc desc--day ${currentDay === 6 ? 'current-day' : ''}`}>Saturday</p>
+          </div>
           <img />
         </Link>
 
         <Link className="link" to={{pathname: "/sorrowful", state: {decade: 0}} }>
-        {/* <Link className="link" to="/sorrowful/the-agony-in-the-garden"> */}
-          <h3 className="mystery">Sorrowful</h3>
-          <p className="desc desc--day">Tuesday</p>
-          <p className="desc desc--day">Friday</p>
+          <div>
+            <h3 className="mystery">Sorrowful</h3>
+            <p className={`desc desc--day ${currentDay === 2 ? 'current-day' : ''}`}>Tuesday</p>
+            <p className={`desc desc--day ${currentDay === 5 ? 'current-day' : ''}`}>Friday</p>
+          </div>
           <img />
         </Link>
 
         <Link className="link" to={{pathname: "/luminous", state: {decade: 0}} }>
-        {/* <Link className="link" to="/luminous/the-baptism-of-the-lord"> */}
-          <h3 className="mystery">Luminous</h3>
-          <p className="desc desc--day">Thursday</p>
+          <div>
+            <h3 className="mystery">Luminous</h3>
+            <p className={`desc desc--day ${currentDay === 4 ? 'current-day' : ''}`}>Thursday</p>
+          </div>
           <img />
         </Link>
       </div>

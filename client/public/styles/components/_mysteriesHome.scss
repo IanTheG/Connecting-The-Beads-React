@@ -13,12 +13,14 @@
     margin-bottom: 2%;
     padding-left: 2rem;
     font-size: 2rem;
-    font-family: map-get($map: $fonts, $key: 'heading');;
+    font-family: map-get($map: $fonts, $key: 'heading');
   }
   .link {
     flex: 1;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template: 1fr / 1fr 1fr;
+    // display: flex;
+    // flex-direction: column;
     text-decoration: none;
     color: black;
     padding-top: 0.5em;
@@ -28,7 +30,11 @@
     }
   }
   .desc--day {
-    padding: 0 0 0.5rem 3rem;
+    padding: 0.5rem 0 0.5rem 3rem;
+  }
+  .current-day {
+    background-color: #6A5188;
+    color: white;
   }
 }
 

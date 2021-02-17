@@ -20,10 +20,11 @@ const OpeningPrayers = () => {
 
       <div className="container">
         <section>
+          <p className="title">Our Father</p>
           <p className="desc">Say the Our Father.</p>
+          <img />
           <p className="desc desc--italic">For our Holy Father, Pope Francis.</p>
-          <p className="prayer">{OUR_FATHER[0]}</p>
-          <p className="prayer">{OUR_FATHER[1]}</p>
+          {OUR_FATHER.map((line, idx) => <p className="prayer" key={idx}>{line}</p> )}
         </section>
         <aside>
           <img />
@@ -32,10 +33,11 @@ const OpeningPrayers = () => {
 
       <div className="container">
         <section>
+          <p className="title">Hail Mary</p>
           <p className="desc">Say three Hail Mary's.</p>
+          <img />
           <p className="desc desc--italic">For the increase of the virtues of Faith, Hope, and Charity.</p>
-          <p className="prayer">{HAIL_MARY[0]}</p>
-          <p className="prayer">{HAIL_MARY[1]}</p>
+          {HAIL_MARY.map((line, idx) => <p className="prayer" key={idx}>{line}</p> )}
         </section>
         <aside>
           <img />
@@ -44,9 +46,10 @@ const OpeningPrayers = () => {
 
       <div className="container">
         <section>
+          <p className="title">Glory Be</p>
           <p className="desc">Say the Glory Be.</p>
-          <p className="prayer">{GLORY_BE[0]}</p>
-          <p className="prayer">{GLORY_BE[1]}</p>
+          <img />
+          {GLORY_BE.map((line, idx) => <p className="prayer" key={idx}>{line}</p> )}
         </section>
         <aside>
           <img />

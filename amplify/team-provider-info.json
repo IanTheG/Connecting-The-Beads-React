@@ -1,0 +1,15 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-connectingthebeads-dev-203258-authRole",
+      "UnauthRoleArn": "arn:aws:iam::987450024716:role/amplify-connectingthebeads-dev-203258-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::987450024716:role/amplify-connectingthebeads-dev-203258-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-connectingthebeads-dev-203258-deployment",
+      "UnauthRoleName": "amplify-connectingthebeads-dev-203258-unauthRole",
+      "StackName": "amplify-connectingthebeads-dev-203258",
+      "StackId": "arn:aws:cloudformation:us-east-1:987450024716:stack/amplify-connectingthebeads-dev-203258/749f9e40-70c8-11eb-8156-0ab4742ddfab",
+      "AmplifyAppId": "d1kx8xx8hdl790"
+    }
+  }
+}

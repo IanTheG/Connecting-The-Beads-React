@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useHistory, useLocation, useParams } from 'react-router'
-import { Location as Locale } from '../../node_modules/@types/history/index'
+import { Location as Locale } from 'history'
 
 import { DecadeI, initialState, MysteryI } from '../utils/interfaces'
 import { fadeAnimation } from '../utils/functions'

@@ -19,10 +19,8 @@
     flex: 1;
     display: grid;
     grid-template: 1fr / 1fr 1fr;
-    // display: flex;
-    // flex-direction: column;
     text-decoration: none;
-    color: black;
+    color: inherit;
     padding-top: 0.5em;
 
     &:hover {
@@ -33,7 +31,7 @@
     padding: 0.5rem 0 0.5rem 3rem;
   }
   .current-day {
-    background-color: #6A5188;
+    background-color: $purple-dark;
     color: white;
   }
 }

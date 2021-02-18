@@ -1,5 +1,4 @@
 @use 'sass:map';
-
 @import 'variables';
 
 @media screen and (min-width: 10px) {
@@ -14,6 +13,12 @@
     }
   }
 
+  .hero-line {
+    margin: 0 2rem;
+    height: 4px;
+    background-color: $purple-dark;
+    border-radius: 4px;
+  }
   .hero-image {
     flex: 1;
   }
@@ -23,10 +28,22 @@
     padding: 1rem;
   }
 
+  .switch {
+    padding-right: 1.2rem;
+  }
+
   .desc {
     margin: 0;
-    padding: 1rem;
+    padding: 1.2rem;
     font-family: map-get($map: $fonts, $key: 'desc');
+
+    &--home {
+      padding-top: 0;
+    }
+
+    &--switch {
+      padding: 0 1rem;
+    }
 
     &--italic {
       font-style: italic;

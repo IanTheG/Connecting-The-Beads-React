@@ -5,9 +5,10 @@
   font-size: 18px;
   // font-family: map-get($map: $fonts, $key: 'btn');
   font-family: map-get($map: $fonts, $key: 'desc');
+  font-size: 1.5rem;
   padding: 2rem;
   color: white;
-  background-color: #6A5188;
+  background-color: $purple-dark;
   border: none;
   cursor: pointer;
   
@@ -26,7 +27,7 @@
   &__text {
     margin: 0;
     border-radius: 50%;
-    background-color: #6A5188;
+    background-color: $purple-dark;
     color: white;
     font-family: 'Avenir', sans-serif;
     width: 36px;

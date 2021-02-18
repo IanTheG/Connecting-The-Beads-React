@@ -11,6 +11,10 @@
   background-color: $purple-dark;
   border: none;
   cursor: pointer;
+
+  &:hover, &:active {
+    background-color: $purple-light;
+  }
   
 }
 .stated-mystery {

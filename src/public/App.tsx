@@ -14,6 +14,7 @@ const App = () => {
   const setDocHeight = () => {
     document.documentElement.style.setProperty('--vh', `${window.innerHeight/100}px`)
   }
+  window.addEventListener('load', setDocHeight)
   window.addEventListener('resize', setDocHeight)
   window.addEventListener('orientationchange', setDocHeight)
 

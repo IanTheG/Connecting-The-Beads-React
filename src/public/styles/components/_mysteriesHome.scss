@@ -23,8 +23,8 @@
     color: inherit;
     padding-top: 0.5em;
 
-    &:hover {
-      background-color: #9E94AA;
+    &:hover, &:active {
+      background-color: $purple-light;
     }
   }
   .desc--day {
@@ -33,6 +33,9 @@
   .current-day {
     background-color: $purple-dark;
     color: white;
+  }
+  .loading {
+    font-family: map-get($map: $fonts, $key: 'desc');
   }
 }
 

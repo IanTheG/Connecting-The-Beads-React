@@ -15,7 +15,7 @@ const Home = () => {
       <h1 className="title"  style={{textAlign: 'center'}}>Connecting The Beads</h1>
       <div className="hero-line"></div>
       {/* Image of rosary beads */}
-      <img className="hero-image" src="https://connectingthebeads-images.s3.amazonaws.com/main/SilverRosary.png" />
+      {/* <img className="hero-image" src="https://connectingthebeads-images.s3.amazonaws.com/main/SilverRosary.png" /> */}
       <Settings />
       <div>
         {/* Add this first paragraph to an about section of the app */}

@@ -36,7 +36,7 @@ const Decade: React.FC<{ mysteryName: string, currentDecade: DecadeI }> =
   return (
     <>
       <div id="top-container" className="container">
-        <h2 className="stated-mystery">The {currentDecade.number} {mysteryName.charAt(0).toUpperCase() + mysteryName.slice(1)} Mystery is {currentDecade.name}.</h2>
+        <h2 className="stated-mystery">The {currentDecade.number} {mysteryName.charAt(0).toUpperCase() + mysteryName.slice(1)} Mystery is {currentDecade.name}</h2>
         <div>
           <section>
             <p className="prayer prayer--top">{OUR_FATHER[0]}</p>
@@ -50,17 +50,17 @@ const Decade: React.FC<{ mysteryName: string, currentDecade: DecadeI }> =
       </div>
       {currentDecade.scenes.map((scene, idx) => <Scene key={idx} mystery={currentDecade.name} scene={scene} idx={idx} /> )}
       <div className="container">
-        <div>
-          <section>
+          <h3 className="title">Glory Be</h3>
+          <div>
             <p className="prayer prayer--top">{GLORY_BE[0]}</p>
             <p className="prayer">{GLORY_BE[1]}</p>
             <p className="prayer">{GLORY_BE[2]}</p>
-            <p className="prayer">{FATIMA_PRAYER}</p>
-          </section>
+          </div>
+          <h3 className="title">Fatima Prayer</h3>
+          <p className="prayer">{FATIMA_PRAYER}</p>
           <aside>
             <img />
           </aside>
-        </div>
         <button className="btn" onClick={handleNextDecade}>Continue</button>
       </div>
     </>

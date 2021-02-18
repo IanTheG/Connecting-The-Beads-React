@@ -11,7 +11,7 @@ const ClosingPrayers = () => {
     document.getElementById('top-container')?.scrollIntoView(true)
     fadeAnimation()
   })
-  
+
   return (
     <>
       <div id="top-container" className="container">

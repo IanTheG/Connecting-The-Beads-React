@@ -20,7 +20,8 @@
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-router": "^5.2.0",
-    "react-router-dom": "^5.2.0"
+    "react-router-dom": "^5.2.0",
+    "react-switch": "^6.0.0"
   },
   "devDependencies": {
     "@parcel/optimizer-cssnano": "^2.0.0-nightly.599",

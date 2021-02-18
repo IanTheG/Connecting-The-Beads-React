@@ -4,30 +4,34 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: $purple-darker;
-  color: whitesmoke;
+  background-color: white;
+  color: black;
 }
 html {
   font-size: 16px;
 }
 
-.light-mode {
-  background-color: white;
-  color: black;
+.dark-mode {
+  background-color: $purple-darker;
+  color: whitesmoke;
 }
 
 // Main styles used throughout out app
 
+@function vh($quantity) {
+  @return calc(var(--vh, 1vh) * #{$quantity});
+}
+
 .scroll-container {
-  // height: 100vh;
-  height: calc(100vh - calc(100vh - 100%));
+  height: vh(100);
+  // height: calc(100vh - calc(100vh - 100%));
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
 }
 
 .container {
-  // height: 100vh;
-  height: calc(100vh - calc(100vh - 100%));
+  height: vh(100);
+  // height: calc(100vh - calc(100vh - 100%));
   width: 100vw;
   scroll-snap-align: center;
   display: flex;

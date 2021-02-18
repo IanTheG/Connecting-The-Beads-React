@@ -10,6 +10,13 @@ import Mystery from './components/Mystery'
 
 const App = () => {
 
+  // Watch for window resize changes to change viewport window size
+  const setDocHeight = () => {
+    document.documentElement.style.setProperty('--vh', `${window.innerHeight/100}px`)
+  }
+  window.addEventListener('resize', setDocHeight)
+  window.addEventListener('orientationchange', setDocHeight)
+
   return (
     <main id="root" className="scroll-container">
       <Switch>

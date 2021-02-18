@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import Switch from "react-switch";
 
 // Include logic to toggle dark/light mode?
@@ -8,14 +8,20 @@ const Settings = () => {
 
   const [mode, setMode] = useState(false)
 
-  useEffect(() => {
-    const app = document.getElementById('app')
-    app && app.classList.toggle('light-mode');
-  }, [mode])
+  const app = document.getElementById('app')
 
   return (
     <label style={{display: 'flex', padding: '1rem 0', flexDirection: 'row-reverse'}}>
-      <Switch onChange={() => setMode(!mode)} checked={mode} uncheckedIcon={false} checkedIcon={false} className="switch" />
+      <Switch
+        onChange={() => {
+          setMode(!mode)
+          app!.classList.toggle('dark-mode')
+        }}
+        checked={app!.classList.contains('dark-mode')}
+        uncheckedIcon={false}
+        checkedIcon={false}
+        className="switch"
+      />
       <span className="desc desc--switch" style={{display: 'flex', alignItems: 'center'}}>
         {mode
          ? <i className="fas fa-sun" style={{fontSize: '1.5rem'}}></i>

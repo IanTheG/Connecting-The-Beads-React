@@ -11,6 +11,10 @@
     &--small {
       font-size: 1.5rem;
     }
+
+    &--mysteries {
+      padding-bottom: 0;
+    }
   }
 
   .hero-line {
@@ -40,19 +44,20 @@
     &--home {
       padding-top: 0;
     }
-
     &--switch {
       padding: 0 1rem;
     }
-
     &--italic {
       font-style: italic;
     }
-
     &--link {
       padding: 0;
       // text-decoration: none;
       color: inherit;
+    }
+    &--day {
+      padding: 0.5em 0 0.5em 3em;
+      // padding: 0.5rem 0 0.5rem 3rem;
     }
   }
 }

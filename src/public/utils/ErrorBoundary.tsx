@@ -32,10 +32,10 @@ class ErrorBoundary extends Component<Props, State> {
       // location.href = '/'
       return (
         <>
-          <h2>Sorry.. there was an error</h2>
-          <p>{this.state.error?.name}</p>
-          <p>{this.state.error?.message}</p>
-          <p>{this.state.error?.stack}</p>
+          <h2 className="title">Sorry.. there was an error</h2>
+          <p className="desc">{this.state.error?.name}</p>
+          <p className="desc">{this.state.error?.message}</p>
+          <p className="desc">{this.state.error?.stack}</p>
         </>
       );
     }

@@ -15,32 +15,31 @@ const ClosingPrayers = () => {
   return (
     <>
       <div id="top-container" className="container">
-        <section>
-          <h2 className="title">Hail, Holy Queen</h2>
-          {HAIL_HOLY_QUEEN.map((line, idx) => <p className="prayer" key={idx}>{line}</p> )}
+        <section className="prayer--section">
+          <div>
+            <h2 className="title">Hail, Holy Queen</h2>
+            {HAIL_HOLY_QUEEN.map((line, idx) => <p className="prayer" key={idx}>{line}</p> )}
+          </div>
         </section>
-        <aside>
-          <img />
-        </aside>
-    </div>
-      <div className="container">
-        <section>
-          <h2 className="title">Final Prayer</h2>
-          {FINAL_PRAYER.map((line, idx) => <p className="prayer" key={idx}>{line}</p> )}
-        </section>
-        <aside>
-          <img />
-        </aside>
       </div>
       <div className="container">
-        <section>
-          <h2 className="title">St. Michael Prayer</h2>
-          {ST_MICHAEL.map((line, idx) => <p className="prayer" key={idx}>{line}</p> )}
+        <section className="prayer--section">
+          <div>
+            <h2 className="title">Final Prayer</h2>
+            {FINAL_PRAYER.map((line, idx) => <p className="prayer" key={idx}>{line}</p> )}
+          </div>
         </section>
-        <aside>
-          <img />
-        </aside>
-        <button className="btn" onClick={() => history.push('/')}>Home</button>
+      </div>
+      <div className="container">
+        <section className="prayer--section">
+          <div>
+            <h2 className="title">St. Michael Prayer</h2>
+            {ST_MICHAEL.map((line, idx) => <p className="prayer" key={idx}>{line}</p> )}
+          </div>
+        </section>
+        <div className="btn--container">
+          <button className="btn" onClick={() => history.push('/')}>Home</button>
+        </div>
       </div>
     </>
   )

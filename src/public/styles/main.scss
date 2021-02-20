@@ -60,20 +60,24 @@ html {
   &--top {
     padding-top: 1rem;
   }
-
   &--tight {
     white-space: pre-wrap;
   }
 }
 
-// @media screen and (min-width: 350px) {
-//   html {
-//     font-size: 15px;
-//   }
-// }
-
 @media screen and (min-width: 400px), (min-height: 700px) {
   html {
     font-size: 18px;
+  }
+}
+
+@media screen and (min-width: 750px) {
+  html {
+    font-size: 24px;
+  }
+  // Formats prayers for better view on tablet
+  .prayer--section {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
   }
 }

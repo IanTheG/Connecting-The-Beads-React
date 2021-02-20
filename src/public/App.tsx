@@ -7,6 +7,7 @@ import OpeningPrayers from './components/OpeningPrayers'
 import MysteriesNav from './components/MysteriesNav'
 import ClosingPrayers from './components/ClosingPrayers'
 import Mystery from './components/Mystery'
+import About from './components/About'
 
 const App = () => {
 
@@ -26,6 +27,7 @@ const App = () => {
           <Guide />
           <OpeningPrayers />
           <MysteriesNav />
+          <About />
         </Route>
         <Route exact path="/closing-prayers">
           <ClosingPrayers />

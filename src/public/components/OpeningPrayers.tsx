@@ -6,9 +6,8 @@ const OpeningPrayers = () => {
   return (
     <>
       <div className="container">
-        <h2 className="title">Opening Prayers</h2>
-          <p className="prayer">{SIGN_OF_CROSS}</p>
-          <p className="prayer prayer--tight">{CREED}</p>
+        <h3 className="title">The Apostle's Creed</h3>
+        <p className="prayer prayer--tight">{CREED}</p>
         {/* <aside>
           <img />
         </aside> */}

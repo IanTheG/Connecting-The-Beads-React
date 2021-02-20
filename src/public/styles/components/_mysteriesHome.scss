@@ -31,10 +31,6 @@
       background-color: $purple-light;
     }
   }
-  .desc--day {
-    padding: 0.5em 0 0.5em 3em;
-    // padding: 0.5rem 0 0.5rem 3rem;
-  }
   .current-day {
     background-color: $purple-dark;
     color: white;
@@ -44,13 +40,27 @@
   }
 }
 
+@media screen and (min-height: 560px) {
+  .desc--day {
+    display: none;
+  }
+}
+
+@media screen and (min-height: 730px) {
+  .desc--day {
+    display: block;
+  }
+}
+
+
+
 @media screen and (min-width: 568px) {
   .mystery {
     padding: 0;
   }
   .mysteries {
     margin: 0;
-    flex-direction: row;
+    // flex-direction: row;
   }
   .description--day {
     padding: 0 0 0.5rem 0;

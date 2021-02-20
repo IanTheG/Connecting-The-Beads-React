@@ -1,5 +1,5 @@
 import React from 'react'
-import { SIGN_OF_CROSS, CREED, OUR_FATHER, HAIL_MARY, GLORY_BE } from '../utils/prayers'
+import { CREED, OUR_FATHER, HAIL_MARY, GLORY_BE } from '../utils/prayers'
 
 const OpeningPrayers = () => {
 
@@ -8,9 +8,6 @@ const OpeningPrayers = () => {
       <div className="container">
         <h3 className="title">The Apostle's Creed</h3>
         <p className="prayer prayer--tight">{CREED}</p>
-        {/* <aside>
-          <img />
-        </aside> */}
       </div>
 
       <div className="container">

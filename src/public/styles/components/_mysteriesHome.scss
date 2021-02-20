@@ -40,32 +40,16 @@
   }
 }
 
-@media screen and (min-height: 560px) {
-  .desc--day {
-    display: none;
-  }
-}
+// Show / hide days
 
-@media screen and (min-height: 730px) {
-  .desc--day {
-    display: block;
-  }
-}
+// @media screen and (min-height: 560px) {
+//   .desc--day {
+//     display: none;
+//   }
+// }
 
-
-
-@media screen and (min-width: 568px) {
-  .mystery {
-    padding: 0;
-  }
-  .mysteries {
-    margin: 0;
-    // flex-direction: row;
-  }
-  .description--day {
-    padding: 0 0 0.5rem 0;
-  }
-  .link {
-    align-items: center;
-  }
-}
+// @media screen and (min-height: 730px) {
+//   .desc--day {
+//     display: block;
+//   }
+// }

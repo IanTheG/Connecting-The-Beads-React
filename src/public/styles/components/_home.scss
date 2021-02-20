@@ -48,5 +48,11 @@
     &--italic {
       font-style: italic;
     }
+
+    &--link {
+      padding: 0;
+      // text-decoration: none;
+      color: inherit;
+    }
   }
 }

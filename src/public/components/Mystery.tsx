@@ -49,8 +49,8 @@ const Mystery = () => {
 
   return (
     currentMystery
-      ? <Decade mysteryName={mystery} currentDecade={currentDecade} />
-      : <Loading mysteryName={mystery} />
+    ? <Decade mysteryName={mystery} currentDecade={currentDecade} />
+    : <Loading mysteryName={mystery} />
   )
 }
 
@@ -64,7 +64,7 @@ const Loading: React.FC<{ mysteryName: string }> = ({ mysteryName }) => {
 
   return (
     <div className="container" style={{ alignItems: 'center', justifyContent: 'center' }}>
-      <h2 className="loading" style={{textAlign: 'center'}}>Loading the {mysteryName.charAt(0).toUpperCase() + mysteryName.slice(1)} Mysteries</h2>
+      <h2 className="loading" style={{ textAlign: 'center', margin: '1rem' }}>Loading the {mysteryName.charAt(0).toUpperCase() + mysteryName.slice(1)} Mysteries</h2>
     </div>
   )
 }

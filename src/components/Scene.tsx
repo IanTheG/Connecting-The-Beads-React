@@ -16,16 +16,20 @@ const Scene: React.FC<{ mystery: string, scene: SceneI, idx: number }> =
       <aside>
         <img src={scene.img} alt={`${mystery} ${idx+1}`}/>
       </aside>
-      <section>
-        <p className="prayer">{HAIL_MARY[0]}</p>
-        <p className="prayer">{HAIL_MARY[1]}</p>
+      <div>
+        <section className="prayer--section">
+          <div>
+            <p className="prayer">{HAIL_MARY[0]}</p>
+            <p className="prayer">{HAIL_MARY[1]}</p>
+          </div>
+        </section>
         <div className="hail-mary-number">
           <div className="hail-mary-number__text">
             <p>{idx+1}</p>
           </div>
           <p className="prayer" style={{padding: 0}}>Amen.</p>
         </div>
-      </section>
+      </div>
     </div>
   )
 }

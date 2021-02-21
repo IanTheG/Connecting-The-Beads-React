@@ -18,21 +18,6 @@ const App = () => {
   window.addEventListener('load', setDocHeight)
   window.addEventListener('resize', setDocHeight)
   window.addEventListener('orientationchange', setDocHeight)
-  
-  // // Logic to hide / display views
-  // const toggleViews = () => {
-  //   const deviceWidth = window.screen.orientation
-
-  //   if (deviceWidth) {
-
-  //   }
-  // }
-  // window.addEventListener('resize', toggleViews)
-
-  // if window is in portrait mode and less than 1024px, display app
-  // if window is in landscape mode and on mobile, display rotate to portrait and hide desktop
-  // if window is in landscape mode and on desktop, display desktop view
-      // if window is less than 1024px, hide desktop view
 
   return (
     <main id="root" className="scroll-container">

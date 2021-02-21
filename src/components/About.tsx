@@ -10,9 +10,11 @@ const About = () => {
         <p className="desc">Note, this web app requires a modern smartphone and updated web browser (at least iOS 12.2 or Chrome 51 on Android).</p>
       </div>
       <div>
-        <h3 className="stated-mystery">Image Credits</h3>
-        <a className="desc" href="https://thenounproject.com/tivilupercio/" target="_blank" style={{color: 'inherit'}}>Favicon by Tivi Lupercio Ordoñez</a>
-        {/* <a className="desc" href="" target="_blank">test</a> */}
+        <h3 className="stated-mystery">Links to Copyrighted Images and Quotes</h3>
+        <a className="desc" href="https://thenounproject.com/tivilupercio/" target="_blank" style={{color: 'inherit'}}>Rosary favicon by Tivi Lupercio Ordoñez</a>
+        <br />
+        <a className="desc" href="https://www.usccb.org/how-to-pray-the-rosary" target="_blank" style={{color: 'inherit'}}>How to Pray the Rosary from the USCCB</a>
+        <br />
       </div>
       <p className="desc">Copyright Ian G 2021</p>
     </div>

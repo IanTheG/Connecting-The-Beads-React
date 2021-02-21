@@ -7,7 +7,7 @@ const Guide = () => {
     <div className="container">
       <h2 className="title">Praying The Rosary</h2>
       
-      <p className="desc">
+      <p className="desc desc--tight">
       &#8223;The Rosary is a Scripture-based prayer. It begins with the Apostles' Creed, which summarizes the great mysteries of the Catholic faith.
         The Our Father, which introduces each mystery, is from the Gospels.
         The first part of the Hail Mary is the angel's words announcing Christ's birth and Elizabeth's greeting to Mary.
@@ -22,7 +22,7 @@ const Guide = () => {
 
       <div>
         <h2 className="title">Opening Prayers</h2>
-        <p className="desc">Begin by making the <b>Sign of The Cross.</b></p>
+        <p className="prayer">Begin by making the <b>Sign of The Cross.</b></p>
         <p className="prayer">{SIGN_OF_CROSS}</p>
       </div>
     </div>

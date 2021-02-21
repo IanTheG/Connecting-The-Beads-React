@@ -11,7 +11,6 @@
   // }
   .mystery {
     margin: 0;
-    // margin-bottom: 2%;
     padding-left: 2rem;
     font-size: 2rem;
     font-family: map-get($map: $fonts, $key: 'heading');
@@ -27,7 +26,6 @@
     transition: transform .2s;
 
     &:hover, &:active {
-      transform: scale(1.05);
       background-color: $purple-light;
     }
   }

@@ -10,7 +10,9 @@ body {
 html {
   font-size: 15px;
 }
-
+#app {
+  transition: background-color 0.5s, color 0.5s;
+}
 .dark-mode {
   background-color: $purple-darker;
   color: whitesmoke;
@@ -82,7 +84,7 @@ html {
   }
 }
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1024px) {
   html {
     font-size: 30px;
   }

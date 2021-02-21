@@ -1,0 +1,66 @@
+@use 'sass:map';
+@import 'variables';
+
+@media screen and (min-width: 10px) {
+  .title {
+    margin: 0;
+    padding: 1rem;
+    font-size: 2rem;
+    font-family: map-get($map: $fonts, $key: 'heading');
+
+    &--small {
+      font-size: 1.5rem;
+    }
+    &--mysteries {
+      padding-bottom: 0;
+    }
+  }
+
+  .hero-line {
+    margin: 0 2rem;
+    height: 0.3rem;
+    background-color: $purple-light;
+    border-radius: 0.5rem;
+  }
+  .hero-image {
+    flex: 1;
+  }
+  .instructions {
+    margin: 0;
+    padding: 1rem;
+  }
+  .settings-container {
+    display: grid;
+    grid-template-columns: 1fr auto
+  }
+  .switch {
+    padding-right: 1.2rem;
+  }
+
+  .desc {
+    margin: 0;
+    padding: 1rem;
+    font-family: map-get($map: $fonts, $key: 'desc');
+
+    &--home {
+      padding-top: 0;
+    }
+    &--switch {
+      padding: 0 1rem;
+    }
+    &--italic {
+      font-style: italic;
+    }
+    &--link {
+      padding: 0;
+      // text-decoration: none;
+      color: inherit;
+    }
+    &--day {
+      padding: 0.5em 0 0.5em 3em;
+    }
+    &--desktop {
+      font-size: 0.8rem;
+    }
+  }
+}

@@ -37,15 +37,15 @@ const Decade: React.FC<{ mysteryName: string, currentDecade: DecadeI }> =
       <div id="top-container" className="container">
         <section>
           <h2 className="stated-mystery">The {currentDecade.number} {mysteryName.charAt(0).toUpperCase() + mysteryName.slice(1)} Mystery is {currentDecade.name}</h2>
-          <p className="desc desc--italic">Our Father...</p>
+          {/* <p className="desc desc--italic">Our Father...</p> */}
         </section>
-        {/* <section className="prayer--section">
+        <section className="prayer--section">
           <div>
             <p className="prayer prayer--top">{OUR_FATHER[0]}</p>
             <p className="prayer">{OUR_FATHER[1]}</p>
             <p className="prayer">{OUR_FATHER[2]}</p>
           </div>
-        </section> */}
+        </section>
       </div>
       {currentDecade.scenes.map((scene, idx) => <Scene key={idx} mystery={currentDecade.name} scene={scene} idx={idx} /> )}
       <div className="container">

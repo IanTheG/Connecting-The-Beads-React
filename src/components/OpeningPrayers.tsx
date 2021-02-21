@@ -7,7 +7,10 @@ const OpeningPrayers = () => {
     <>
       <div className="container">
         <h3 className="title">The Apostle's Creed</h3>
-        <p className="prayer prayer--tight">{CREED}</p>
+        <div>
+          <p className="desc">Say the <b>Apostle's Creed.</b></p>
+          <p className="prayer prayer--tight">{CREED}</p>
+        </div>
       </div>
 
       <div className="container">

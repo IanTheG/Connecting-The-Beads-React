@@ -15,7 +15,7 @@ const Guide = () => {
         There are four sets of Mysteries: Joyful, Sorrowful, Glorious and––added by Saint John Paul II in 2002––the Luminous.&#8221;
       </p>
       {/* Include an image of the Rosary and describe how to pray */}
-      <p className="desc" style={{ textAlign: 'center', fontSize: '1.2rem' }}><b>This web app will guide you through every prayer in the Rosary.</b></p>
+      <p className="desc desc--guide"><b>This web app will guide you through every prayer in the Rosary.</b></p>
       {/* <p className="desc">Before beginning, you may take a few minutes to talk with God, Jesus, Mother Mary, or any of the Saints and present them with any prayer intentions.</p> */}
       <img />
       <div className="hero-line"></div>

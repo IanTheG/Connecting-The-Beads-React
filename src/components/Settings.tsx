@@ -11,7 +11,7 @@ const Settings = () => {
   const app = document.getElementById('app')
 
   return (
-    <label style={{display: 'flex', padding: '1rem 0', flexDirection: 'row-reverse'}}>
+    <label className="switch-container">
       <Switch
         onChange={() => {
           setMode(!mode)

@@ -1,0 +1,53 @@
+@use 'sass:map';
+@import 'variables';
+
+.btn {
+  font-family: map-get($map: $fonts, $key: 'desc');
+  font-size: 1.5rem;
+  color: white;
+  background-color: $purple-dark;
+  border: none;
+  cursor: pointer;
+
+  &:hover, &:active {
+    background-color: $purple-light;
+  }
+  width: 50%;
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 20px;
+
+  &--container {
+    display: flex;
+    justify-content: center;
+  }
+}
+.stated-mystery {
+  padding: 0 1rem;
+  text-align: center;
+  font-family: map-get($map: $fonts, $key: 'desc');
+}
+.hail-mary-number {
+  margin: 0 1rem 1rem 1rem;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+
+  &__text {
+    margin: 0;
+    border-radius: 50%;
+    background-color: $purple-dark;
+    color: white;
+    font-family: 'Avenir', sans-serif;
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    > p {
+      margin: 0;
+      font-weight: bold;
+    }
+  }
+}

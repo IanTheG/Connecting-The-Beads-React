@@ -1,9 +1,9 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useHistory, useLocation } from 'react-router'
 
-import { OUR_FATHER, GLORY_BE, FATIMA_PRAYER} from '../utils/prayers'
+import { OUR_FATHER, HAIL_MARY, GLORY_BE, FATIMA_PRAYER } from '../utils/prayers'
 import { fadeAnimation } from '../utils/functions'
-import Scene from './Scene'
+import SceneContainer from './SceneContainer'
 
 import { DecadeI } from '../utils/interfaces'
 
@@ -12,6 +12,8 @@ const Decade: React.FC<{ mysteryName: string, currentDecade: DecadeI }> =
 
   const history = useHistory()
   const { state } = useLocation<{ decade: number }>()
+
+  const [index, setIndex] = useState(0);
 
   useEffect(() => {
     document.getElementById('top-container')?.scrollIntoView(true)
@@ -36,7 +38,7 @@ const Decade: React.FC<{ mysteryName: string, currentDecade: DecadeI }> =
     <>
       <div id="top-container" className="container">
         <section>
-          <h2 className="stated-mystery">The {currentDecade.number} {mysteryName.charAt(0).toUpperCase() + mysteryName.slice(1)} Mystery is {currentDecade.name}</h2>
+          <h2 className="subtitle">The {currentDecade.number} {mysteryName.charAt(0).toUpperCase() + mysteryName.slice(1)} Mystery is {currentDecade.name}</h2>
           {/* <p className="desc desc--italic">Our Father...</p> */}
         </section>
         <section className="prayer--section">
@@ -47,7 +49,13 @@ const Decade: React.FC<{ mysteryName: string, currentDecade: DecadeI }> =
           </div>
         </section>
       </div>
-      {currentDecade.scenes.map((scene, idx) => <Scene key={idx} mystery={currentDecade.name} scene={scene} idx={idx} /> )}
+
+      {/* <div className="container"> */}
+
+      <SceneContainer currentDecade={currentDecade}/>
+
+      {/* </div> */}
+
       <div className="container">
         <section className="prayer--section">
           <div>
@@ -60,7 +68,7 @@ const Decade: React.FC<{ mysteryName: string, currentDecade: DecadeI }> =
         <section className="prayer--section">
           <div>
             <h3 className="title">Fatima Prayer</h3>
-            <p className="prayer">{FATIMA_PRAYER}</p>
+            <p className="prayer prayer--top">{FATIMA_PRAYER}</p>
           </div>
         </section>
         <div className="btn--container">

@@ -7,7 +7,7 @@ const MysteriesNav = () => {
 
   return (
     <div className="container">
-      <h2 className="title title--mysteries">Mysteries</h2>
+      <h2 className="title">Mysteries</h2>
       <Link className="link" to={{pathname: "/glorious", state: {decade: 0}} }>
         <div>
           <h3 className="mystery">Glorious</h3>

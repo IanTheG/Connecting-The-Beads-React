@@ -1,8 +1,6 @@
 import React, { useState } from 'react'
 import Switch from "react-switch";
 
-// Include logic to toggle dark/light mode?
-// Include instructions to turn on Do Not Disturb
 // Include option to not display prayers (display only images)
 const Settings = () => {
 
@@ -16,6 +14,16 @@ const Settings = () => {
         onChange={() => {
           setMode(!mode)
           app!.classList.toggle('dark-mode')
+          if (mode) {
+            // Light mode
+            app!.style.setProperty('--theme', '#967db4')
+            app!.style.setProperty('--theme-hail-mary', '#FFF')
+          }
+          else {
+            // Dark mode
+            app!.style.setProperty('--theme', '#6A5188')
+            app!.style.setProperty('--theme-hail-mary', '#3b2d4d')
+          }
         }}
         checked={app!.classList.contains('dark-mode')}
         uncheckedIcon={false}

@@ -14,15 +14,16 @@ const Guide = () => {
         St. Pius V officially added the second part of the Hail Mary. The Mysteries of the Rosary center on the events of Christ's life.
         There are four sets of Mysteries: Joyful, Sorrowful, Glorious and––added by Saint John Paul II in 2002––the Luminous.&#8221;
       </p>
+      <div className="hero-line"></div>
+
       {/* Include an image of the Rosary and describe how to pray */}
       <p className="desc desc--guide"><b>This web app will guide you through every prayer in the Rosary.</b></p>
       {/* <p className="desc">Before beginning, you may take a few minutes to talk with God, Jesus, Mother Mary, or any of the Saints and present them with any prayer intentions.</p> */}
       <img />
-      <div className="hero-line"></div>
 
       <div>
-        <h2 className="title">Opening Prayers</h2>
-        <p className="prayer">Begin by making the <b>Sign of The Cross.</b></p>
+        <h2 className="subtitle">Opening Prayers</h2>
+        <p className="prayer prayer--top">Begin by making the <b>Sign of The Cross.</b></p>
         <p className="prayer">{SIGN_OF_CROSS}</p>
       </div>
     </div>

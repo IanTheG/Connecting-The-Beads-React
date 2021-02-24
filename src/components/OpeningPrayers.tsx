@@ -6,7 +6,7 @@ const OpeningPrayers = () => {
   return (
     <>
       <div className="container">
-        <h3 className="title">The Apostle's Creed</h3>
+        <h3 className="title title--clear">The Apostle's Creed</h3>
         <div>
           <p className="desc">Say the <b>Apostle's Creed.</b></p>
           <p className="prayer prayer--tight">{CREED}</p>
@@ -14,7 +14,7 @@ const OpeningPrayers = () => {
       </div>
 
       <div className="container">
-        <h3 className="title">Our Father</h3>
+        <h3 className="title title--clear">Our Father</h3>
         <section className="prayer--section">
           <div>
             <p className="desc">Say the <b>Our Father.</b></p>
@@ -25,7 +25,7 @@ const OpeningPrayers = () => {
       </div>
 
       <div className="container">
-        <h3 className="title">Hail Mary</h3>
+        <h3 className="title title--clear">Hail Mary</h3>
         <section className="prayer--section">
           <div>
             <p className="desc">Say three <b>Hail Mary's.</b></p>
@@ -36,7 +36,7 @@ const OpeningPrayers = () => {
       </div>
 
       <div className="container">
-        <h3 className="title">Glory Be</h3>
+        <h3 className="title title--clear">Glory Be</h3>
         <section className="prayer--section">
           <div>
             <p className="desc">Say the <b>Glory Be.</b></p>

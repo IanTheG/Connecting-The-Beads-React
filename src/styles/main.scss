@@ -1,5 +1,10 @@
 @import './components';
 
+:root {
+  --theme: #967db4;
+  --theme-hail-mary: white;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -11,11 +16,36 @@ html {
   font-size: 15px;
 }
 #app {
-  transition: background-color 0.5s, color 0.5s;
+  transition: background-color 0.4s, color 0.4s;
 }
 .dark-mode {
   background-color: $purple-darker;
   color: whitesmoke;
+  // $dark-theme: true;
+}
+.title {
+  margin: 0;
+  padding: 1rem;
+  font-size: 2rem;
+  font-family: map-get($map: $fonts, $key: 'heading');
+  background-color: var(--theme);
+
+  &--small {
+    font-size: 1.5rem;
+  }
+  &--mysteries {
+    padding-bottom: 0;
+  }
+  &--clear {
+    background-color: transparent;
+  }
+}
+.subtitle {
+  margin: 0;
+  padding: 1rem;
+  text-align: center;
+  font-family: map-get($map: $fonts, $key: 'desc');
+  background-color: var(--theme);
 }
 
 // Main styles used throughout out app

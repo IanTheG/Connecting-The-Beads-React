@@ -2,20 +2,6 @@
 @import 'variables';
 
 @media screen and (min-width: 10px) {
-  .title {
-    margin: 0;
-    padding: 1rem;
-    font-size: 2rem;
-    font-family: map-get($map: $fonts, $key: 'heading');
-
-    &--small {
-      font-size: 1.5rem;
-    }
-    &--mysteries {
-      padding-bottom: 0;
-    }
-  }
-
   .hero-line {
     margin: 0 2rem;
     height: 0.3rem;

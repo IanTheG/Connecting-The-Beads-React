@@ -13,7 +13,7 @@ const Home = () => {
     <div id="top-container" className="container">
       <div>
         <h1 className="title" style={{textAlign: 'center'}}>Connecting The Beads</h1>
-        <div className="hero-line"></div>
+        {/* <div className="hero-line"></div> */}
       </div>
       {/* Image of rosary beads */}
       {/* <img className="hero-image" src="https://connectingthebeads-images.s3.amazonaws.com/main/SilverRosary.png" /> */}

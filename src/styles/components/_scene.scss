@@ -1,6 +1,14 @@
 @use 'sass:map';
 @import 'variables';
 
+.verse {
+  margin-top: 20%;
+  z-index: 0;
+  -webkit-transform: translate3d(0,0,0);
+  -webkit-backface-visibility: hidden;
+	-webkit-perspective: 1000;
+}
+
 .btn {
   font-family: map-get($map: $fonts, $key: 'desc');
   font-size: 1.5rem;
@@ -22,13 +30,24 @@
     justify-content: center;
   }
 }
-.stated-mystery {
-  padding: 0 1rem;
-  text-align: center;
-  font-family: map-get($map: $fonts, $key: 'desc');
+.sticky--top {
+  -webkit-backface-visibility: hidden;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0rem;
+  z-index: 2;
+}
+.sticky--bottom {
+  -webkit-backface-visibility: hidden;
+  position: -webkit-sticky;
+  position: sticky;
+  bottom: 0rem;
+  z-index: 1;
+  padding-bottom: 1rem;
+  background-color: var(--theme-hail-mary);
 }
 .hail-mary-number {
-  margin: 0 1rem 1rem 1rem;
+  margin: 0 1rem;
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;

@@ -59,7 +59,8 @@ const Decade: React.FC<{ mysteryName: string, currentDecade: DecadeI }> =
       <div className="container">
         <section className="prayer--section">
           <div>
-            <h3 className="title">Glory Be</h3>
+            <h3 className="title title--clear">Glory Be</h3>
+            <div className="hero-line"></div>
             <p className="prayer prayer--top">{GLORY_BE[0]}</p>
             <p className="prayer">{GLORY_BE[1]}</p>
             <p className="prayer">{GLORY_BE[2]}</p>
@@ -67,7 +68,8 @@ const Decade: React.FC<{ mysteryName: string, currentDecade: DecadeI }> =
         </section>
         <section className="prayer--section">
           <div>
-            <h3 className="title">Fatima Prayer</h3>
+            <h3 className="title title--clear">Fatima Prayer</h3>
+            <div className="hero-line"></div>
             <p className="prayer prayer--top">{FATIMA_PRAYER}</p>
           </div>
         </section>

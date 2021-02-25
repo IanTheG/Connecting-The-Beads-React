@@ -31,6 +31,7 @@
   }
 }
 .sticky--top {
+  -webkit-transform: translate3d(0,0,0);
   -webkit-backface-visibility: hidden;
   position: -webkit-sticky;
   position: sticky;
@@ -38,6 +39,7 @@
   z-index: 2;
 }
 .sticky--bottom {
+  -webkit-transform: translate3d(0,0,0);
   -webkit-backface-visibility: hidden;
   position: -webkit-sticky;
   position: sticky;

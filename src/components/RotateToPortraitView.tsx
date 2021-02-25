@@ -10,7 +10,6 @@ const RotateToPortraitView = () => {
           <i className="fas fa-undo"></i>
           <i className="fas fa-mobile-alt"></i>
         </div>
-        <img />
       </div>
     </>
   )

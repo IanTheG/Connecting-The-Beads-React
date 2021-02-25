@@ -19,7 +19,7 @@ const Guide = () => {
       {/* Include an image of the Rosary and describe how to pray */}
       <p className="desc desc--guide"><b>This web app will guide you through every prayer in the Rosary.</b></p>
       {/* <p className="desc">Before beginning, you may take a few minutes to talk with God, Jesus, Mother Mary, or any of the Saints and present them with any prayer intentions.</p> */}
-      <img />
+      {/* <img /> */}
 
       <div>
         <h2 className="subtitle">Opening Prayers</h2>

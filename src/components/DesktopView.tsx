@@ -11,10 +11,10 @@ const DesktopView = () => {
     <div id="desktop-view" className="container">
       <div>
         <h1 className="title title--desktop">Connecting The Beads</h1>
-        <p className="desc desc--italic desc--desktop" style={{textAlign: 'center'}}>Rediscover the Rosary</p>
+        <p className="desc desc--italic desc--desktop" style={{textAlign: 'center'}}>Rediscover the Rosary with Scripture and Meditation</p>
       </div>
       
-      <section style={{display: 'grid', gridTemplateColumns: '1fr 1fr'}}>
+      <section className="section--desktop">
         <p className="desc desc--desktop">
           This simple and elegant web app is designed to help newcomers and daily devotees pray the Rosary by
           allowing them to enter a deeper meditation on the lives of Jesus and Mary

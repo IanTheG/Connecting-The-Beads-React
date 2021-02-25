@@ -1,0 +1,246 @@
+{
+  "id": "luminous",
+  "name": "Luminous",
+  "decades": [
+    {
+      "id": 1,
+      "image": "",
+      "name": "The Baptism of The Lord",
+      "number": "First",
+      "scenes": [
+        {
+          "verse": "In those days John the Baptist appeared in the wilderness crying out: \"Prepare a way for the Lord!\"",
+          "ref": "Mark 1:3a, 4"
+        },
+        {
+          "verse": "\"Make his paths straight; for he guides are feet into the way of peace.\"",
+          "ref": "Mark 1:3b, Luke 1:79b"
+        },
+        {
+          "verse": "\"He gives light to those who live in darkness; and all mankind shall see the salvation of God.\"",
+          "ref": "Luke 1:79a, 3:6"
+        },
+        {
+          "verse": "When all the people asked him, \"What must we do then?\" he answered, \"Anyone who has two tunics must share with the one who has none.\"",
+          "ref": "Luke 3:10-11"
+        },
+        {
+          "verse": "\"And the one with something to eat must do the same.\"",
+          "ref": "Luke 3:11"
+        },
+        {
+          "verse": "And he said, \"Someone is coming, someone more powerful than I am.\"",
+          "ref": "Luke 3:16"
+        },
+        {
+          "verse": "\"I have baptized you with water, but he will baptize you with the Holy Spirit and fire.\"",
+          "ref": "Mark 1:8, Luke 3:16"
+        },
+        {
+          "verse": "Then Jesus came to be baptized by John, and John said, \"Look, there is the Lamb of God that takes away the sins of the world.\"",
+          "ref": "Matthew 3:13, John 1:29"
+        },
+        {
+          "verse": "And Jesus was baptized by John, and suddenly the heavens opened.",
+          "ref": "Matthew 3:16, Mark 1:9-10"
+        },
+        {
+          "verse": "And the Holy Spirit descended on him like a dove. And a voice spoke from Heaven, \"This is my beloved Son, with whom I am well pleased.\"",
+          "ref": "Luke 3:22, Mark 1:11, Matthew 3:17"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "image": "",
+      "name": "The Wedding at Cana",
+      "number": "Second",
+      "scenes": [
+        {
+          "verse": "There was a wedding at Cana at Galilee, and the mother of Jesus was there. Jesus and his disciples had also been invited.",
+          "ref": "John 2:1-2"
+        },
+        {
+          "verse": "When the wine provided for the wedding was all finished, the mother Jesus said to him, \"They have no wine.\"",
+          "ref": "John 2:3-4a"
+        },
+        {
+          "verse": "Jesus said, \"Woman, why turn to me? My hours has not yet come.\"",
+          "ref": "John 2:4b"
+        },
+        {
+          "verse": "She said to the servants, \"Do whatever he tells you.\" So he told them, \"Fill the jars with water.\"",
+          "ref": "John 2:5, 7"
+        },
+        {
+          "verse": "\"Now take some to the steward.\" When the steward tasted it he exclaimed, \"You have kept the best wine till now!\"",
+          "ref": "John 2:8, 10"
+        },
+        {
+          "verse": "This was the first of the signs given by Jesus, and his disciples believed in him.",
+          "ref": "John 2:!1"
+        },
+        {
+          "verse": "Then he came to Judea and some Pharisees asked him, \"Is is against the law for a man to divorce his wife?\"",
+          "ref": "Mark 10:1-2"
+        },
+        {
+          "verse": "Jesus said, \"From the beginning of creation, God made them male and female.\"",
+          "ref": ""
+        },
+        {
+          "verse": "\"This is why a man must leave his father and mother, and be joined to his wife.\"",
+          "ref": "Mark 10:8, Genesis 2:24"
+        },
+        {
+          "verse": "\"They are no longer two, therefore, but one body. So then, what God has united, man must not divide.\"",
+          "ref": "Mark 10:9-10"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "image": "",
+      "name": "Proclamation of The Kingdom",
+      "number": "Third",
+      "scenes": [
+        {
+          "verse": "After John had been arrested, Jesus went into Galilee. There he proclaimed the Good News from God.",
+          "ref": "Mark 1:14"
+        },
+        {
+          "verse": "\"The time has come; the kingdom of God is close at hand! Repent and believe in the Gospel.\"",
+          "ref": "Mark 1:15"
+        },
+        {
+          "verse": "And he taught: \"The kingdom of God is like a treasure hidden in a field, which someone has found.\"",
+          "ref": "Matthew 13:44a"
+        },
+        {
+          "verse": "\"He goes off happy, sells everything he owns and buys the field.\"",
+          "ref": "Matthew 13:44b"
+        },
+        {
+          "verse": "\"The kingdom of God is among you. So walk while you have the light, or darkness will overtake you.\"",
+          "ref": "Luke 17:21, John 12:35"
+        },
+        {
+          "verse": "\"You are the light of the world, buy your light must shine to give praise to your Father in heaven.\"",
+          "ref": "Matthew 5:14, 16"
+        },
+        {
+          "verse": "\"For much will be required of those to whom much is given.\"",
+          "ref": "Luke 12:48"
+        },
+        {
+          "verse": "\"And once the hand is laid on the plow, no one who looks back is fit for the kingdom of God.\"",
+          "ref": "Luke 9:62"
+        },
+        {
+          "verse": "And Jesus called a little child to him, and put his arms around him.",
+          "ref": "Matthew 18:2, Mark 9:36"
+        },
+        {
+          "verse": "Saying, \"I tell you solemnly, anyone who does not welcome the kingdom of God like a little child will never enter it.\"",
+          "ref": "Mark 10:15"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "image": "",
+      "name": "The Transfiguration",
+      "number": "Fourth",
+      "scenes": [
+        {
+          "verse": "Jesus went up a high mountain to pray; and he took with him Peter and James and John.",
+          "ref": "Luke 9:28, Mark 9:2"
+        },
+        {
+          "verse": "As he prayed, he was transfigured. His face shone like the sun and his clothes became as dazzling as light.",
+          "ref": "Luke 9:29, Matthew 17:2"
+        },
+        {
+          "verse": "Suddenly Moses and Elijah were there, speaking of his passing in Jerusalem.",
+          "ref": "Luke 9:30-31"
+        },
+        {
+          "verse": "Then Peter spoke to Jesus, \"Lord, it is wonderful for us to be here.\"",
+          "ref": "Matthew 17:4"
+        },
+        {
+          "verse": "As he spoke, a cloud covered them, and the disciples were afraid.",
+          "ref": "Luke 9:34"
+        },
+        {
+          "verse": "And a voice come from the cloud, \"This is my Son, the Chosen One; with whom I am well pleased. Listen to him.\"",
+          "ref": "Luke 9:35, Matthew 17:5"
+        },
+        {
+          "verse": "And the disciples fell face down on the ground, overcame with fear.",
+          "ref": "Matthew 17:6"
+        },
+        {
+          "verse": "But Jesus come up and touched them, saying, \"Stand up, do not be afraid.\"",
+          "ref": "Matthew 17:7"
+        },
+        {
+          "verse": "And when they raised their eyes they saw no one but only Jesus.",
+          "ref": "Matthew 17:8"
+        },
+        {
+          "verse": "And Jesus ordered them: \"Tell no one about the vision, until the Son of Man has risen from the dead.\"",
+          "ref": "Matthew 17:9"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "image": "",
+      "name": "The Institution of The Eucharist",
+      "number": "Fifth",
+      "scenes": [
+        {
+          "verse": "\"I am the living bread which has come down from heaven. Anyone who eats this bread will live forever.\"",
+          "ref": "John 6:31"
+        },
+        {
+          "verse": "\"For my flesh is real food, and my blood is real drink.\"",
+          "ref": "John 6:55"
+        },
+        {
+          "verse": "\"Whoever eats my flesh and drinks my blood lives in me, and I live in him.\"",
+          "ref": "John 6:56"
+        },
+        {
+          "verse": "After this, many of disciples left him. The Jesus said to the Twelve, \"Do you want to go away too?\"",
+          "ref": "John 6:66-67"
+        },
+        {
+          "verse": "Peter answered, \"Lord, to whom shall we go? You have the message of eternal life.\"",
+          "ref": "John 6:68"
+        },
+        {
+          "verse": "\"And we believe, and have come to know, that you are the Holy One of God.\"",
+          "ref": "John 6:69"
+        },
+        {
+          "verse": "Noe on the night he was betrayed, the Lord Jesus took some bread, and broke it.",
+          "ref": "1 Corinthians 11:23, Matthew 26:26a"
+        },
+        {
+          "verse": "And he gave it to the disciples, saying, \"Take it and eat. This is my body.\"",
+          "ref": "Matthew 26:26b"
+        },
+        {
+          "verse": "Then he took a cup, and gave it to them. \"Drink from this, all of you,\" he said.",
+          "ref": "Matthew 26:27"
+        },
+        {
+          "verse": "\"For this is my blood, the blood of the new covenant, which is to be poured out for many for the forgiveness of sins.\"",
+          "ref": "Matthew 26:28"
+        }
+      ]
+    }
+  ]
+}

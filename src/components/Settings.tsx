@@ -12,8 +12,6 @@ const Settings = () => {
     <label className="switch-container">
       <Switch
         onChange={() => {
-          setMode(!mode)
-          app!.classList.toggle('dark-mode')
           if (mode) {
             // Light mode
             app!.style.setProperty('--theme', '#967db4')
@@ -24,6 +22,8 @@ const Settings = () => {
             app!.style.setProperty('--theme', '#6A5188')
             app!.style.setProperty('--theme-hail-mary', '#3b2d4d')
           }
+          setMode(!mode)
+          app!.classList.toggle('dark-mode')
         }}
         checked={app!.classList.contains('dark-mode')}
         uncheckedIcon={false}

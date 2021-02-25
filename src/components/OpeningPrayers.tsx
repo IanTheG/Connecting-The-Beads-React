@@ -6,7 +6,10 @@ const OpeningPrayers = () => {
   return (
     <>
       <div className="container">
-        <h3 className="title title--clear">The Apostle's Creed</h3>
+        <div>
+          <h3 className="title title--clear">The Apostle's Creed</h3>
+          <div className="hero-line"></div>
+        </div>
         <div>
           <p className="desc">Say the <b>Apostle's Creed.</b></p>
           <p className="prayer prayer--tight">{CREED}</p>
@@ -14,7 +17,10 @@ const OpeningPrayers = () => {
       </div>
 
       <div className="container">
-        <h3 className="title title--clear">Our Father</h3>
+        <div>
+          <h3 className="title title--clear">Our Father</h3>
+          <div className="hero-line"></div>
+        </div>
         <section className="prayer--section">
           <div>
             <p className="desc">Say the <b>Our Father.</b></p>
@@ -25,7 +31,10 @@ const OpeningPrayers = () => {
       </div>
 
       <div className="container">
-        <h3 className="title title--clear">Hail Mary</h3>
+        <div>
+          <h3 className="title title--clear">Hail Mary</h3>
+          <div className="hero-line"></div>
+        </div>
         <section className="prayer--section">
           <div>
             <p className="desc">Say three <b>Hail Mary's.</b></p>
@@ -36,11 +45,14 @@ const OpeningPrayers = () => {
       </div>
 
       <div className="container">
-        <h3 className="title title--clear">Glory Be</h3>
+        <div>
+          <h3 className="title title--clear">Glory Be</h3>
+          <div className="hero-line"></div>
+        </div>
         <section className="prayer--section">
           <div>
             <p className="desc">Say the <b>Glory Be.</b></p>
-            {GLORY_BE.map((line, idx) => <p className="prayer" key={idx}>{line}</p> )}
+            {GLORY_BE.map((line, idx) => <p className={idx == 0 ? 'prayer prayer--top' : 'prayer'} key={idx}>{line}</p> )}
           </div>
         </section>
       </div>

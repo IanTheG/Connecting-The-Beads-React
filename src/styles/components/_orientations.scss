@@ -15,9 +15,16 @@
 #desktop-view {
   display: none;
   align-items: space-between;
+
+  section {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+  }
 }
 .title--desktop {
-  color: white;
+  color: inherit;
   background-color: $purple-dark;
   box-shadow: 0px 5px 20px black;
 }

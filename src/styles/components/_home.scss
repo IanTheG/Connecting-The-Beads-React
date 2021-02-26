@@ -1,0 +1,71 @@
+@use 'sass:map';
+@import 'variables';
+
+@media screen and (min-width: 10px) {
+  .hero-line {
+    margin: 0 1rem;
+    height: 0.2rem;
+    background-color: $purple-light;
+    border-radius: 0.5rem;
+  }
+  .hero-image {
+    flex: 1;
+  }
+  .instructions {
+    margin: 0;
+    padding: 1rem;
+  }
+  .settings-container {
+    display: grid;
+    grid-template-columns: 1fr auto
+  }
+  .switch {
+    padding-right: 1.2rem;
+  }
+  .switch-container {
+    display: flex;
+    padding: 1rem 0;
+    flex-direction: row-reverse;
+    align-items: center;
+  }
+
+  .desc {
+    margin: 0;
+    padding: 1rem;
+    font-family: map-get($map: $fonts, $key: 'desc');
+
+    &--home {
+      padding-top: 0;
+    }
+    &--switch {
+      padding: 0 1rem;
+    }
+    &--italic {
+      font-style: italic;
+    }
+    &--link {
+      padding: 0;
+      color: inherit;
+    }
+    &--day {
+      padding: 0.5em 0 0.5em 3em;
+    }
+    &--desktop {
+      font-size: 0.8rem;
+    }
+    &--tight {
+      padding: 0 1rem;
+    }
+    &--guide {
+      display: none;
+    }
+  }
+}
+
+@media screen and (min-width: 370px) {
+  .desc--guide {
+    display: block;
+    text-align: center;
+    font-size: 1.2rem;
+  }
+}

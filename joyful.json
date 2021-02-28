@@ -7,6 +7,7 @@
       "image": "",
       "name": "The Annunciation",
       "number": "First",
+      "fruits": "humility",
       "scenes": [
         {
           "verse": "The angel Gabriel was sent by God to a virgin; and the virgin's name was Mary.",
@@ -55,6 +56,7 @@
       "image": "",
       "name": "The Visitation",
       "number": "Second",
+      "fruits": "love of neighbor",
       "scenes": [
         {
           "verse": "Mary set out at that time and went to the hill country, and she went into Zechariah's house and greeted Elizabeth.",
@@ -103,6 +105,7 @@
       "image": "",
       "name": "The Nativity",
       "number": "Third",
+      "fruits": "poverty, detachment from things of the world, love of the poor",
       "scenes": [
         {
           "verse": "Now while Mary and Joseph were in Bethlehem, this time came for her to have her child.",
@@ -151,6 +154,7 @@
       "image": "",
       "name": "The Presentation",
       "number": "Fourth",
+      "fruits": "obedience",
       "scenes": [
         {
           "verse": "Observing the Law of Moses, they took Jesus up to Jerusalem to present him to the Lord.",
@@ -199,6 +203,7 @@
       "image": "",
       "name": "The Finding of Jesus in the Temple",
       "number": "Fifth",
+      "fruits": "piety, joy of finding Jesus",
       "scenes": [
         {
           "verse": "When Jesus was twelve years old, they went up to Jerusalem, for the feast of the Passover.",

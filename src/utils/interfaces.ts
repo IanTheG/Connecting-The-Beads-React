@@ -9,6 +9,7 @@ export interface DecadeI {
   name: string;
   number: string;
   image: string;
+  fruits: string;
   scenes: SceneI[]
 }
 
@@ -23,6 +24,7 @@ export const initialState: DecadeI = {
   name: '',
   number: '',
   image: '',
+  fruits: '',
   scenes: [],
 }
 // interface LocationI {

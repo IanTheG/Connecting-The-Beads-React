@@ -2,11 +2,12 @@
 @import 'variables';
 
 .verse {
-  margin-top: 20%;
+  margin-top: 14%;
   z-index: 0;
   -webkit-transform: translate3d(0,0,0);
   -webkit-backface-visibility: hidden;
 	-webkit-perspective: 1000;
+  background-color: rgba(150, 125, 180, 0.75);
 }
 
 .btn {
@@ -24,6 +25,7 @@
   margin: 1rem;
   padding: 1rem;
   border-radius: 20px;
+  border: 5px solid white;
 
   &--container {
     display: flex;
@@ -46,7 +48,6 @@
   bottom: 0rem;
   z-index: 1;
   padding-bottom: 1rem;
-  background-color: var(--theme-hail-mary);
 }
 .hail-mary-number {
   margin: 0 1rem;

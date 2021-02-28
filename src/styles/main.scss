@@ -18,6 +18,11 @@ html {
 #app {
   transition: background-color 0.4s, color 0.4s;
 }
+#root {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
 .dark-mode {
   background-color: $purple-darker;
   color: whitesmoke;
@@ -83,6 +88,10 @@ html {
   transform: translate3d(0, 0, 0);
 }
 
+#bottom-container {
+  background-color: rgba(150, 125, 180, 0.75);
+}
+
 .prayer {
   padding: 0 1rem 1rem 1rem;
   margin: 0;
@@ -94,6 +103,10 @@ html {
   }
   &--tight {
     white-space: pre-wrap;
+  }
+  &--section {
+    // background-color: var(--theme-hail-mary);
+    background-color: rgba(150, 125, 180, 0.75);
   }
 }
 

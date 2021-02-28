@@ -7,6 +7,7 @@
       "image": "",
       "name": "The Resurrection",
       "number": "First",
+      "fruits": "faith",
       "scenes": [
         {
           "verse": "\"I tell you most solemnly, you will be sorrowful, but your sorrow will turn to joy.\"",
@@ -55,6 +56,7 @@
       "image": "",
       "name": "The Ascension",
       "number": "Second",
+      "fruits": "hope, desire for Heaven",
       "scenes": [
         {
           "verse": "Jesus took them out as far as the outskirts of Bethany, and lifting up his hand he blessed them.",
@@ -103,6 +105,7 @@
       "image": "",
       "name": "The Descent of The Holy Spirit",
       "number": "Third",
+      "fruits": "wisdom, love of God, divine charity",
       "scenes": [
         {
           "verse": "When Pentecost day came around, they had all met in one room.",
@@ -151,6 +154,7 @@
       "image": "",
       "name": "The Assumption",
       "number": "Fourth",
+      "fruits": "devotion to Mary",
       "scenes": [
         {
           "verse": "\"Come then, my love; my lovely one, come.\"",
@@ -199,6 +203,7 @@
       "image": "",
       "name": "The Coronation",
       "number": "Fifth",
+      "fruits": "perseverance, increase in virtue and trust",
       "scenes": [
         {
           "verse": "Who is this arising like the dawn; fair as the moon, resplendent as the sun?",

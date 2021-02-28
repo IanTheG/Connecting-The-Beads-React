@@ -7,6 +7,7 @@
       "image": "",
       "name": "The Agony in the Garden",
       "number": "First",
+      "fruits": "contrition, conformity to God's will",
       "scenes": [
         {
           "verse": "Jesus came with them to Gethsemane. And sadness overcame him, and great distress.",
@@ -55,6 +56,7 @@
       "image": "",
       "name": "The Scourging at the Pillar",
       "number": "Second",
+      "fruits": "purification, sacrifice",
       "scenes": [
         {
           "verse": "They had Jesus bound and handed him over to Pilate. Pilate questioned him, \"Are you the king of the Jews?\"",
@@ -103,6 +105,7 @@
       "image": "",
       "name": "The Crowning with Thorns",
       "number": "Third",
+      "fruits": "moral courage",
       "scenes": [
         {
           "verse": "The soldiers led him away to the Praetorium. Then they stripped him and dressed him up in purple.",
@@ -151,6 +154,7 @@
       "image": "",
       "name": "The Carrying of The Cross",
       "number": "Fourth",
+      "fruits": "patience",
       "scenes": [
         {
           "verse": "\"If anyone wants to be a follower of mine, let him renounce himself.\"",
@@ -199,6 +203,7 @@
       "image": "",
       "name": "The Crucifixion",
       "number": "Fifth",
+      "fruits": "salvation, perseverance in faith, forgiveness",
       "scenes": [
         {
           "verse": "When they reached the place called The Skull, they crucified him.",

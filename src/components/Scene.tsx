@@ -9,7 +9,7 @@ const Scene: React.FC<{ scene: SceneI }> = ({ scene }) => {
   return (
     <div className="container">
       <section className="verse">
-        <p className="prayer">{scene.verse}</p>
+        <p className="prayer prayer--top">{scene.verse}</p>
         <p className="prayer desc--italic">{scene.ref}</p>
       </section>
     </div>

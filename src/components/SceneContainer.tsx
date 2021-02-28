@@ -12,13 +12,18 @@ const SceneContainer: React.FC<{ currentDecade: DecadeI }> = ({ currentDecade })
   // previousScene={idx > 0 && currentDecade.scenes[idx-1]}
 
   useEffect(() => {
+    const verseTopMarginHeight = document.getElementById('mysteryName')?.offsetHeight
+    document.querySelectorAll('.verse').forEach((el) => {
+      (el as HTMLElement).style.marginTop = `${verseTopMarginHeight}px`
+    })
+    
     fadeAnimation()
   })
 
   return (
     <div>
-      <h3 className="subtitle sticky--top">{currentDecade.name}</h3>
-      
+      <h3 id="mysteryName" className="subtitle sticky--top">{currentDecade.name}</h3>
+
       {currentDecade.scenes.map((scene, idx) => <Scene key={idx} scene={scene} /> )}
         <section className="prayer--section sticky--bottom">
           <div>

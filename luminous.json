@@ -7,6 +7,7 @@
       "image": "",
       "name": "The Baptism of The Lord",
       "number": "First",
+      "fruits": "openness to the Holy Spirit",
       "scenes": [
         {
           "verse": "In those days John the Baptist appeared in the wilderness crying out: \"Prepare a way for the Lord!\"",
@@ -55,6 +56,7 @@
       "image": "",
       "name": "The Wedding at Cana",
       "number": "Second",
+      "fruits": "to Jesus through Mary",
       "scenes": [
         {
           "verse": "There was a wedding at Cana at Galilee, and the mother of Jesus was there. Jesus and his disciples had also been invited.",
@@ -103,6 +105,7 @@
       "image": "",
       "name": "Proclamation of The Kingdom",
       "number": "Third",
+      "fruits": "repentance, trust in God",
       "scenes": [
         {
           "verse": "After John had been arrested, Jesus went into Galilee. There he proclaimed the Good News from God.",
@@ -151,6 +154,7 @@
       "image": "",
       "name": "The Transfiguration",
       "number": "Fourth",
+      "fruits": "desire for holiness",
       "scenes": [
         {
           "verse": "Jesus went up a high mountain to pray; and he took with him Peter and James and John.",
@@ -199,6 +203,7 @@
       "image": "",
       "name": "The Institution of The Eucharist",
       "number": "Fifth",
+      "fruits": "adoration",
       "scenes": [
         {
           "verse": "\"I am the living bread which has come down from heaven. Anyone who eats this bread will live forever.\"",

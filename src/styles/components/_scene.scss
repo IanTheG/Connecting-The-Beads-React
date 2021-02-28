@@ -2,13 +2,18 @@
 @import 'variables';
 
 .verse {
-  margin-top: 20%;
   z-index: 0;
+  background-color: rgba(150, 125, 180, 0.75);
   -webkit-transform: translate3d(0,0,0);
   -webkit-backface-visibility: hidden;
 	-webkit-perspective: 1000;
-}
 
+  display: grid;
+  grid-template-columns: 3rem auto;
+}
+.scene-item {
+  grid-column-start: 2;
+}
 .btn {
   font-family: map-get($map: $fonts, $key: 'desc');
   font-size: 1.5rem;
@@ -24,6 +29,7 @@
   margin: 1rem;
   padding: 1rem;
   border-radius: 20px;
+  border: 5px solid white;
 
   &--container {
     display: flex;
@@ -46,13 +52,10 @@
   bottom: 0rem;
   z-index: 1;
   padding-bottom: 1rem;
-  background-color: var(--theme-hail-mary);
 }
 .hail-mary-number {
-  margin: 0 1rem;
-  display: flex;
-  flex-direction: row-reverse;
-  justify-content: space-between;
+  grid-column-start: 1;
+  margin: 1rem 0 1rem 1rem;
 
   &__text {
     margin: 0;

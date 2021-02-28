@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import { useHistory, useLocation } from 'react-router'
 
-import { OUR_FATHER, HAIL_MARY, GLORY_BE, FATIMA_PRAYER } from '../utils/prayers'
+import { OUR_FATHER, GLORY_BE, FATIMA_PRAYER } from '../utils/prayers'
 import { fadeAnimation } from '../utils/functions'
 import SceneContainer from './SceneContainer'
 
@@ -13,9 +13,10 @@ const Decade: React.FC<{ mysteryName: string, currentDecade: DecadeI }> =
   const history = useHistory()
   const { state } = useLocation<{ decade: number }>()
 
-  const [index, setIndex] = useState(0);
-
   useEffect(() => {
+    const root = document.getElementById('root')
+    root!.style.backgroundImage = `url(${currentDecade.image})`
+
     document.getElementById('top-container')?.scrollIntoView(true)
     fadeAnimation()
   })
@@ -39,7 +40,7 @@ const Decade: React.FC<{ mysteryName: string, currentDecade: DecadeI }> =
       <div id="top-container" className="container">
         <section>
           <h2 className="subtitle">The {currentDecade.number} {mysteryName.charAt(0).toUpperCase() + mysteryName.slice(1)} Mystery is {currentDecade.name}</h2>
-          {/* <p className="desc desc--italic">Our Father...</p> */}
+          <p className="subtitle" style={{fontStyle: 'italic', paddingTop: '0'}}>Fruits of the mystery: {currentDecade.fruits}.</p>
         </section>
         <section className="prayer--section">
           <div>
@@ -50,14 +51,10 @@ const Decade: React.FC<{ mysteryName: string, currentDecade: DecadeI }> =
         </section>
       </div>
 
-      {/* <div className="container"> */}
-
       <SceneContainer currentDecade={currentDecade}/>
 
-      {/* </div> */}
-
-      <div className="container">
-        <section className="prayer--section">
+      <div id="bottom-container" className="container">
+        <section>
           <div>
             <h3 className="title title--clear">Glory Be</h3>
             <div className="hero-line"></div>
@@ -66,7 +63,7 @@ const Decade: React.FC<{ mysteryName: string, currentDecade: DecadeI }> =
             <p className="prayer">{GLORY_BE[2]}</p>
           </div>
         </section>
-        <section className="prayer--section">
+        <section>
           <div>
             <h3 className="title title--clear">Fatima Prayer</h3>
             <div className="hero-line"></div>

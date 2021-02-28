@@ -5,6 +5,8 @@ import Settings from './Settings'
 const Home = () => {
 
   useEffect(() => {
+    const root = document.getElementById('root')
+    root!.style.backgroundImage = 'none'
     document.getElementById('top-container')?.scrollIntoView(true)
     fadeAnimation()
   })

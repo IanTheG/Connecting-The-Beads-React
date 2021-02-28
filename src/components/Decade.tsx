@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import { useHistory, useLocation } from 'react-router'
 
 import { OUR_FATHER, GLORY_BE, FATIMA_PRAYER } from '../utils/prayers'
@@ -12,8 +12,6 @@ const Decade: React.FC<{ mysteryName: string, currentDecade: DecadeI }> =
 
   const history = useHistory()
   const { state } = useLocation<{ decade: number }>()
-
-  // const [index, setIndex] = useState(0);
 
   useEffect(() => {
     const root = document.getElementById('root')
@@ -53,11 +51,7 @@ const Decade: React.FC<{ mysteryName: string, currentDecade: DecadeI }> =
         </section>
       </div>
 
-      {/* <div className="container"> */}
-
       <SceneContainer currentDecade={currentDecade}/>
-
-      {/* </div> */}
 
       <div id="bottom-container" className="container">
         <section>

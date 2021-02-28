@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Switch from "react-switch";
 
 // Include option to not display prayers (display only images)
@@ -8,20 +8,30 @@ const Settings = () => {
 
   const app = document.getElementById('app')
 
+  const setVars = (checked: boolean | HTMLElement | null) => {
+    if (checked) {
+      // Dark mode
+      app!.style.setProperty('--theme', '#6A5188')
+      app!.style.setProperty('--theme-invert', '#967db4')
+      app!.style.setProperty('--theme-prayer-section', 'rgba(106, 81, 136, 0.75)')
+    }
+    else {
+      // Light mode
+      app!.style.setProperty('--theme', '#967db4')
+      app!.style.setProperty('--theme-invert', '#6A5188')
+      app!.style.setProperty('--theme-prayer-section', 'rgba(150, 125, 180, 0.75)')
+    }
+  }
+
+  useEffect(() => {
+    setVars(app!.classList.contains('dark-mode'))
+  }, [])
+
   return (
     <label className="switch-container">
       <Switch
-        onChange={() => {
-          if (mode) {
-            // Light mode
-            app!.style.setProperty('--theme', '#967db4')
-            app!.style.setProperty('--theme-hail-mary', '#FFF')
-          }
-          else {
-            // Dark mode
-            app!.style.setProperty('--theme', '#6A5188')
-            app!.style.setProperty('--theme-hail-mary', '#3b2d4d')
-          }
+        onChange={(checked) => {
+          setVars(checked)
           setMode(!mode)
           app!.classList.toggle('dark-mode')
         }}

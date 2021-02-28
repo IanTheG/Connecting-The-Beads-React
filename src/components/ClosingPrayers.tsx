@@ -19,7 +19,6 @@ const ClosingPrayers = () => {
       <div id="top-container" className="container prayer--section">
         <div>
           <h2 className="subtitle">Closing Prayers</h2>
-          {/* <div className="hero-line"></div> */}
         </div>
         <section style={{flex: 1}}>
           <div>

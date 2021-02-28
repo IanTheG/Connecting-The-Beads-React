@@ -28,12 +28,18 @@
   background-color: $purple-dark;
   box-shadow: 0px 5px 20px black;
 }
-
+// Normal display
 @media (orientation: portrait) {
   #root { display: block; }
   #portrait { display: none; }
 }
+// iPhone
 @media (orientation: landscape) and (max-width: 760px) {
+  #root { display: none; }
+  #portrait { display: flex; }
+}
+// Large iPhone
+@media (orientation: landscape) and (max-width: 900px) and (max-height: 450px) {
   #root { display: none; }
   #portrait { display: flex; }
 }

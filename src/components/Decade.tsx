@@ -40,7 +40,7 @@ const Decade: React.FC<{ mysteryName: string, currentDecade: DecadeI }> =
       <div id="top-container" className="container">
         <section>
           <h2 className="subtitle">The {currentDecade.number} {mysteryName.charAt(0).toUpperCase() + mysteryName.slice(1)} Mystery is {currentDecade.name}</h2>
-          <p className="subtitle" style={{fontStyle: 'italic', paddingTop: '0'}}>Fruits of the mystery: {currentDecade.fruits}.</p>
+          <p className="subtitle subtitle--fruit">Fruits of the mystery: {currentDecade.fruits}.</p>
         </section>
         <section className="prayer--section">
           <div className="prayer--short">
@@ -57,7 +57,7 @@ const Decade: React.FC<{ mysteryName: string, currentDecade: DecadeI }> =
       <SceneContainer currentDecade={currentDecade}/>
 
       <div id="bottom-container" className="container">
-        <section>
+        <section className="prayer--section" style={{backgroundColor: 'transparent'}}>
           <div>
             <h3 className="title title--clear">Glory Be</h3>
             <div className="hero-line"></div>
@@ -66,7 +66,7 @@ const Decade: React.FC<{ mysteryName: string, currentDecade: DecadeI }> =
             <p className="prayer">{GLORY_BE[2]}</p>
           </div>
         </section>
-        <section>
+        <section className="prayer--section" style={{backgroundColor: 'transparent'}}>
           <div>
             <h3 className="title title--clear">Fatima Prayer</h3>
             <div className="hero-line"></div>

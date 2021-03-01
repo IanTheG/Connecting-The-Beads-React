@@ -51,9 +51,16 @@ html {
 .subtitle {
   margin: 0;
   padding: 1rem;
+  font-size: 1.2rem;
   text-align: center;
   font-family: map-get($map: $fonts, $key: 'desc');
   background-color: var(--theme);
+
+  &--fruit {
+    font-style: italic;
+    padding-top: 0;
+    font-size: 1rem;
+  }
 }
 .hero-line {
   margin: 0 1rem;

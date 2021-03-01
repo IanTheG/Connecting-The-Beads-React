@@ -59,6 +59,17 @@
       display: none;
     }
   }
+
+  .no-grid {
+    flex: 1;
+    display: flex !important;
+    align-items: flex-end;
+  }
+  .inner-prayer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
 }
 
 @media screen and (min-width: 370px) {

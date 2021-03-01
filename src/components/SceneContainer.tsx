@@ -23,7 +23,10 @@ const SceneContainer: React.FC<{ currentDecade: DecadeI }> = ({ currentDecade })
 
       {currentDecade.scenes.map((scene, idx) => <Scene key={idx} scene={scene} index={idx+1} /> )}
         <section className="prayer--section sticky--bottom">
-          <div>
+        <div className="prayer--short">
+            <p className="prayer prayer--top" style={{fontSize: '1.2rem'}}>Hail Mary...</p>
+          </div>
+          <div className="prayer--long">
             <p className="prayer prayer--top">{HAIL_MARY[0]}</p>
             <p className="prayer">{HAIL_MARY[1]}</p>
             <p className="prayer">Amen.</p>

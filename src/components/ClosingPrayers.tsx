@@ -16,11 +16,12 @@ const ClosingPrayers = () => {
 
   return (
     <>
-      <div id="top-container" className="container prayer--section">
+      <div id="top-container" className="container">
         <div>
           <h2 className="subtitle">Closing Prayers</h2>
+          {/* <div className="hero-line"></div> */}
         </div>
-        <section style={{flex: 1}}>
+        <section className="prayer--section">
           <div>
             <h2 className="title title--clear">Hail, Holy Queen</h2>
             <div className="hero-line"></div>
@@ -28,8 +29,8 @@ const ClosingPrayers = () => {
           </div>
         </section>
       </div>
-      <div className="container prayer--section">
-        <section>
+      <div className="container">
+        <section className="prayer--section">
           <div>
             <h2 className="title title--clear">Final Prayer</h2>
             <div className="hero-line"></div>
@@ -37,15 +38,15 @@ const ClosingPrayers = () => {
           </div>
         </section>
       </div>
-      <div className="container prayer--section">
-        <section>
+      <div className="container">
+        <section className="prayer--section">
           <div>
             <h2 className="title title--clear">St. Michael Prayer</h2>
             <div className="hero-line"></div>
             {ST_MICHAEL.map((line, idx) => <p className={idx == 0 ? 'prayer prayer--top' : 'prayer'} key={idx}>{line}</p> )}
           </div>
         </section>
-        <section>
+        <section className="prayer--section">
           <div>
             <p className="desc">End the Rosary by making the <b>Sign of The Cross.</b></p>
             <p className="prayer">{SIGN_OF_CROSS}</p>

@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { fadeAnimation } from '../utils/functions'
-import Settings from './Settings'
+// import Settings from './Settings'
 
 const Home = () => {
 
@@ -22,7 +22,7 @@ const Home = () => {
       <div>
         <div className="settings-container">
           <div></div>
-          <Settings />
+          {/* <Settings /> */}
         </div>
         {/* Add this first paragraph to an about section of the app */}
         <p className="desc desc--home">This mobile–friendly web app is a Rosary companion designed to help you pray and meditate with scripture and religious artwork.</p>

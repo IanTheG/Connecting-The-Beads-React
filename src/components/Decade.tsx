@@ -43,7 +43,10 @@ const Decade: React.FC<{ mysteryName: string, currentDecade: DecadeI }> =
           <p className="subtitle" style={{fontStyle: 'italic', paddingTop: '0'}}>Fruits of the mystery: {currentDecade.fruits}.</p>
         </section>
         <section className="prayer--section">
-          <div>
+          <div className="prayer--short">
+            <p className="prayer prayer--top" style={{fontSize: '1.2rem'}}>Our Father...</p>
+          </div>
+          <div className="prayer--long">
             <p className="prayer prayer--top">{OUR_FATHER[0]}</p>
             <p className="prayer">{OUR_FATHER[1]}</p>
             <p className="prayer">{OUR_FATHER[2]}</p>

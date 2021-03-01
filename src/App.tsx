@@ -1,7 +1,8 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { Switch, Route } from 'react-router-dom'
 
 import Home from './components/Home'
+import Settings from './components/Settings'
 import Guide from './components/Guide'
 import OpeningPrayers from './components/OpeningPrayers'
 import MysteriesNav from './components/MysteriesNav'
@@ -24,6 +25,7 @@ const App = () => {
       <Switch>
         <Route exact path="/">
           <Home />
+          <Settings />
           <Guide />
           <OpeningPrayers />
           <MysteriesNav />

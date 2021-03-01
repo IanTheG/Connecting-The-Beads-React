@@ -19,8 +19,13 @@
   .switch-container {
     display: flex;
     padding: 1rem 0;
-    flex-direction: row-reverse;
+    // flex-direction: row-reverse;
     align-items: center;
+
+    &--top {
+      align-items: flex-start;
+      padding: 0;
+    }
   }
 
   .desc {

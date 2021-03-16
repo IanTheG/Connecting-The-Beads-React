@@ -5,7 +5,7 @@ const DesktopView = () => {
   
   useEffect(() => {
     fadeAnimation()
-  })
+  }, [])
 
   return (
     <div id="desktop-view" className="container">

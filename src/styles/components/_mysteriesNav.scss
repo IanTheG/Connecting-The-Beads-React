@@ -29,10 +29,6 @@
       background-color: $purple-light;
     }
   }
-  .current-day {
-    background-color: $purple-dark;
-    color: white;
-  }
   .loading {
     font-family: map-get($map: $fonts, $key: 'desc');
   }

@@ -3,6 +3,7 @@
 export const fadeAnimation = (): void => {
 
   const containers = Array.from(document.querySelectorAll('.container')) as HTMLElement[]
+  // const image = document.getElementById('dynamic-image') as HTMLImageElement
   const options = {
     rootMargin: '0px',
     threshold: 0.75,
@@ -11,6 +12,7 @@ export const fadeAnimation = (): void => {
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       const { target } = entry;
+
       if (entry.intersectionRatio >= 0.75) {
         target.classList.add("is-visible")
       } else {
@@ -28,8 +30,21 @@ export const fadeAnimation = (): void => {
       containerChildren.forEach((el, index: number) => {
         el.style.setProperty("--delay", `${index * 250}ms`);
       });
-  
+
       observer.observe(container)
     }
   })
 }
+
+// const scrollImage = (): void => {
+//   const image = document.getElementById('dynamic-image') as HTMLImageElement
+
+//   const options = {
+//     rootMargin: '0px',
+//     threshold: 0.75,
+//   }
+
+//   const observer = new IntersectionObserver((entry) => {
+//     const { target } = entry
+//   })
+// }

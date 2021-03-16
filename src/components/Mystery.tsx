@@ -11,19 +11,17 @@ import Decade from './Decade'
 const Mystery = () => {
 
   const history = useHistory()
-
   const location = useLocation<{ decade: number }>()
-
-  // Sets a default state for location, otherwise crashes app
-  const location2: Locale<{ decade: number }> = {
-    ...location,
-    state: location.state ? location.state : {decade: 0}
-  }
-
   const { mystery } = useParams<{ mystery: string }>()
 
   const [currentMystery, setCurrentMystery] = useState<MysteryI>()
   const [currentDecade, setCurrentDecade] = useState<DecadeI>(initialState)
+
+  // Sets a default state for location, otherwise crashes app
+  const location2: Locale<{ decade: number }> = {
+    ...location,
+    state: location.state ? location.state : {decade: 1}
+  }
 
   // Initializes the chosen mystery in state (prevents repeated server GET requests)
   useEffect(() => {
@@ -44,28 +42,29 @@ const Mystery = () => {
 
   // Re-renders when state in location object changes or mystery changes, enables forward-backward navigation
   useEffect(() => {
-      currentMystery && setCurrentDecade(currentMystery.decades[location2.state.decade])
+    if (currentMystery) {
+      setCurrentDecade(currentMystery.decades[location2.state.decade - 1])
+    } 
   }, [currentMystery, location2.state.decade])
 
   return (
-    currentMystery
+    // Only render decade if name is set (after pulling from API)
+    currentDecade.name !== ''
     ? <Decade mysteryName={mystery} currentDecade={currentDecade} />
     : <Loading mysteryName={mystery} />
   )
 }
 
-export default Mystery
-
 const Loading: React.FC<{ mysteryName: string }> = ({ mysteryName }) => {
 
-  useEffect(() => {
-    fadeAnimation()
-  })
+  useEffect(() => fadeAnimation())
 
   return (
-    <div className="container" style={{ alignItems: 'center', justifyContent: 'center' }}>
+    <div className="container theme--trans" style={{ alignItems: 'center', justifyContent: 'center' }}>
       <h2 className="loading" style={{ textAlign: 'center', margin: '1rem' }}>Loading the {mysteryName.charAt(0).toUpperCase() + mysteryName.slice(1)} Mysteries</h2>
       <div className="hero-line"></div>
     </div>
   )
 }
+
+export default Mystery

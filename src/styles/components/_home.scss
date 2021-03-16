@@ -19,7 +19,6 @@
   .switch-container {
     display: flex;
     padding: 1rem 0;
-    // flex-direction: row-reverse;
     align-items: center;
 
     &--top {
@@ -58,10 +57,15 @@
     &--guide {
       display: none;
     }
+    &--copyright {
+      padding-top: 0;
+      padding-bottom: 0;
+      color: inherit;
+    }
   }
 
   .no-grid {
-    flex: 1;
+    background-color: var(--theme-prayer-section);
     display: flex !important;
     align-items: flex-end;
   }

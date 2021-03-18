@@ -1,13 +1,15 @@
 import React from 'react'
 
-export type CurrentImageType = {
+export type ImageI = {
   url: string;
   alt: string;
 }
 
 type ImageContextType = {
-  currentImage: CurrentImageType;
-  setCurrentImage: React.Dispatch<React.SetStateAction<CurrentImageType>>;
+  selectedMysteryImages: ImageI[];
+  currentImageIndex: number;
+  setSelectedMysteryImages: React.Dispatch<React.SetStateAction<ImageI[]>>;
+  setCurrentImageIndex: React.Dispatch<React.SetStateAction<number>>;
 }
 
 // Custom context enables ImageContext.Provider in App component to manage state

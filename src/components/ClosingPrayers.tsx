@@ -1,20 +1,24 @@
 import React, { useEffect } from 'react'
 import { useHistory } from 'react-router'
+
 import { fadeAnimation } from '../utils/functions'
 import { HAIL_HOLY_QUEEN, FINAL_PRAYER, ST_MICHAEL, SIGN_OF_CROSS } from '../utils/prayers'
+import { useImage } from '../utils/ImageContext'
 
 const ClosingPrayers = () => {
 
   const history = useHistory()
+  const { setCurrentImageIndex } = useImage()!
 
   useEffect(() => {
+    setCurrentImageIndex(6)
     document.getElementById('top-container')?.scrollIntoView(true)
     fadeAnimation()
   }, [])
 
   return (
     <>
-      <div id="top-container" className="container">
+      <div id="top-container" className="container theme--trans">
         <div>
           <h2 className="subtitle">Closing Prayers</h2>
         </div>
@@ -26,7 +30,7 @@ const ClosingPrayers = () => {
           </div>
         </section>
       </div>
-      <div className="container">
+      <div className="container theme--trans">
         <section className="prayer--section prayer--ipad">
           <div>
             <h2 className="title title--clear no-border">Final Prayer</h2>
@@ -35,7 +39,7 @@ const ClosingPrayers = () => {
           </div>
         </section>
       </div>
-      <div id="bottom-container" className="container">
+      <div id="bottom-container" className="container theme--trans">
         <section className="prayer--section prayer--ipad">
           <div>
             <h2 className="title title--clear no-border">St. Michael Prayer</h2>

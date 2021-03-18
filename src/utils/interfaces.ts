@@ -1,7 +1,6 @@
 export interface SceneI {
   verse: string;
   ref: string;
-  imagine: string;
 }
 
 export interface DecadeI {
@@ -14,7 +13,7 @@ export interface DecadeI {
 }
 
 export interface MysteryI {
-  _id: string;
+  id: string;
   name: string;
   decades: DecadeI[];
 }

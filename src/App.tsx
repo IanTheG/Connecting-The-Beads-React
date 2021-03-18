@@ -8,8 +8,9 @@ import MysteriesNav from './components/MysteriesNav'
 import About from './components/About'
 import Mystery from './components/Mystery'
 import ClosingPrayers from './components/ClosingPrayers'
-import { CurrentImageType, ImageContext } from './utils/ImageContext'
-import CrossFadeImageTS from './utils/CrossFadeImageTS'
+import { ImageI, ImageContext } from './utils/ImageContext'
+
+import ImageContainer from './components/ImageContainer'
 
 const App = () => {
 
@@ -21,17 +22,34 @@ const App = () => {
   window.addEventListener('resize', setDocHeight)
   window.addEventListener('orientationchange', setDocHeight)
 
-  const [currentImage, setCurrentImage] = useState<CurrentImageType>({ url: '', alt: '' })
+  const [currentImageIndex, setCurrentImageIndex] = useState<number>(0)
+  const [selectedMysteryImages, setSelectedMysteryImages] = useState<ImageI[]>([])
+
+  const homeImage = (): ImageI => {
+    const randomImageNumber = Math.floor(Math.random() * Math.floor(5)) + 1
+    const randomMysteryNumber = Math.floor(Math.random() * Math.floor(4))
+    const randomMystery = ["glorious", "sorrowful", "joyful", "luminous"][randomMysteryNumber]
+
+    return {
+      // url: `https://connectingthebeads-images.s3.amazonaws.com/${randomMystery}/${randomImageNumber}.jpg`,
+      url: "https://connectingthebeads-images.s3.amazonaws.com/sorrowful/1.jpg",
+      alt: `${randomMystery} ${randomImageNumber}`
+    }
+  }
+  const closingImage: ImageI = {
+    url: "",
+    alt: ""
+  }
 
   return (
     <main id="root" className="scroll-container">
-      <ImageContext.Provider value={{ currentImage, setCurrentImage }}>
-        <CrossFadeImageTS
-          src={currentImage.url}
-          alt={currentImage.alt}
+      <ImageContext.Provider value={{ currentImageIndex, setCurrentImageIndex, selectedMysteryImages, setSelectedMysteryImages }}>
+        <ImageContainer
+          // Make the home page image random, and the ClosingPrayers image one of the five Joyful mysteries
+          images={[homeImage(), ...selectedMysteryImages, closingImage]}
+          currentImageIndex={currentImageIndex}
           imgStyle={{ position: 'fixed', height: '100vh', width: '100vw', zIndex: -1, objectFit: 'cover' }}
           containerStyle={{ display: 'flex', justifyContent: 'center' }}
-          duration={800}
         />
         <Switch>
           <Route exact path="/">

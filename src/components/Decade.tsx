@@ -12,14 +12,11 @@ const Decade: React.FC<{ mysteryName: string, currentDecade: DecadeI }> =
 
   const history = useHistory()
   const { state } = useLocation<{ decade: number }>()
-  const { setCurrentImage } = useImage()!
-
+  const { setCurrentImageIndex } = useImage()!
+  
   useEffect(() => {
     document.getElementById('top-container')?.scrollIntoView(true)
-  })
-
-  useEffect(() => {
-    setCurrentImage({ url: currentDecade.image, alt: currentDecade.name })
+    setCurrentImageIndex(currentDecade.id)
   }, [currentDecade])
 
   const handleNextDecade = () => {

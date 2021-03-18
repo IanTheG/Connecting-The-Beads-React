@@ -12,13 +12,13 @@ const Theme = () => {
       // Dark mode
       app!.style.setProperty('--theme', '#6A5188')
       app!.style.setProperty('--theme-invert', '#967db4')
-      app!.style.setProperty('--theme-prayer-section', 'rgba(106, 81, 136, 0.85)')
+      app!.style.setProperty('--theme-trans', 'rgba(106, 81, 136, 0.85)')
     }
     else {
       // Light mode
       app!.style.setProperty('--theme', '#967db4')
       app!.style.setProperty('--theme-invert', '#6A5188')
-      app!.style.setProperty('--theme-prayer-section', 'rgba(150, 125, 180, 0.85)')
+      app!.style.setProperty('--theme-trans', 'rgba(150, 125, 180, 0.85)')
     }
   }
 

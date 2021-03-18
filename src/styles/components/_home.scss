@@ -44,9 +44,14 @@
     &--link {
       padding: 0;
       color: inherit;
+      text-decoration-thickness: 1px;
+
+      &:hover {
+        color: white;
+      }
     }
     &--day {
-      padding: 0.5em 0 0.5em 3em;
+      padding: 0.5em 0 0.5em 2.5em;
     }
     &--desktop {
       font-size: 0.8rem;
@@ -57,6 +62,9 @@
     &--guide {
       display: none;
     }
+    &--small-phone {
+      display: none;
+    }
     &--copyright {
       padding-top: 0;
       padding-bottom: 0;
@@ -65,7 +73,7 @@
   }
 
   .no-grid {
-    background-color: var(--theme-prayer-section);
+    background-color: var(--theme-trans);
     display: flex !important;
     align-items: flex-end;
   }
@@ -75,11 +83,18 @@
     justify-content: flex-end;
   }
 }
-
 @media screen and (min-width: 370px) {
-  .desc--guide {
-    display: block;
-    text-align: center;
-    font-size: 1.2rem;
+  .desc {
+    &--small-phone {
+      display: block;
+    }
+    &--guide {
+      display: block;
+      text-align: center;
+      font-size: 1.2rem;
+    }
+    &--day {
+      font-size: 1.2rem;
+    }
   }
 }

@@ -16,7 +16,12 @@
 }
 #desktop-view {
   display: none;
-  align-items: space-between;
+  // align-items: space-between;
+  background-color: whitesmoke;
+
+  & > * {
+    color: black;
+  }
 
   section {
     flex: 1;
@@ -27,8 +32,10 @@
 }
 .title--desktop {
   color: inherit;
-  background-color: $purple-dark;
+  background-color: $purple-light !important;
+  border-bottom: none !important;
   box-shadow: 0px 5px 20px black;
+
 }
 // Normal display
 @media (orientation: portrait) {

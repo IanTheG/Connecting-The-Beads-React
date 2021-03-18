@@ -7,16 +7,33 @@ import { useImage } from '../utils/ImageContext'
 
 const Home = () => {
 
-  const { setCurrentImage } = useImage()!
+  const { setCurrentImageIndex } = useImage()!
+  const currentDay = (new Date()).getDay()
 
   useEffect(() => {
-    setCurrentImage({
-      url: 'https://www.rosarycenter.org/wp-content/uploads/sites/3/2019/02/j1-1.jpg',
-      alt: 'Home image'
-    })
+    setCurrentImageIndex(0)
+    // const randomImageNumber = Math.floor(Math.random() * Math.floor(5)) + 1
+    // const dailyMystery = "sorrowful"//getMysteryFromDay(currentDay)
+    // setCurrentImage({
+    //   url: `https://connectingthebeads-images.s3.amazonaws.com/${dailyMystery}/${randomImageNumber}.jpg`,
+    //   alt: 'Home image'
+    // })
     document.getElementById('top-container')?.scrollIntoView(true)
     fadeAnimation()
   }, [])
+
+  const getMysteryFromDay = (day: number) => {
+    switch (day) {
+      case 0 :
+      case 3 : return 'glorious'
+      case 1 :
+      case 6 : return 'joyful'
+      case 2 :
+      case 5 : return 'sorrowful'
+      case 4 : return 'luminous'
+      default : return 'glorious'
+    }
+  }
 
   return (
     <div id="top-container" className="container">

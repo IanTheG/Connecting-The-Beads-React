@@ -33,9 +33,9 @@ type ImageTransitionT = {
  *
  * @param {string} src The image source.
  * @param {string=} alt Alt text describing image.
- * @param {number=} duration The duration of the opacity transition.
+ * @param {number=} duration The duration in ms of the opacity transition.
  * @param {enum} timingFunction "ease" | "ease-in" | "ease-out" | "ease-in-out" | "linear" | "step-start" | "step-en"
- * @param {number=} delay The delay of the opacity transition.
+ * @param {number=} delay The delay in ms of the opacity transition.
  * @param {object=} imgStyle React in-line styles for the img elements.
  * @param {string=} imgClassName CSS class names for styling img elements.
  * @param {object=} containerStyle React in-line styles for the div container.

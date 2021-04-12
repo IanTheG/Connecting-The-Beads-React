@@ -3,40 +3,44 @@
 :root {
   --theme: #967db4;
   --theme-invert: #6A5188;
-  --theme-prayer-section: rgba(150, 125, 180, 0.75);
-  --prayer-long: block;
-  --prayer-short: none;
+  --theme-trans: rgba(150, 125, 180, 0.85);
 }
+// #4b3961
 
+// Base elements and theme styling
+
+html {
+  font-size: 15px;
+  background-color: $purple-darker;
+}
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: white;
   color: black;
 }
-html {
-  font-size: 15px;
-}
-#app {
-  transition: background-color 0.4s, color 0.4s;
-}
-#root {
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-}
 .dark-mode {
-  background-color: $purple-darker;
   color: whitesmoke;
-  // $dark-theme: true;
 }
+.theme--trans {
+  background-color: var(--theme-trans);
+}
+.hero-line {
+  margin: 0 1rem;
+  height: 0.2rem;
+  background-color: var(--theme-invert);
+  border-radius: 0.5rem;
+}
+
+// Text
+
 .title {
   margin: 0;
   padding: 1rem;
   font-size: 2rem;
   font-family: map-get($map: $fonts, $key: 'heading');
   background-color: var(--theme);
+  border-bottom: 0.25rem solid var(--theme-invert);
 
   &--small {
     font-size: 1.5rem;
@@ -55,18 +59,30 @@ html {
   text-align: center;
   font-family: map-get($map: $fonts, $key: 'desc');
   background-color: var(--theme);
+  border-bottom: 0.25rem solid var(--theme-invert);
 
   &--fruit {
     font-style: italic;
     padding-top: 0;
     font-size: 1rem;
   }
+  &--trans {
+    background-color: var(--theme-trans);
+  }
 }
-.hero-line {
-  margin: 0 1rem;
-  height: 0.2rem;
+.current-day {
   background-color: var(--theme-invert);
-  border-radius: 0.5rem;
+  color: white;
+}
+
+// Image
+
+.img {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  z-index: -1;
+  object-fit: cover;
 }
 
 // Main styles used throughout out app
@@ -77,14 +93,12 @@ html {
 
 .scroll-container {
   height: vh(100);
-  // height: calc(100vh - calc(100vh - 100%));
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
 }
 
 .container {
   height: vh(100);
-  // height: calc(100vh - calc(100vh - 100%));
   width: 100vw;
   scroll-snap-align: center;
   display: flex;
@@ -102,11 +116,6 @@ html {
   opacity: 1;
   transform: translate3d(0, 0, 0);
 }
-
-#bottom-container {
-  background-color: var(--theme-prayer-section);
-}
-
 .prayer {
   padding: 0 1rem 1rem 1rem;
   margin: 0;
@@ -120,47 +129,73 @@ html {
     white-space: pre-wrap;
   }
   &--section {
-    // flex: 1;
-    background-color: var(--theme-prayer-section);
+    background-color: var(--theme-trans);
   }
-  &--long {
-    display: var(--prayer-long);
+  &--ipad {
+    background-color: transparent;
+    flex: 1;
   }
-  &--short {
-    display: var(--prayer-short);
+  &--decade-end {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
   }
 }
 
 @media screen and (min-width: 370px), (min-height: 700px) {
-  html {
-    font-size: 16px;
-  }
+  html { font-size: 16px; }
 }
 @media screen and (min-width: 400px), (min-height: 700px) {
-  html {
-    font-size: 18px;
-  }
+  html { font-size: 18px; }
 }
-
 @media screen and (min-width: 600px) {
-  html {
-    font-size: 21px;
-  }
+  html { font-size: 21px; }
 }
-
 @media screen and (min-width: 750px) {
-  html {
-    font-size: 24px;
-  }
+  html { font-size: 24px; }
+
   // Formats prayers for better view on tablet
   .prayer--section {
     display: grid;
     grid-template-columns: 2fr 1fr;
   }
 }
-
 @media screen and (min-width: 1024px) {
-  html {
-    font-size: 30px;
-  }
+  html { font-size: 30px; }
 }
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translate3d(0, 1rem, 0); }
+  to   { opacity: 1; transform: translate3d(0, 0rem, 0); }
+}
+/* Firefox < 16 */
+@-moz-keyframes fadeIn {
+  from { opacity: 0; transform: translate3d(0, 1rem, 0); }
+  to   { opacity: 1; transform: translate3d(0, 0rem, 0); }
+}
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadeIn {
+  from { opacity: 0; transform: translate3d(0, 1rem, 0); }
+  to   { opacity: 1; transform: translate3d(0, 0rem, 0); }
+}
+
+// @keyframes moveIn {
+//   from { transform: translate3d(0, 1rem, 0); }
+//   to   { transform: translate3d(0, 0rem, 0); }
+// }
+// /* Firefox < 16 */
+// @-moz-keyframes moveIn {
+//   from { transform: translate3d(0, 1rem, 0); }
+//   to   { transform: translate3d(0, 0rem, 0); }
+// }
+// /* Safari, Chrome and Opera > 12.1 */
+// @-webkit-keyframes moveIn {
+//   from { transform: translate3d(0, 1rem, 0); }
+//   to   { transform: translate3d(0, 0rem, 0); }
+// }
+
+// /* Internet Explorer */
+// @-ms-keyframes fadein {
+//   from { opacity: 0; }
+//   to   { opacity: 1; }
+// }

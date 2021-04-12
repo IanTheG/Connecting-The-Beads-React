@@ -1,6 +1,5 @@
 export interface SceneI {
-  img: string;
-  verse: string | string[];
+  verse: string;
   ref: string;
 }
 
@@ -14,7 +13,7 @@ export interface DecadeI {
 }
 
 export interface MysteryI {
-  _id: string;
+  id: string;
   name: string;
   decades: DecadeI[];
 }

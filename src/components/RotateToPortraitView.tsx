@@ -1,6 +1,5 @@
-import React from 'react'
-
 const RotateToPortraitView = () => {
+
   return (
     <>
       <div id="portrait">

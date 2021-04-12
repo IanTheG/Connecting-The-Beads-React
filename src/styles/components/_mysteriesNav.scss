@@ -29,10 +29,6 @@
       background-color: $purple-light;
     }
   }
-  .current-day {
-    background-color: $purple-dark;
-    color: white;
-  }
   .loading {
     font-family: map-get($map: $fonts, $key: 'desc');
   }
@@ -51,3 +47,65 @@
     grid-template: 1fr / 1fr 2fr;
   }
 }
+
+// @use 'sass:map';
+
+// @import 'variables';
+
+// @media screen and (min-width: 10px) {
+//   #mysteries-nav {
+//     display: grid;
+//     grid-template-rows: auto repeat(4, 22vh);
+//     width: 100%;
+//   }
+//   .mystery {
+//     margin: 0;
+//     font-size: 2rem;
+//     padding: 1rem 0 0 1rem;
+//     font-family: map-get($map: $fonts, $key: 'heading');
+//   }
+//   .link {
+//     display: grid;
+//     grid-template: 1fr / 1fr 1fr;
+//     text-decoration: none;
+//     color: inherit;
+//     margin: 0;
+
+//     &:hover, &:active {
+//       background-color: $purple-light;
+//     }
+//   }
+//   .loading {
+//     font-family: map-get($map: $fonts, $key: 'desc');
+//   }
+//   .image-icon {
+//     object-fit: cover;
+//     object-position: center top;
+//     width: 100%;
+//     max-height: 100%;
+
+//     &--ipad {
+//       display: none;
+//     }
+//   }
+// }
+
+// @media screen and (min-width: 768px) {
+//   .link {
+//     grid-template: 1fr / 1fr 2fr;
+//   }
+//   .image-icon {
+//     grid-column: 2 / -1;
+
+//     &--ipad {
+//       display: block;
+//     }
+//   }
+//   .mystery {
+//     padding-left: 1.5rem;
+
+//     & ~ .desc--day {
+//       padding-left: 2.5em;
+//     }
+//   }
+// }

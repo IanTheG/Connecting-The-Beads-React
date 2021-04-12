@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { Switch, Route } from 'react-router-dom'
 
 import Home from './components/Home'
@@ -31,14 +31,10 @@ const App = () => {
     const randomMystery = ["glorious", "sorrowful", "joyful", "luminous"][randomMysteryNumber]
 
     return {
-      // url: `https://connectingthebeads-images.s3.amazonaws.com/${randomMystery}/${randomImageNumber}.jpg`,
-      url: "https://connectingthebeads-images.s3.amazonaws.com/sorrowful/1.jpg",
+      url: `https://connectingthebeads-images.s3.amazonaws.com/${randomMystery}/${randomImageNumber}.jpg`,
+      // url: "https://connectingthebeads-images.s3.amazonaws.com/sorrowful/1.jpg",
       alt: `${randomMystery} ${randomImageNumber}`
     }
-  }
-  const closingImage: ImageI = {
-    url: "",
-    alt: ""
   }
 
   return (
@@ -46,9 +42,9 @@ const App = () => {
       <ImageContext.Provider value={{ currentImageIndex, setCurrentImageIndex, selectedMysteryImages, setSelectedMysteryImages }}>
         <ImageContainer
           // Make the home page image random, and the ClosingPrayers image one of the five Joyful mysteries
-          images={[homeImage(), ...selectedMysteryImages, closingImage]}
+          images={[homeImage(), ...selectedMysteryImages]}
           currentImageIndex={currentImageIndex}
-          imgStyle={{ position: 'fixed', height: '100vh', width: '100vw', zIndex: -1, objectFit: 'cover' }}
+          imgClassName="img"
           containerStyle={{ display: 'flex', justifyContent: 'center' }}
         />
         <Switch>

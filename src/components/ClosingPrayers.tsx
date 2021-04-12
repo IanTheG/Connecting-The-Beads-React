@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import { useEffect } from 'react'
 import { useHistory } from 'react-router'
 
 import { fadeAnimation } from '../utils/functions'
@@ -8,10 +8,10 @@ import { useImage } from '../utils/ImageContext'
 const ClosingPrayers = () => {
 
   const history = useHistory()
-  const { setCurrentImageIndex } = useImage()!
+  // const { setCurrentImageIndex } = useImage()!
 
   useEffect(() => {
-    setCurrentImageIndex(6)
+    // setCurrentImageIndex(6)
     document.getElementById('top-container')?.scrollIntoView(true)
     fadeAnimation()
   }, [])

@@ -20,7 +20,6 @@ body {
   color: black;
 }
 .dark-mode {
-  // background-color: $purple-darker;
   color: whitesmoke;
 }
 .theme--trans {
@@ -32,21 +31,6 @@ body {
   background-color: var(--theme-invert);
   border-radius: 0.5rem;
 }
-
-// Image
-
-// #image-container {
-//   display: flex;
-//   justify-content: center;
-//   position: fixed;
-//   z-index: -1;
-// }
-// .image {
-//   height: 100vh;
-//   width: 100vw;
-//   object-fit: cover;
-//   animation: fadeIn 1s;
-// }
 
 // Text
 
@@ -89,6 +73,16 @@ body {
 .current-day {
   background-color: var(--theme-invert);
   color: white;
+}
+
+// Image
+
+.img {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  z-index: -1;
+  object-fit: cover;
 }
 
 // Main styles used throughout out app

@@ -1,10 +1,9 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useHistory, useLocation, useParams } from 'react-router'
 import { Location as Locale } from 'history'
 
 import { DecadeI, initialState, MysteryI } from '../utils/interfaces'
 import { fadeAnimation } from '../utils/functions'
-// import getMystery from '../utils/api'
 import { useImage } from '../utils/ImageContext'
 
 import glorious from '../data/glorious.json'
@@ -34,19 +33,6 @@ const Mystery = () => {
   useEffect(() => {
     fadeAnimation()
     let mounted = true
-
-    // const initializeMystery = async () => {
-    //   const chosenMystery = await getMystery(mystery)
-    //   if (chosenMystery) {
-    //     setCurrentMystery(chosenMystery.data)
-    //     const chosenMysteryImages = chosenMystery.data.decades.map((decade) => {
-    //       return { url: decade.image, alt: decade.name }
-    //     })
-    //     setSelectedMysteryImages(chosenMysteryImages)
-    //   }
-    //   else history.push('/')
-    // }
-    // mounted && initializeMystery();
 
     const initializeMystery = () => {
       let chosenMystery: MysteryI
@@ -86,25 +72,10 @@ const Mystery = () => {
   }, [currentMystery, location2.state.decade])
 
   return (
-    // Only render decade if name is set (after pulling from API)
-    // currentDecade.name !== ''
-    // ? <Decade mysteryName={mystery} currentDecade={currentDecade} />
-    // : <Loading mysteryName={mystery} />
+    // Only render decade if name is set
     currentDecade.name !== ''
       ? <Decade mysteryName={mystery.toLowerCase()} currentDecade={currentDecade} />
       : null
-  )
-}
-
-const Loading: React.FC<{ mysteryName: string }> = ({ mysteryName }) => {
-
-  useEffect(() => fadeAnimation())
-
-  return (
-    <div className="container theme--trans" style={{ alignItems: 'center', justifyContent: 'center' }}>
-      <h2 className="loading" style={{ textAlign: 'center', margin: '1rem' }}>Loading the {mysteryName.charAt(0).toUpperCase() + mysteryName.slice(1)} Mysteries</h2>
-      <div className="hero-line"></div>
-    </div>
   )
 }
 

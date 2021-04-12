@@ -1,39 +1,20 @@
-import React, { useEffect } from 'react'
-
-import Theme from './Theme'
+import { useEffect } from 'react'
 
 import { fadeAnimation } from '../utils/functions'
 import { useImage } from '../utils/ImageContext'
 
+import Theme from './Theme'
+
 const Home = () => {
 
-  const { setCurrentImageIndex } = useImage()!
-  const currentDay = (new Date()).getDay()
+  const { setCurrentImageIndex, setSelectedMysteryImages } = useImage()!
 
   useEffect(() => {
     setCurrentImageIndex(0)
-    // const randomImageNumber = Math.floor(Math.random() * Math.floor(5)) + 1
-    // const dailyMystery = "sorrowful"//getMysteryFromDay(currentDay)
-    // setCurrentImage({
-    //   url: `https://connectingthebeads-images.s3.amazonaws.com/${dailyMystery}/${randomImageNumber}.jpg`,
-    //   alt: 'Home image'
-    // })
+    setSelectedMysteryImages([])
     document.getElementById('top-container')?.scrollIntoView(true)
     fadeAnimation()
   }, [])
-
-  const getMysteryFromDay = (day: number) => {
-    switch (day) {
-      case 0 :
-      case 3 : return 'glorious'
-      case 1 :
-      case 6 : return 'joyful'
-      case 2 :
-      case 5 : return 'sorrowful'
-      case 4 : return 'luminous'
-      default : return 'glorious'
-    }
-  }
 
   return (
     <div id="top-container" className="container">
@@ -42,7 +23,8 @@ const Home = () => {
         <div>
           <Theme />
           <p className="desc">This mobile–friendly web app is a Rosary companion designed to help you pray and meditate with scripture and religious artwork depicting the lives of Jesus, Mary, Joseph, and the disciples.</p>
-          <p className="desc desc--home">Scroll down to advance to the next section, or scroll up to go back.</p>
+          <p className="desc desc--home">Add this app to your home screen to run it full-screen!</p>
+          {/* <p className="desc desc--home">Scroll down to advance to the next section, or scroll up to go back.</p> */}
         </div>
       </section>
     </div>

@@ -1,4 +1,3 @@
-import React from 'react'
 import { SIGN_OF_CROSS, CREED, OUR_FATHER, HAIL_MARY, GLORY_BE } from '../utils/prayers'
 
 const OpeningPrayers = () => {

@@ -9,7 +9,6 @@ interface PropTypesI {
   containerStyle?: React.CSSProperties | undefined;
   containerClassName?: string;
   duration?: number;
-  // timingFunction?: Property.AnimationTimingFunction
   timingFunction?: '-moz-initial' | 'inherit' | 'initial' | 'revert' | 'unset' | 'ease' | 'ease-in' | 'ease-out' | 'ease-in-out' | 'linear' | 'step-start' | 'step-en';
   delay?: number;
 };

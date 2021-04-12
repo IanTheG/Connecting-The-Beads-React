@@ -16,15 +16,10 @@
   .switch {
     padding-right: 1.2rem;
   }
-  .switch-container {
+  .switch-label {
     display: flex;
     padding: 1rem 0;
     align-items: center;
-
-    &--top {
-      align-items: flex-start;
-      padding: 0;
-    }
   }
 
   .desc {
@@ -44,7 +39,6 @@
     &--link {
       padding: 0;
       color: inherit;
-      text-decoration-thickness: 1px;
 
       &:hover {
         color: white;

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import Switch from "react-switch";
 
 const Theme = () => {
@@ -23,13 +23,13 @@ const Theme = () => {
   }
 
   return (
-    <>
-      <label className="switch-container">
+    <div style={{ display: 'flex' }}>
+      <label className="switch-label">
         {/* <p className="desc">{theme ? "Dark mode" : "Light mode"}</p> */}
-        <span className="desc desc--switch" style={{display: 'flex', alignItems: 'center'}}>
+        <span className="desc desc--switch" style={{ display: 'flex', alignItems: 'center' }}>
           {theme
-          ? <i className="far fa-moon" style={{fontSize: '1.5rem'}}></i>
-          : <i className="fas fa-sun" style={{fontSize: '1.5rem'}}></i>}
+          ? <i className="far fa-moon" style={{ fontSize: '1.5rem' }}></i>
+          : <i className="fas fa-sun" style={{ fontSize: '1.5rem' }}></i>}
         </span>
         <Switch
           onChange={(checked) => {
@@ -43,7 +43,7 @@ const Theme = () => {
           className="switch"
         />
       </label>
-    </>
+    </div>
   )
 }
 

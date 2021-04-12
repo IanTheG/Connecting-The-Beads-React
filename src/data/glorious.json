@@ -4,7 +4,7 @@
   "decades": [
     {
       "id": 1,
-      "image": "",
+      "image": "https://connectingthebeads-images.s3.amazonaws.com/glorious/1.jpg",
       "name": "The Resurrection",
       "number": "First",
       "fruits": "faith",
@@ -53,7 +53,7 @@
     },
     {
       "id": 2,
-      "image": "",
+      "image": "https://connectingthebeads-images.s3.amazonaws.com/glorious/2.jpg",
       "name": "The Ascension",
       "number": "Second",
       "fruits": "hope, desire for Heaven",
@@ -102,7 +102,7 @@
     },
     {
       "id": 3,
-      "image": "",
+      "image": "https://connectingthebeads-images.s3.amazonaws.com/glorious/3.jpg",
       "name": "The Descent of The Holy Spirit",
       "number": "Third",
       "fruits": "wisdom, love of God, divine charity",
@@ -151,7 +151,7 @@
     },
     {
       "id": 4,
-      "image": "",
+      "image": "https://connectingthebeads-images.s3.amazonaws.com/glorious/4.jpg",
       "name": "The Assumption",
       "number": "Fourth",
       "fruits": "devotion to Mary",
@@ -200,7 +200,7 @@
     },
     {
       "id": 5,
-      "image": "",
+      "image": "https://connectingthebeads-images.s3.amazonaws.com/glorious/5.jpg",
       "name": "The Coronation",
       "number": "Fifth",
       "fruits": "perseverance, increase in virtue and trust",

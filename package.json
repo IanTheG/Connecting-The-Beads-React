@@ -60,7 +60,6 @@
     "react-refresh": "^0.8.3",
     "react-router": "^5.2.0",
     "react-router-dom": "^5.2.0",
-    "react-simple-image-slider": "^2.0.3",
     "react-switch": "^6.0.0",
     "resolve": "1.18.1",
     "resolve-url-loader": "^3.1.2",
@@ -80,6 +79,7 @@
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
+    "build-no-maps": "GENERATE_SOURCEMAP=false node scripts/build.js",
     "test": "node scripts/test.js"
   },
   "eslintConfig": {

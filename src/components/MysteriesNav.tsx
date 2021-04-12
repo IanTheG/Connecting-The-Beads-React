@@ -1,4 +1,3 @@
-import React from 'react'
 import { Link } from 'react-router-dom'
 
 const MysteriesNav = () => {
@@ -15,7 +14,6 @@ const MysteriesNav = () => {
           <p className={`desc desc--day ${currentDay === 3 ? 'current-day' : ''}`}>Wednesday</p>
         </div>
         {/* <img className="image-icon" src={images.glorious[0]} /> */}
-        {/* <img className="image-icon image-icon--ipad" src={images.glorious[1]} /> */}
       </Link>
 
       <Link className="link" to={{pathname: "/joyful", state: {decade: 1}} }>
@@ -25,7 +23,6 @@ const MysteriesNav = () => {
           <p className={`desc desc--day ${currentDay === 6 ? 'current-day' : ''}`}>Saturday</p>
         </div>
         {/* <img className="image-icon" src={images.joyful[0]} /> */}
-        {/* <img className="image-icon image-icon--ipad" src={images.joyful[1]} /> */}
       </Link>
 
       <Link className="link" to={{pathname: "/sorrowful", state: {decade: 1}} }>
@@ -35,7 +32,6 @@ const MysteriesNav = () => {
           <p className={`desc desc--day ${currentDay === 5 ? 'current-day' : ''}`}>Friday</p>
         </div>
         {/* <img className="image-icon" src={images.sorrowful[0]} /> */}
-        {/* <img className="image-icon image-icon--ipad" src={images.sorrowful[1]} /> */}
       </Link>
 
       <Link className="link" to={{pathname: "/luminous", state: {decade: 1}} }>
@@ -44,7 +40,6 @@ const MysteriesNav = () => {
           <p className={`desc desc--day ${currentDay === 4 ? 'current-day' : ''}`}>Thursday</p>
         </div>
         {/* <img className="image-icon" src={images.luminous[0]} /> */}
-        {/* <img className="image-icon image-icon--ipad" src={images.luminous[1]} /> */}
       </Link>
     </div>
   )

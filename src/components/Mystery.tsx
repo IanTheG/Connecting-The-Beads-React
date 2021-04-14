@@ -73,6 +73,7 @@ const Mystery = () => {
     return () => {
       mounted = false
     }
+    // eslint-disable-next-line
   }, [])
 
   // Re-renders when state in location object changes or mystery changes, enables forward-backward navigation

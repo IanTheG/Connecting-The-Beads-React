@@ -17,6 +17,7 @@ const Decade: React.FC<{ mysteryName: string, currentDecade: DecadeI }> =
   useEffect(() => {
     document.getElementById('top-container')?.scrollIntoView(true)
     setCurrentImageIndex(currentDecade.id)
+    // eslint-disable-next-line
   }, [currentDecade])
 
   const handleNextDecade = () => {

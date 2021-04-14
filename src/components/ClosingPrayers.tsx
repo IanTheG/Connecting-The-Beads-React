@@ -3,15 +3,12 @@ import { useHistory } from 'react-router'
 
 import { fadeAnimation } from '../utils/functions'
 import { HAIL_HOLY_QUEEN, FINAL_PRAYER, ST_MICHAEL, SIGN_OF_CROSS } from '../utils/prayers'
-import { useImage } from '../utils/ImageContext'
 
 const ClosingPrayers = () => {
 
   const history = useHistory()
-  // const { setCurrentImageIndex } = useImage()!
 
   useEffect(() => {
-    // setCurrentImageIndex(6)
     document.getElementById('top-container')?.scrollIntoView(true)
     fadeAnimation()
   }, [])
@@ -26,7 +23,7 @@ const ClosingPrayers = () => {
           <div>
             <h2 className="title title--clear no-border">Hail, Holy Queen</h2>
             <div className="hero-line"></div>
-            {HAIL_HOLY_QUEEN.map((line, idx) => <p className={idx == 0 ? 'prayer prayer--top' : 'prayer'} key={idx}>{line}</p> )}
+            {HAIL_HOLY_QUEEN.map((line, idx) => <p className={idx === 0 ? 'prayer prayer--top' : 'prayer'} key={idx}>{line}</p> )}
           </div>
         </section>
       </div>
@@ -35,7 +32,7 @@ const ClosingPrayers = () => {
           <div>
             <h2 className="title title--clear no-border">Final Prayer</h2>
             <div className="hero-line"></div>
-            {FINAL_PRAYER.map((line, idx) => <p className={idx == 0 ? 'prayer prayer--top' : 'prayer'} key={idx}>{line}</p> )}
+            {FINAL_PRAYER.map((line, idx) => <p className={idx === 0 ? 'prayer prayer--top' : 'prayer'} key={idx}>{line}</p> )}
           </div>
         </section>
       </div>
@@ -44,7 +41,7 @@ const ClosingPrayers = () => {
           <div>
             <h2 className="title title--clear no-border">St. Michael Prayer</h2>
             <div className="hero-line"></div>
-            {ST_MICHAEL.map((line, idx) => <p className={idx == 0 ? 'prayer prayer--top' : 'prayer'} key={idx}>{line}</p> )}
+            {ST_MICHAEL.map((line, idx) => <p className={idx === 0 ? 'prayer prayer--top' : 'prayer'} key={idx}>{line}</p> )}
           </div>
         </section>
         <section style={{backgroundColor: 'transparent'}}>

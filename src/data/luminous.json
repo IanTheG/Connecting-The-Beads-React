@@ -4,7 +4,6 @@
   "decades": [
     {
       "id": 1,
-      "image": "https://connectingthebeads-images.s3.amazonaws.com/luminous/1.jpg",
       "name": "The Baptism of The Lord",
       "number": "First",
       "fruits": "openness to the Holy Spirit",
@@ -53,7 +52,6 @@
     },
     {
       "id": 2,
-      "image": "https://connectingthebeads-images.s3.amazonaws.com/luminous/2.jpg",
       "name": "The Wedding at Cana",
       "number": "Second",
       "fruits": "to Jesus through Mary",
@@ -102,7 +100,6 @@
     },
     {
       "id": 3,
-      "image": "https://connectingthebeads-images.s3.amazonaws.com/luminous/3.jpg",
       "name": "Proclamation of The Kingdom",
       "number": "Third",
       "fruits": "repentance, trust in God",
@@ -151,7 +148,6 @@
     },
     {
       "id": 4,
-      "image": "https://connectingthebeads-images.s3.amazonaws.com/luminous/4.jpg",
       "name": "The Transfiguration",
       "number": "Fourth",
       "fruits": "desire for holiness",
@@ -200,7 +196,6 @@
     },
     {
       "id": 5,
-      "image": "https://connectingthebeads-images.s3.amazonaws.com/luminous/5.jpg",
       "name": "The Institution of The Eucharist",
       "number": "Fifth",
       "fruits": "adoration",

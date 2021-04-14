@@ -7,7 +7,6 @@ export interface DecadeI {
   id: number;
   name: string;
   number: string;
-  image: string;
   fruits: string;
   scenes: SceneI[]
 }
@@ -22,7 +21,6 @@ export const initialState: DecadeI = {
   id: 0,
   name: '',
   number: '',
-  image: '',
   fruits: '',
   scenes: [],
 }

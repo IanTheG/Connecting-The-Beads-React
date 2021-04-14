@@ -4,7 +4,6 @@
   "decades": [
     {
       "id": 1,
-      "image": "https://connectingthebeads-images.s3.amazonaws.com/sorrowful/1.jpg",
       "name": "The Agony in the Garden",
       "number": "First",
       "fruits": "contrition, conformity to God's will",
@@ -53,7 +52,6 @@
     },
     {
       "id": 2,
-      "image": "https://connectingthebeads-images.s3.amazonaws.com/sorrowful/2.jpg",
       "name": "The Scourging at the Pillar",
       "number": "Second",
       "fruits": "purification, sacrifice",
@@ -102,7 +100,6 @@
     },
     {
       "id": 3,
-      "image": "https://connectingthebeads-images.s3.amazonaws.com/sorrowful/3.jpg",
       "name": "The Crowning with Thorns",
       "number": "Third",
       "fruits": "moral courage",
@@ -151,7 +148,6 @@
     },
     {
       "id": 4,
-      "image": "https://connectingthebeads-images.s3.amazonaws.com/sorrowful/4.jpg",
       "name": "The Carrying of The Cross",
       "number": "Fourth",
       "fruits": "patience",
@@ -200,7 +196,6 @@
     },
     {
       "id": 5,
-      "image": "https://connectingthebeads-images.s3.amazonaws.com/sorrowful/5.jpg",
       "name": "The Crucifixion",
       "number": "Fifth",
       "fruits": "salvation, perseverance in faith, forgiveness",

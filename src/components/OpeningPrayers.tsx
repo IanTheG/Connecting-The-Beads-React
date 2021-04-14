@@ -52,7 +52,7 @@ const OpeningPrayers = () => {
         <section className="prayer--section">
           <div className="inner-prayer">
             <p className="desc">Say the <b>Glory Be.</b></p>
-            {GLORY_BE.map((line, idx) => <p className={idx == 0 ? 'prayer prayer--top' : 'prayer'} key={idx}>{line}</p> )}
+            {GLORY_BE.map((line, idx) => <p className={idx === 0 ? 'prayer prayer--top' : 'prayer'} key={idx}>{line}</p> )}
           </div>
         </section>
       </div>

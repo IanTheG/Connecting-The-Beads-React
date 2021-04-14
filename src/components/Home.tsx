@@ -14,6 +14,7 @@ const Home = () => {
     setSelectedMysteryImages([])
     document.getElementById('top-container')?.scrollIntoView(true)
     fadeAnimation()
+    // eslint-disable-next-line
   }, [])
 
   return (

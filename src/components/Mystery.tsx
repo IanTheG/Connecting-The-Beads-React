@@ -54,8 +54,17 @@ const Mystery = () => {
           return
       }
       setCurrentMystery(chosenMystery)
+
+      // Depending on device window size, pull either small, medium, or large image
+      let size = 'S'
+      if (window.innerHeight > 900) size = 'M'
+      if (window.innerHeight > 1200) size = 'L'
+
       const chosenMysteryImages = chosenMystery.decades.map((decade) => {
-        return { url: decade.image, alt: decade.name }
+        return {
+          url: `https://connectingthebeads-images.s3.amazonaws.com/${chosenMystery.id}/${decade.id}${size}.jpg`,
+          alt: decade.name
+        }
       })
       setSelectedMysteryImages(chosenMysteryImages)
     }

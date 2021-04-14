@@ -37,8 +37,15 @@ const Decade: React.FC<{ mysteryName: string, currentDecade: DecadeI }> =
     <>
       <div id="top-container" className="container">
         <section>
-          <h2 className="subtitle subtitle--trans no-border">The {currentDecade.number} {mysteryName.charAt(0).toUpperCase() + mysteryName.slice(1)} Mystery is {currentDecade.name}</h2>
-          <p className="subtitle subtitle--trans subtitle--fruit no-border">Fruits of the mystery: {currentDecade.fruits}.</p>
+          <h2 className="subtitle subtitle--trans no-border" style={{ paddingBottom: 0 }}>
+            The {currentDecade.number} {mysteryName.charAt(0).toUpperCase() + mysteryName.slice(1)} Mystery
+          </h2>
+          <h2 className="subtitle subtitle--trans no-border" style={{ padding: "0 0 1rem 0"}}>
+            {currentDecade.name}
+          </h2>
+          <p className="subtitle subtitle--trans subtitle--fruit no-border">
+            Fruits of the mystery: {currentDecade.fruits}.
+          </p>
         </section>
         <div style={{flex: 1}}></div>
         <section className="prayer--section">

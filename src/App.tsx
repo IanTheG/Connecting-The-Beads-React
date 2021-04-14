@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Switch, Route } from 'react-router-dom'
 
 import Home from './components/Home'
@@ -24,25 +24,34 @@ const App = () => {
 
   const [currentImageIndex, setCurrentImageIndex] = useState<number>(0)
   const [selectedMysteryImages, setSelectedMysteryImages] = useState<ImageI[]>([])
+  const [homeImage, setHomeImage] = useState<ImageI>({ url: '', alt: '' })
 
-  const homeImage = (): ImageI => {
+  useEffect(() => {
     const randomImageNumber = Math.floor(Math.random() * Math.floor(5)) + 1
-    const randomMysteryNumber = Math.floor(Math.random() * Math.floor(4))
-    const randomMystery = ["glorious", "sorrowful", "joyful", "luminous"][randomMysteryNumber]
 
-    return {
-      url: `https://connectingthebeads-images.s3.amazonaws.com/${randomMystery}/${randomImageNumber}.jpg`,
-      // url: "https://connectingthebeads-images.s3.amazonaws.com/sorrowful/1.jpg",
-      alt: `${randomMystery} ${randomImageNumber}`
-    }
-  }
+    let dailyMystery = ""
+    const currentDay = (new Date()).getDay()
+    if (currentDay === 0 || currentDay === 3) dailyMystery = 'glorious'
+    else if (currentDay === 1 || currentDay === 6) dailyMystery = 'joyful'
+    else if (currentDay === 2 || currentDay === 5) dailyMystery = 'sorrowful'
+    else if (currentDay === 4) dailyMystery = 'luminous'
+
+    let size = 'S'
+    if (window.innerHeight > 900) size = 'M'
+    if (window.innerHeight > 1200) size = 'L'
+
+    setHomeImage({
+      url: `https://connectingthebeads-images.s3.amazonaws.com/${dailyMystery}/${randomImageNumber}${size}.jpg`,
+      alt: `${dailyMystery} ${randomImageNumber}`
+    })
+  }, [])
 
   return (
     <main id="root" className="scroll-container">
       <ImageContext.Provider value={{ currentImageIndex, setCurrentImageIndex, selectedMysteryImages, setSelectedMysteryImages }}>
         <ImageContainer
           // Make the home page image random, and the ClosingPrayers image one of the five Joyful mysteries
-          images={[homeImage(), ...selectedMysteryImages]}
+          images={[homeImage, ...selectedMysteryImages]}
           currentImageIndex={currentImageIndex}
           imgClassName="img"
           containerStyle={{ display: 'flex', justifyContent: 'center' }}
